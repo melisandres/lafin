@@ -4,8 +4,13 @@
 $datas = file_get_contents("../info.json");
 $datas = json_decode($datas, TRUE);
 
+//the index number of the icon clicked
+//is passed on through .get, as "newIndex"
 $newIndex = $_GET["newIndex"];
 
+//a function that searches through all the Json
+//data stored in $datas, finds the clicked index
+//and sets the corresponding archive as $newDisplay
 function resetOnDisplay($index, $data){
     $newDisplay = array ();
     foreach($data as $value){
@@ -16,14 +21,11 @@ function resetOnDisplay($index, $data){
     return $newDisplay;
 }
 
+//this function is already in c-text. It's the 
+//function that displays the selected archive.
+
 $onDisplay = resetOnDisplay($newIndex, $datas);
-
-function displayText($onD){
-    echo "<h1>".$onD[title]."</h1>";
-    echo "<h4>".$onD[lead]."</h4>";
-    echo "<p>".$onD[blurb]."</p>";
-}
-
-displayText($onDisplay);
+include "c-text.php";
+include "c-image";
 
 ?>
