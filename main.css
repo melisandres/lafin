@@ -1,0 +1,257 @@
+body{
+    display:grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-rows: 180px 1fr 30px;
+    grid-template-areas:
+    "nav nav nav nav"
+    "left c-image c-text right"
+    "bottom bottom bottom bottom";
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.c-image{
+    grid-area: c-image;
+    display: flex;
+    background-color: goldenrod;
+    z-index: -2;
+}
+.c-text{
+    grid-area: c-text;
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    background-color: beige;
+    padding: 20px;
+    z-index: -10;
+}
+
+footer{
+    grid-area: bottom;
+    background-color: teal;
+}
+
+nav{
+    grid-area: nav;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+nav .name{
+    padding: 30px;
+    width: 30vw;
+    text-align: right;
+}
+
+nav .description{
+    text-align: left;
+    color: darkkhaki;
+    width: 30vw;
+    padding: 30px;
+}
+
+.nav-buttons{
+    display: grid;
+    grid-template-columns: 180px;
+    grid-template-rows: 50px 30px 100px;
+    grid-template-areas:
+    "logo"
+    "lafinButtons"
+    "desc";
+    background-color: gold;
+    grid-gap: 0.3rem;
+}
+nav .logo{
+    grid-area: logo;
+    font-size: 32px;
+}
+nav .lafinButtons{
+    display: flex;
+    justify-content: space-between;
+}
+nav .desc{
+    grid-area: desc;
+    justify-self: center;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+nav a{
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.periods{
+    grid-area: left;
+    background-color: goldenrod;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: auto;
+}
+.period{
+    font-size:6pt;
+    background-color: blanchedalmond;
+    width: 100px;  /* Or whatever */
+    height: 100px; /* Or whatever */
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 50%;
+    list-style-type: none;
+    line-height: 100px;
+}
+
+.projects{
+    grid-area: right;
+    background-color: palegoldenrod;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+.project{
+    font-size:6pt;
+    background-color: blanchedalmond;
+    width: 100px;  /* Or whatever */
+    height: 100px; /* Or whatever */
+    text-align: center;
+    margin-top: 10px;
+    list-style-type: none;
+    line-height: 100px;
+}
+
+.p-active{
+    background-color:hotpink;
+}
+
+
+.nav-link{
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+  
+.nav-link:hover{
+    background-color: gold;
+    color:whitesmoke;
+  }
+  
+.left_aside{
+    left: 0;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+  }
+
+.right_aside{
+    right: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+.vert_centered {
+    display: grid;
+    align-self: center;
+    top:0;
+    height: 100%; /* Full width */
+    overflow: hidden;
+    position: fixed;
+ }
+
+.hor_centered_bottom {
+    display: grid;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 768px){
+      body{
+          display:none;
+      }
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+    background-color: lightgrey;
+    color: white;
+    padding: 2px 8px;
+    font-size: 20px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+   
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 9px 9px;
+  }
+  
+.active{
+        color:firebrick;
+    }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: grey;} 
+
+.fiction-hover{
+    display:none;
+    font-size: 100px;
+    z-index: 5;
+}
+.we-hover{
+    display:none;
+    font-size: 100px;
+    z-index: 5;
+}
+.do-hover{
+    display:none;
+    font-size: 100px;
+    z-index: 5;
+}
+ .do:hover > .do-hover{
+    display:block;
+}
+ .we:hover > .we-hover{
+    display:block;
+    }
+ .fiction:hover + .fiction-hover{
+    display:block;
+    }
