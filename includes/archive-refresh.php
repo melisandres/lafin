@@ -6,7 +6,15 @@ $datas = json_decode($datas, TRUE);
 
 //the index number of the icon clicked
 //is passed on through .get, as "newIndex"
-$newIndex = $_GET["newIndex"];
+$newIndex = $_POST["newIndex"];
+
+
+//this code can be reused to refresh image & text...
+//however, as they need to each be loaded in different
+//places... I'm sending over a variable from the jqueery
+//script that acts like a toggle.
+
+$refresh = $_POST["refresh"];
 
 //a function that searches through all the Json
 //data stored in $datas, finds the clicked index
@@ -21,11 +29,25 @@ function resetOnDisplay($index, $data){
     return $newDisplay;
 }
 
-//this function is already in c-text. It's the 
-//function that displays the selected archive.
-
+//In c-text.php and in c-image.php, functions
+//display the $onDisplay variable. So... I reset it, 
+//before calling these scripts. 
 $onDisplay = resetOnDisplay($newIndex, $datas);
-include "c-text.php";
-include "c-image";
 
+function showNewDisplay($im, $onD){
+    if ($im == "text"){
+       include 'c-text.php';
+       displayText($onD);
+    }
+    elseif ($im == "image") {
+        include "c-text.php";
+
+    }
+    else {
+        echo "error";
+    }
+}
+
+//I'll be calling this whole script two times, I guess.
+showNewDisplay($refresh, $onDisplay);
 ?>
