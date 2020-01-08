@@ -33,6 +33,17 @@ $(document).ready(function(){
                 $("#c-text").html(data);
             }
         });
+        $.ajax({
+            type: "POST",
+            url: "includes/archive-refresh.php",
+            data: {
+                "newIndex": myId,
+                "refresh": "image"
+            },
+            success: function(data, status) { 
+                $("#c-image").html(data);
+            }
+        });
     });   
 });
 

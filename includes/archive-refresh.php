@@ -40,8 +40,8 @@ function showNewDisplay($im, $onD){
        displayText($onD);
     }
     elseif ($im == "image") {
-        include "c-text.php";
-
+        include "c-image.php";
+        displayImage($onD);
     }
     else {
         echo "error";
