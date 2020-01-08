@@ -16,7 +16,7 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image">
+<section class="c-image" id="c-image">
 	<?php $page ='presses'; include 'includes/c-image.php'; ?>
 </section>
 
