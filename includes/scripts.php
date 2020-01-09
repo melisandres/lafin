@@ -94,10 +94,10 @@ function fillAsides($archive, $type, $onDisplay){
     {
         $buttonScript = "";
         if($value == $onDisplay){
-            echo "<a href='#' onClick='myFunction(".$value[index].");'><li id='archive-button' data-internalid='".$value[index]."' class='".$type." archive-button p-active'>".$value[title]."</li>";            
+            echo "<a href='#' onClick='myFunction(".$value[index].");'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'>".$value[title]."</li>";            
         }
         else{
-            echo "<a href='#' onClick='myFunction(".$value[index].");'><li id='archive-button' data-internalid='".$value[index]."' class='".$type." archive-button'>".$value[title]."</li>";
+            echo "<a href='#' onClick='myFunction(".$value[index].");'><li data-internalid='".$value[index]."' class='".$type." archive-button'>".$value[title]."</li>";
         }
     }
 }
