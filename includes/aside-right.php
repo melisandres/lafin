@@ -23,6 +23,9 @@ fillAsides($pageProjects, $type, $onDisplay);
 //'archive-button' is clicked. It removes the p-active class
 //from the last active button, and adds it to the button just clicked.
 //it then sends two post requests. 1 to c-text, another to c-image.
+
+//next it may be important to have some visualization for which archives are
+//contemporary to the one selected. 
 $(document).ready(function(){
     $(".archive-button").on('click', function(){
         var actives = document.querySelectorAll(".archive-button");
@@ -35,17 +38,7 @@ $(document).ready(function(){
         }
         this.classList.add("p-active");
         var myId = $(this).data().internalid;
-        $.ajax({
-            type: "POST",
-            url: "includes/archive-refresh.php",
-            data: {
-                "newIndex": myId,
-                "refresh": "text"
-            },
-            success: function(data, status) { 
-                $("#c-text").html(data);
-            }
-        });
+
         $.ajax({
             type: "POST",
             url: "includes/archive-refresh.php",
@@ -57,6 +50,20 @@ $(document).ready(function(){
                 $("#c-image").html(data);
             }
         });
+
+        
+        $.ajax({
+            type: "POST",
+            url: "includes/archive-refresh.php",
+            data: {
+                "newIndex": myId,
+                "refresh": "text"
+            },
+            success: function(data, status) { 
+                $("#c-text").html(data);
+            }
+        });
+
     });   
 });
 

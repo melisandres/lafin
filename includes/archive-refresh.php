@@ -35,16 +35,15 @@ function resetOnDisplay($index, $data){
 $onDisplay = resetOnDisplay($newIndex, $datas);
 
 function showNewDisplay($im, $onD){
+    $onDisplay = $onD;
     if ($im == "text"){
        include 'c-text.php';
-       displayText($onD);
     }
     elseif ($im == "image") {
         include "c-image.php";
-        displayImage($onD);
     }
     else {
-        echo "error";
+        echo "error at aside-right.php, sending neither text nor image";
     }
 }
 

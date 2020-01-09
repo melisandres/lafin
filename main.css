@@ -16,15 +16,15 @@ body{
 .c-image{
     grid-area: c-image;
     display: flex;
+    justify-items: start;
+    align-items: center;
     background-color: goldenrod;
     z-index: -2;  
 }
 
 img {
-    display: flex;
-    align-self: center;
-    max-width:50%;
-    max-height:50%;
+    max-width:70%;
+    max-height:70%;
 }
 
 .c-text{
