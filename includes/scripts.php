@@ -44,6 +44,13 @@ function fillArchive($data, $thisPage, $type){
 $pageProjects = fillArchive($datas, $page, "project");
 $pagePeriods = fillArchive($datas, $page, "period");
 
+//reorganize arrays so that the elements are in chronological order
+function sortFunction( $a, $b ) {
+    return strtotime($a["startDate"]) - strtotime($b["startDate"]);
+}
+usort($pageProjects, "sortFunction");
+usort($pagePeriods, "sortFunction");
+
 
 //WHERE ARE WE, IN TIME? (what is today?)
 //(a variable that can be altered easily if Lafin ever time-travels)
@@ -66,9 +73,9 @@ $currentPeriods = findCurrent($pagePeriods, $currentDate);
   
 //onDisplay
 //Which current projects/period(s) will be on display (on load).
-    //Are there any current projects? (*for now, just display currentProjects[0])
-    //No current projects, check current periods. (*for now, just display currentPeriods[0])
-    //No current periods, put in a fallback... an INBEETWEEN Periods /IBETWEEN Projects
+    //Are there any current projects? ( if yes, *for now* display currentProjects[0])
+    //No current projects, check current periods. (if yes, *for now* display currentPeriods[0])
+    //No current periods, put in a fallback... wherein the json "type" is set to default
 function chooseDisplay($projects, $periods, $json, $page){
     $onDisplay;
     if(count($projects) > 0) {
