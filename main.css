@@ -16,15 +16,16 @@ body{
 .c-image{
     grid-area: c-image;
     display: flex;
-    justify-items: start;
     align-items: center;
+    justify-content: right;
+    padding-right: 0px;
     background-color: goldenrod;
     z-index: -2;  
 }
 
 img {
-    max-width:70%;
-    max-height:70%;
+    width: auto;
+    height: 60vh;
 }
 
 .c-text{
@@ -105,7 +106,7 @@ nav a{
 
 .periods{
     grid-area: left;
-    background-color: goldenrod;
+    background-color: grey;
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -147,7 +148,7 @@ nav a{
 }
 
 .p-active{
-    background-color:hotpink;
+    background-color: lightsalmon;
 }
 
 
