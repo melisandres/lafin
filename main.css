@@ -1,6 +1,6 @@
 body{
     display:grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-columns: 200px 1fr 1fr 200px;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
     "nav nav nav nav"
@@ -104,9 +104,18 @@ nav a{
     text-decoration: none;
 }
 
+.info{
+    visibility:hidden;
+}
+
+.archive-button:hover + .info {
+    visibility: visible;
+    margin-left: 35px;
+    margin-top: -35px;
+}
+
 .periods{
     grid-area: left;
-    background-color: grey;
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -116,8 +125,8 @@ nav a{
 .period{
     font-size:6pt;
     background-color: blanchedalmond;
-    width: 100px;  /* Or whatever */
-    height: 100px; /* Or whatever */
+    width: 25px;  /* Or whatever */
+    height: 25px; /* Or whatever */
     text-align: center;
     margin-top: 10px;
     border-radius: 50%;
@@ -139,8 +148,8 @@ nav a{
 .project{
     font-size:6pt;
     background-color: blanchedalmond;
-    width: 100px;  /* Or whatever */
-    height: 100px; /* Or whatever */
+    width: 25px;  /* Or whatever */
+    height: 25px; /* Or whatever */
     text-align: center;
     margin-top: 10px;
     list-style-type: none;

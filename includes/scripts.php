@@ -99,12 +99,11 @@ $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 function fillAsides($archive, $type, $onDisplay){
     foreach ($archive as $value) 
     {
-        $buttonScript = "";
         if($value == $onDisplay){
-            echo "<a href='#' onClick='myFunction(".$value[index].");'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'>".$value[title]."</li>";            
+            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]." ".$value[startDate]."-".$value[endDate]."</span></a>";            
         }
         else{
-            echo "<a href='#' onClick='myFunction(".$value[index].");'><li data-internalid='".$value[index]."' class='".$type." archive-button'>".$value[title]."</li>";
+            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]." ".$value[startDate]."-".$value[endDate]."</span></a>";
         }
     }
 }
