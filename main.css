@@ -106,12 +106,16 @@ nav a{
 
 .info{
     visibility:hidden;
+    list-style-type: none;
+    text-decoration: none;
+    font-size:10pt;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 30px;
 }
 
 .archive-button:hover + .info {
     visibility: visible;
-    margin-left: 35px;
-    margin-top: -35px;
 }
 
 .periods{
@@ -123,14 +127,11 @@ nav a{
     overflow: auto;
 }
 .period{
-    font-size:6pt;
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
-    text-align: center;
     margin-top: 10px;
     border-radius: 50%;
-    list-style-type: none;
     line-height: 100px;
 }
 
@@ -146,13 +147,11 @@ nav a{
 
 
 .project{
-    font-size:6pt;
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
     text-align: center;
     margin-top: 10px;
-    list-style-type: none;
     line-height: 100px;
 }
 

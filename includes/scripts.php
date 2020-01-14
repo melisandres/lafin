@@ -99,11 +99,19 @@ $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 function fillAsides($archive, $type, $onDisplay){
     foreach ($archive as $value) 
     {
+        //this should be checking if there is 
+        $startYear = intval($value[startDate]);
+        $endYear = intval($value[endDate]);
+        //the following gives a three character shortening of the month name
+        //replace the "M" with an "F" for a full month name (ie. January)
+        $startMonth = date("M", strtotime($value[startDate]));
+        $endMonth = date("M", strtotime($value[endDate]));
+
         if($value == $onDisplay){
-            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]." ".$value[startDate]."-".$value[endDate]."</span></a>";            
+            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";            
         }
         else{
-            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]." ".$value[startDate]."-".$value[endDate]."</span></a>";
+            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";
         }
     }
 }
