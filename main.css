@@ -157,6 +157,7 @@ border-color: black;
     justify-content: center; /* this is where I will need to align "now" to center*/
     overflow: auto;
 }
+
 .period{
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
@@ -171,7 +172,7 @@ border-color: black;
     /*height: 20px; it may be better to send the height over from PHP*/
     background-color: grey;
     margin-left: 50%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .projects{
