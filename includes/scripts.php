@@ -108,10 +108,12 @@ function fillAsides($archive, $type, $onDisplay){
         $endMonth = date("M", strtotime($value[endDate]));
 
         if($value == $onDisplay){
-            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";            
+            echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";  
+            echo "<div class='time-line'></div>";       
         }
         else{
-            echo "<a href='#'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";
+            echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>"; 
+            echo "<div class='time-line'></div>";
         }
     }
 }

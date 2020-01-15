@@ -1,6 +1,6 @@
 body{
     display:grid;
-    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-columns: 280px 1fr 1fr 100px;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
     "nav nav nav nav"
@@ -111,10 +111,25 @@ nav a{
     font-size:10pt;
     position: absolute;
     margin-top: -25px;
-    margin-left: 30px;
+    margin-left: 5px;
+    pointer-events: none;
+}
+
+
+.archive-button:active{
+    background-color: rgb(241, 193, 176);
+    /* halfway to .pactive colour */
+}
+.archive-button{
+    margin: auto;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 .archive-button:hover + .info {
+    visibility: visible;
+}
+.archive-button:hover + .left_aside {
     visibility: visible;
 }
 
@@ -130,9 +145,17 @@ nav a{
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     border-radius: 50%;
     line-height: 100px;
+}
+
+.time-line{
+    width: 1px;
+    height: 30px;
+    background-color: grey;
+    z-index: -1;
+    margin-left: 50%
 }
 
 .projects{
@@ -174,16 +197,36 @@ nav a{
   }
   
 .left_aside{
-    left: 0;
+    visibility:hidden;
+    margin: auto;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
   }
 
-.right_aside{
+.right_aside{ 
     right: 0;
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
+
+  .periods::after {
+    /*content:"meow";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px dotted #ff0000;
+    transform: translate(-50%);*/
+}
+
+aside {
+    /*
+    height: auto;
+    position:relative;
+    text-align:center
+    */
+}
 
 .vert_centered {
     display: grid;
