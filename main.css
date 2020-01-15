@@ -120,6 +120,13 @@ nav a{
     background-color: rgb(241, 193, 176);
     /* halfway to .pactive colour */
 }
+
+.archive-button:hover{
+border-width: 1px;
+border-style: dotted;
+border-color: black;
+}
+
 .archive-button{
     margin: auto;
     list-style-type: none;
@@ -147,14 +154,13 @@ nav a{
     height: 25px; /* Or whatever */
     /*margin-top: 10px;*/
     border-radius: 50%;
-    line-height: 100px;
+    /*line-height: 100px;*/
 }
 
 .time-line{
     width: 1px;
-    height: 30px;
+    /*height: 20px; it may be better to send the height over from PHP*/
     background-color: grey;
-    z-index: -1;
     margin-left: 50%
 }
 
@@ -174,7 +180,6 @@ nav a{
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
     text-align: center;
-    margin-top: 10px;
     line-height: 100px;
 }
 

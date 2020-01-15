@@ -99,6 +99,7 @@ $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 function fillAsides($archive, $type, $onDisplay){
     foreach ($archive as $value) 
     {
+        $lineLength = 20;
         //this should be checking if there is 
         $startYear = intval($value[startDate]);
         $endYear = intval($value[endDate]);
@@ -109,11 +110,11 @@ function fillAsides($archive, $type, $onDisplay){
 
         if($value == $onDisplay){
             echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";  
-            echo "<div class='time-line'></div>";       
+            echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";       
         }
         else{
             echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>"; 
-            echo "<div class='time-line'></div>";
+            echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
         }
     }
 }
