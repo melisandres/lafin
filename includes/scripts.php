@@ -97,8 +97,8 @@ $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 //populate both asides
 //call the function from left-aside & right-aside?
 function fillAsides($archive, $type, $onDisplay){
-    foreach ($archive as $value) 
-    {
+    $lastPrintedYear;
+    for($i = 0; $i < count($archive); ++$i){
         $lineLength = 20;
         //this should be checking if there is 
         $startYear = intval($value[startDate]);
@@ -108,12 +108,20 @@ function fillAsides($archive, $type, $onDisplay){
         $startMonth = date("M", strtotime($value[startDate]));
         $endMonth = date("M", strtotime($value[endDate]));
 
-        if($value == $onDisplay){
-            echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button p-active'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";  
-            echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";       
+        //check if this year is already printed on the time-line
+        if ($startYear !== $lastPrintedYear){
+            
         }
-        else{
-            echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>"; 
+
+        //build the html for each archive-button, making the one on display active
+        $activeState = "";
+        if($archive[$i] == $onDisplay){
+            $activeState = "p-active";
+        }
+        echo "<a href='#' class='archive'><li data-internalid='".$value[index]."' class='".$type." archive-button ".$activeState."'></li> <span class='info'>".$value[title]."<br>".$startYear."/".$endYear."</span></a>";
+
+        //don't place a timeline under a last item... 
+        if ($i !== count($archive)-1){
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
         }
     }

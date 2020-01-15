@@ -1,6 +1,6 @@
 body{
     display:grid;
-    grid-template-columns: 180px 100px 1fr 1fr;
+    grid-template-columns: 110px 150px 1fr 1fr;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
     "nav nav nav nav"
