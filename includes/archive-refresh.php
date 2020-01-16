@@ -43,7 +43,7 @@ function showNewDisplay($im, $onD){
         include "c-image.php";
     }
     else {
-        echo "error at aside-right.php, sending neither text nor image";
+        echo "error at aside-left.php?, sending neither text nor image";
     }
 }
 

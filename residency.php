@@ -33,12 +33,6 @@
 </aside>
 <!--- End Aside Left-->
 
-<!--- Aside Right-->
-<aside class="projects">
-	<?php include 'includes/aside-right.php'; ?>
-</aside>
-<!--- End Aside Right -->
-
 <!--- End script for getting new stuff in the middle -->
 
 <!--- End script for getting new stuff in the middle -->

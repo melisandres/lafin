@@ -35,13 +35,6 @@
 </aside>
 <!--- End Aside Left-->
 
-
-<!--- Aside Right-->
-<aside class="projects">
-	<?php include 'includes/aside-right.php'; ?>
-</aside>
-<!--- End Aside Right -->
-
 <footer>
 <!--- Join us Section -->
 	<a href="#default" class=nav-link>join us</a></li>

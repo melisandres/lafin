@@ -1,11 +1,11 @@
 body{
     display:grid;
-    grid-template-columns: 200px 150px 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
-    "nav nav nav nav"
-    "left right c-image c-text"
-    "bottom bottom bottom bottom";
+    "left nav nav"
+    "left c-image c-text"
+    "bottom bottom bottom";
     height: 100vh;
     margin: 0px;
     padding: 0px;
