@@ -173,6 +173,13 @@ border-color: black;
     font-size: 8pt;
 }
 
+.period-line{
+    height: 100px;
+    width: 30px;
+    border-width: 1px;
+    border-right: transparent;
+}
+
 .projects{
     grid-area: right;
     background-color: palegoldenrod;

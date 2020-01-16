@@ -70,6 +70,14 @@ function findCurrent($data, $thisTime){
 }
 $currentProjects = findCurrent($pageProjects, $currentDate);
 $currentPeriods = findCurrent($pagePeriods, $currentDate);
+
+//FUNCTION THAT COMBINES THIS PAGE'S PROJECTS AND PERIODS
+//and holds them in chronological order.
+function createArrayOfPageArchives($period, $projects){
+
+}
+
+
   
 //onDisplay
 //Which current projects/period(s) will be on display (on load).
@@ -94,41 +102,74 @@ function chooseDisplay($projects, $periods, $json, $page){
 }
 $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 
+
+
 //populate both asides
 //call the function from left-aside & right-aside?
 function fillAsides($archive, $type, $onDisplay){
+    //this is getting checked to know whether or not to print the year
     $lastPrintedYear;
+    //we will need a bool, to know when to close the period openface rectangle
+    $inPeriod;
+    //and a year to check next to the cycling year, also for closing...
+    $lastPeriodEnd;
+
     for($i = 0; $i < count($archive); ++$i){
         $lineLength = 20;
         //this should be checking if there is 
         $startYear = intval($archive[$i][startDate]);
         $endYear = intval($archive[$i][endDate]);
- 
-        //the following gives a three character shortening of the month name
+
+        //A three character shortening of the month name
         //replace the "M" with an "F" for a full month name (ie. January)
         $startMonth = date("M", strtotime($archive[$i][startDate]));
         $endMonth = date("M", strtotime($archive[$i][endDate]));
 
-        //check if this year is already printed on the time-line
-        if ($startYear !== $lastPrintedYear){
+        if ($startYear > lastPeriodEnd && $inPeriod){
+           echo "</section>";
+           echo "<div>MEOW!</div>";
+           $inPeriod = false;
+        }
+
+        //check if THIS year is already printed on the time-line, IF NOT PRINT IT
+        //you'll want to take out the part that makes sure project is true, later...
+        if ($type == "project" && $startYear !== $lastPrintedYear){
             $lastPrintedYear = $startYear;
             echo "<div class='timeline-year'>".$startYear."</div>";
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
         }
 
-        //build the html for each archive-button, making the one on display active
+        //IF this is a period, OPEN the period border/rectangle/section
+        if ($type == "period"){
+            echo "<section class='period-line'>";
+            $inPeriod = true;
+            $lastPeriodEnd = $endYear;
+        }
+
+        //create a variable, and set it to p-active if this is the "onDisplay"
         $activeState = "";
         if($archive[$i] == $onDisplay){
             $activeState = "p-active";
         }
+
+        //build this archive's archive-button!
         echo "<a href='#' class='archive'><li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <span class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</span></a>";
 
-        //don't place a timeline under a last item... 
-        if ($i !== count($archive)-1){
+        //place a timeline under this archive button, but not if it's the last!
+        //you may be able to get rid of the "project" reference here.
+        if ($i !== count($archive)-1 && $type == "project"){
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+        }
+
+        //
+        if ($i !== count($archive)-1 && $inPeriod){
+            echo "</section>";
+            $inPeriod = false;
         }
     }
 }
+
+
 
 //make "current" in the asides, add to a $page.current array
 
