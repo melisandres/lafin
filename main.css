@@ -110,15 +110,9 @@ nav a{
     text-decoration: none;
     font-size:10pt;
     position: absolute;
-    /*margin-top: -25px;
-    margin-left: -100px;*/
+    margin-top: -25px;
+    margin-left: -30px;
     pointer-events: none;
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
-    top:0;
-    height: 100%; /* Full width */
-    overflow: hidden;
-    position: fixed;
 }
 
 
@@ -174,6 +168,10 @@ border-color: black;
     margin-left: 50%;
     z-index: 1;
 }
+.timeline-year{
+    text-align: center;
+    font-size: 8pt;
+}
 
 .projects{
     grid-area: right;
@@ -184,7 +182,6 @@ border-color: black;
     justify-content: center;
     overflow: auto;
 }
-
 
 .project{
     background-color: blanchedalmond;
