@@ -142,7 +142,7 @@ border-color: black;
     visibility: visible;
 }
 a + .archive{
-    position:relative;
+    display: inline-block;
 }
 
 .periods{
@@ -174,18 +174,20 @@ a + .archive{
     border-right: 0;
     border-bottom-left-radius: 10rem;
     border-top-left-radius: 10rem;
+    text-align:center;
 }
 
 .time-line{
     width: 1px;
     /*height: 20px; it may be better to send the height over from PHP*/
     background-color: grey;
-    margin-left: 50%;
+    margin-left: 37px;
     z-index: 1;
 }
 .timeline-year{
     text-align: center;
     font-size: 8pt;
+    margin-left: 25px;
 }
 
 .projects{
@@ -202,6 +204,7 @@ a + .archive{
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
+    margin-left: 25px;
     text-align: center;
     line-height: 100px;
 }
