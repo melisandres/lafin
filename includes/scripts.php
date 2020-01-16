@@ -159,9 +159,8 @@ function fillAsides($archive, $onDisplay){
 
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
-        if ($archive[$i][startDate] >= lastPeriodEnd && $inPeriod){
+        if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
            echo "</section>";
-           echo "<div>MEOW! ".$archive[$i][startDate]." > ".$lastPeriodEnd."!</div>";
            $inPeriod = false;
         }
 
