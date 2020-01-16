@@ -5,6 +5,4 @@ function displayImage($onD){
 }
 displayImage($onDisplay);
 
-//echo "number of projects:".count($pageProjects)."<br>number of periods:".count($pagePeriods);
-//echo "<br>Current projects:".count($currentProjects)."<br>Current periods:".count($currentPeriods);
 ?>

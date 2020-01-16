@@ -165,6 +165,16 @@ a + .archive{
     position: relative;
     /*line-height: 100px;*/
 }
+.out-of-period{
+    margin-left: 50px;
+    height: auto;
+    width: 50px;
+   /* border: 1px solid red;
+    border-right: 0;
+    border-bottom-left-radius: 10rem;
+    border-top-left-radius: 10rem;*/
+    text-align:center;
+}
 
 .period-line{
     margin-left: 50px;

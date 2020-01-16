@@ -1,6 +1,7 @@
 <?php 
 fillAsides($allArchives, $onDisplay);
 ?>
+
 <script>
 //instead of placing the click function in each
 //individual links, as they populate the assides...

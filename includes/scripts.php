@@ -131,7 +131,7 @@ $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
 
 
 
-//populate both asides
+//populate the aside (it used to be two asides)
 //call the function from left-aside & right-aside?
 function fillAsides($archive, $onDisplay){
     //this is getting checked to know whether or not to print the year
@@ -161,6 +161,7 @@ function fillAsides($archive, $onDisplay){
         //and if his new archive fits into that period
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
            echo "</section>";
+           echo "<section class='out-of-period'>";
            $inPeriod = false;
         }
 
@@ -174,8 +175,8 @@ function fillAsides($archive, $onDisplay){
 
         //IF this is a period, OPEN the period border/rectangle/section
         if ($type == "period"){
-            if ($inPeriod){
-                echo "</section>";
+            if ($i !== 0){
+            echo "</section>";
             }
             echo "<section class='period-line'>";
             $inPeriod = true;
