@@ -1,6 +1,6 @@
 body{
     display:grid;
-    grid-template-columns: 110px 150px 1fr 1fr;
+    grid-template-columns: 200px 150px 1fr 1fr;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
     "nav nav nav nav"
@@ -144,10 +144,12 @@ border-color: black;
 
 .periods{
     grid-area: left;
+    padding-top: 200%;
+    padding-bottom:100%
     height: 100%;
     display: flex;
     flex-flow: column;
-    margin-left: 60%;
+
     justify-content: center; /* this is where I will need to align "now" to center*/
     overflow: auto;
 }
@@ -156,7 +158,7 @@ border-color: black;
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
-    margin-top: 150%;
+    margin-top: 50%;
     margin-left: -14px;
     border-radius: 50%;
     /*line-height: 100px;*/
@@ -164,7 +166,7 @@ border-color: black;
 
 .period-line{
     margin-left: 15px;
-    height: 100px;
+    height: auto;
     width: 25px;
     border: 1px solid red;
     border-right: 0;
