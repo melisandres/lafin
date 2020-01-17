@@ -140,6 +140,8 @@ function fillAsides($archive, $onDisplay){
     $inPeriod;
     //and a year to check next to the cycling year, also for closing...
     $lastPeriodEnd;
+    //last type... in case a period has no work in it
+    $lastType;
 
     for($i = 0; $i < count($archive); ++$i){
         $lineLength = 20;
@@ -151,7 +153,6 @@ function fillAsides($archive, $onDisplay){
         //make type more accessible
         $type = $archive[$i][type];
 
-
         //A three character shortening of the month name
         //replace the "M" with an "F" for a full month name (ie. January)
         $startMonth = date("M", strtotime($archive[$i][startDate]));
@@ -160,6 +161,10 @@ function fillAsides($archive, $onDisplay){
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
+            if ($lastType = "period" & $inPeriod){
+                $lineLength = 80;
+                echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+              }
            echo "</section>";
            echo "<section class='out-of-period'>";
            $inPeriod = false;
@@ -167,7 +172,7 @@ function fillAsides($archive, $onDisplay){
 
         //check if THIS year is already printed on the time-line, IF NOT PRINT IT
         //you'll want to take out the part that makes sure project is true, later...
-        if ($type == "project" && $startYear !== $lastPrintedYear){
+        if ($startYear !== $lastPrintedYear){
             $lastPrintedYear = $startYear;
             echo "<div class='timeline-year'>".$startYear."</div>";
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
@@ -175,12 +180,14 @@ function fillAsides($archive, $onDisplay){
 
         //IF this is a period, OPEN the period border / rectangle / section
         if ($type == "period"){
+
             if ($i !== 0){
             echo "</section>";
             }
             echo "<section class='period-line'>";
             $inPeriod = true;
             $lastPeriodEnd = $archive[$i][endDate];
+
         }
 
         //create a variable, and set it to p-active if this is the "onDisplay"
@@ -201,9 +208,14 @@ function fillAsides($archive, $onDisplay){
         //make sure that if you're at the last archive, but your period extends further,
         //that you close the period section.
         if ($i == count($archive)-1 && $inPeriod){
+            if ($lastType = "period" && $inPeriod){
+                $lineLength = 80;
+                echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+              }
             echo "</section>";
             $inPeriod = false;
         }
+        $lastType = $type;
     }
 }
 
