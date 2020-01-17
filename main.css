@@ -158,13 +158,13 @@ nav a{
 
 .period{
     position: absolute;
+    margin-top:auto;
+    margin-bottom:auto;
+    top: 0; left: -14px; bottom: 0; right: 0;
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
-    margin-top: 50%;
-    margin-left: -14px;
     border-radius: 50%;
-    line-height: 100%;
     list-style-type: none;
 }
 .out-of-period{
@@ -180,7 +180,7 @@ nav a{
     height: auto;
     min-height: 80px;
     width: 50px;
-    border: 1px solid red;
+    border: 1px solid gold;
     border-right: 0;
     border-bottom-left-radius: 10rem;
     border-top-left-radius: 10rem;
