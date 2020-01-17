@@ -1,6 +1,6 @@
 body{
     display:grid;
-    grid-template-columns: 200px 1fr 1fr;
+    grid-template-columns: 180px 1fr 1fr;
     grid-template-rows: 180px 1fr 30px;
     grid-template-areas:
     "left nav nav"
@@ -105,22 +105,39 @@ nav a{
 }
 
 .info{
-    /* height: 100% is supposed to make this part sticky*/
     position: absolute;
-    height: 100%;
+    /*height: 100%;*/
     visibility:hidden;
     list-style-type: none;
     text-decoration: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.period + .info{
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    position: absolute;
+    margin: auto;
+    top: 0; left: -50px; bottom: 0; right: 0;
+    font-size: 12pt;
+    text-align: center;
+}
+.project + .info{
+    border-width: 1px;
+    background-color: white;
+    z-index: 3;
     font-size: 10pt;
     margin-top: -25px;
-    margin-left: 20px;
-    pointer-events: none;
+    margin-left: 60px;
+    font-size: 10pt;
+    text-align: left;
 }
 
 
 .archive-button:active{
     background-color: rgb(241, 193, 176);
-    /* halfway to .pactive colour */
+    /* halfway to .p-active colour */
 }
 
 .archive-button:hover{
@@ -139,6 +156,7 @@ nav a{
     grid-area: left;
     padding-top: 200px;
     padding-bottom: 200px;
+    padding-left:10px;
     /*display: flex;
     flex-flow: column;
     justify-content: center; /* this is where I will need to align "now" to center*/
@@ -183,9 +201,9 @@ nav a{
     width: 50px;
     border: 1px solid gold;
     border-right: 0;
-    border-bottom-left-radius: 10rem;
-    border-top-left-radius: 10rem;
-    text-align:center;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    text-align: center;
 }
 
 .time-line{

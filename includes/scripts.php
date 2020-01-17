@@ -190,7 +190,7 @@ function fillAsides($archive, $onDisplay){
         }
 
         //build this archive's archive-button!
-        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <span class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</span>";
+        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <li class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</li>";
 
         //place a timeline under this archive button, but not if it's the last!
         //you may be able to get rid of the "project" reference here.
