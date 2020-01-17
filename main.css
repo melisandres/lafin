@@ -106,12 +106,12 @@ nav a{
 
 .info{
     /* height: 100% is supposed to make this part sticky*/
+    position: absolute;
     height: 100%;
     visibility:hidden;
     list-style-type: none;
     text-decoration: none;
     font-size: 10pt;
-    position: fixed;
     margin-top: -25px;
     margin-left: 20px;
     pointer-events: none;
@@ -168,6 +168,7 @@ nav a{
     list-style-type: none;
 }
 .out-of-period{
+    position: relative;
     margin-left: 50px;
     height: auto;
     width: 50px;
