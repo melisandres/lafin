@@ -173,7 +173,7 @@ function fillAsides($archive, $onDisplay){
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
         }
 
-        //IF this is a period, OPEN the period border/rectangle/section
+        //IF this is a period, OPEN the period border / rectangle / section
         if ($type == "period"){
             if ($i !== 0){
             echo "</section>";
@@ -190,7 +190,7 @@ function fillAsides($archive, $onDisplay){
         }
 
         //build this archive's archive-button!
-        echo "<a href='#' class='archive'><li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <span class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</span></a>";
+        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <span class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</span>";
 
         //place a timeline under this archive button, but not if it's the last!
         //you may be able to get rid of the "project" reference here.
@@ -202,7 +202,6 @@ function fillAsides($archive, $onDisplay){
         //that you close the period section.
         if ($i == count($archive)-1 && $inPeriod){
             echo "</section>";
-            echo "<div>WOOF!!</div>";
             $inPeriod = false;
         }
     }

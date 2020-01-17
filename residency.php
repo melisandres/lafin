@@ -29,7 +29,7 @@
 
 <!--- Aside Left-->
 <aside class="periods">
-	<?php include 'includes/aside-left.php'; ?>
+		<?php include 'includes/aside-left.php'; ?>
 </aside>
 <!--- End Aside Left-->
 

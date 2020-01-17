@@ -105,13 +105,15 @@ nav a{
 }
 
 .info{
+    /* height: 100% is supposed to make this part sticky*/
+    height: 100%;
     visibility:hidden;
     list-style-type: none;
     text-decoration: none;
-    font-size:10pt;
-    position: absolute;
+    font-size: 10pt;
+    position: fixed;
     margin-top: -25px;
-    margin-left: -30px;
+    margin-left: 20px;
     pointer-events: none;
 }
 
@@ -122,63 +124,61 @@ nav a{
 }
 
 .archive-button:hover{
-border-width: 1px;
-width: 23px;
-height: 23px;
-border-style: dotted;
-border-color: black;
-}
-
-.archive-button{
-    margin: auto;
-    list-style-type: none;
-    text-decoration: none;
+    border-width: 1px;
+    width: 23px;
+    height: 23px;
+    border-style: dotted;
+    border-color: black;
 }
 
 .archive-button:hover + .info {
     visibility: visible;
 }
-.archive-button:hover + .left_aside {
-    visibility: visible;
-}
-a + .archive{
-    display: inline-block;
-}
 
 .periods{
     grid-area: left;
     padding-top: 200px;
-    padding-bottom: 100px;
-    display: flex;
+    padding-bottom: 200px;
+    /*display: flex;
     flex-flow: column;
     justify-content: center; /* this is where I will need to align "now" to center*/
-    overflow: auto;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project{
+    background-color: blanchedalmond;
+    width: 25px;  /* Or whatever */
+    height: 25px; /* Or whatever */
+    margin-left: 25px;
+    text-align: center;
+    line-height: 100px;
+    list-style-type: none;
 }
 
 .period{
+    position: absolute;
     background-color: blanchedalmond;
     width: 25px;  /* Or whatever */
     height: 25px; /* Or whatever */
     margin-top: 50%;
     margin-left: -14px;
     border-radius: 50%;
-    position: relative;
-    /*line-height: 100px;*/
+    line-height: 100%;
+    list-style-type: none;
 }
 .out-of-period{
     margin-left: 50px;
     height: auto;
     width: 50px;
-   /* border: 1px solid red;
-    border-right: 0;
-    border-bottom-left-radius: 10rem;
-    border-top-left-radius: 10rem;*/
-    text-align:center;
+    text-align: center;
 }
 
 .period-line{
+    position: relative;
     margin-left: 50px;
     height: auto;
+    min-height: 80px;
     width: 50px;
     border: 1px solid red;
     border-right: 0;
@@ -198,25 +198,6 @@ a + .archive{
     text-align: center;
     font-size: 8pt;
     margin-left: 25px;
-}
-
-.projects{
-    grid-area: right;
-    background-color: palegoldenrod;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    overflow: auto;
-}
-
-.project{
-    background-color: blanchedalmond;
-    width: 25px;  /* Or whatever */
-    height: 25px; /* Or whatever */
-    margin-left: 25px;
-    text-align: center;
-    line-height: 100px;
 }
 
 .p-active{
