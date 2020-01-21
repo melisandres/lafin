@@ -158,6 +158,13 @@ function fillAsides($archive, $onDisplay){
         $startMonth = date("M", strtotime($archive[$i][startDate]));
         $endMonth = date("M", strtotime($archive[$i][endDate]));
 
+        if ($i == 0){
+            if ($type == "project"){
+                echo "<section class='out-of-period'>";
+                $inPeriod = true;
+            }
+        }
+
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
@@ -180,14 +187,12 @@ function fillAsides($archive, $onDisplay){
 
         //IF this is a period, OPEN the period border / rectangle / section
         if ($type == "period"){
-
             if ($i !== 0){
             echo "</section>";
             }
             echo "<section class='period-line'>";
             $inPeriod = true;
             $lastPeriodEnd = $archive[$i][endDate];
-
         }
 
         //create a variable, and set it to p-active if this is the "onDisplay"
