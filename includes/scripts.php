@@ -169,6 +169,9 @@ function fillAsides($archive, $onDisplay){
               }
            echo "</section>";
            echo "<section class='out-of-period'>";
+            if ($type =="project"){
+                echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+            }
            $inPeriod = false;
         }
 
@@ -187,6 +190,9 @@ function fillAsides($archive, $onDisplay){
         //start and one for end.
         if ($startYear !== $lastPrintedYear && $type == "project"){
             $lastPrintedYear = $startYear;
+            if ($lastType == "period"){
+                echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+            }
             echo "<div class='timeline-year'>".$startYear."</div>";
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
         }
