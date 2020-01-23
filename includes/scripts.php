@@ -144,6 +144,8 @@ function fillAsides($archive, $onDisplay){
     $lastType;
 
     for($i = 0; $i < count($archive); ++$i){
+
+        //this is the length of the time-line fragments
         $lineLength = 20;
 
         //isolate start and end years from the full date
@@ -158,17 +160,10 @@ function fillAsides($archive, $onDisplay){
         $startMonth = date("M", strtotime($archive[$i][startDate]));
         $endMonth = date("M", strtotime($archive[$i][endDate]));
 
-        if ($i == 0){
-            if ($type == "project"){
-                echo "<section class='out-of-period'>";
-                $inPeriod = true;
-            }
-        }
-
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
-            if ($lastType = "period" & $inPeriod){
+            if ($lastType == "period" && $inPeriod ){
                 $lineLength = 80;
                 echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
               }
@@ -177,9 +172,20 @@ function fillAsides($archive, $onDisplay){
            $inPeriod = false;
         }
 
+        //ensure that if the first element is a project
+        //the start of the time-line is properly formatted
+        if ($i == 0){
+            if ($type == "project"){
+                echo "<section class='out-of-period'>";
+                $inPeriod = false;
+            }
+        }
+
         //check if THIS year is already printed on the time-line, IF NOT PRINT IT
-        //you'll want to take out the part that makes sure project is true, later...
-        if ($startYear !== $lastPrintedYear){
+        //I've tried printing start years for periods too, but it's too weird.
+        //If printed, they should appear differently, and there should be one for 
+        //start and one for end.
+        if ($startYear !== $lastPrintedYear && $type == "project"){
             $lastPrintedYear = $startYear;
             echo "<div class='timeline-year'>".$startYear."</div>";
             echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
@@ -220,6 +226,8 @@ function fillAsides($archive, $onDisplay){
             echo "</section>";
             $inPeriod = false;
         }
+
+        //reset $lastType
         $lastType = $type;
     }
 }
