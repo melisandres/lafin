@@ -242,8 +242,16 @@ function fillAsides($archive, $onDisplay){
             }
         }
 
+        //make sure the title is no longer than 15char
+        $max_length = 17;
+        $title = $archive[$i][title];
+        if ($type == "project" && strlen($title) > $max_length){
+            $offset = ($max_length - 3) - strlen($title);
+            $title = substr($title, 0, strrpos($title, ' ', $offset)) . '...';
+        }
+
         //build this archive's archive-button!
-        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <li class='info'>".$archive[$i][title]."<br>".$when."</li>";
+        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <li class='info'>".$title."<br>".$when."</li>";
 
         //place a timeline under this archive button, but not if it's the last!
         //you may be able to get rid of the "project" reference here.
