@@ -160,6 +160,10 @@ function fillAsides($archive, $onDisplay){
         $startMonth = date("M", strtotime($archive[$i][startDate]));
         $endMonth = date("M", strtotime($archive[$i][endDate]));
 
+        //and now to get the days
+        $startDay = date("d", strtotime($archive[$i][startDate]));
+        $endDay = date("d", strtotime($archive[$i][endDate]));
+
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
@@ -212,9 +216,34 @@ function fillAsides($archive, $onDisplay){
         if($archive[$i] == $onDisplay){
             $activeState = "p-active";
         }
+        //do a few comparisons to figure out how to reference the dates
+        $when;
+        if ($startYear !== $endYear){
+           $when = $startYear."/".$endYear;
+        }
+        elseif($startYear == $endYear && $startMonth !== $endMonth){
+            if ($type == "project"){
+            $when = $startMonth." ".$startDay."/".$endMonth." ".$endDay;
+            }
+            elseif($type == "period"){
+                $when = $startYear." ".$startMonth."/".$endMonth;
+            }
+        }
+        elseif($startMonth == $endMonth){
+            if ($type == "period"){
+                $when = $startYear." ".$startMonth;
+            }
+            elseif ($type == "project"){
+                if ($startDay !== $endDay){
+                    $when = $startMonth." ".$startDay."/".$endDay;
+                }
+                else{$when = $startMonth." ".$startDay;}
+
+            }
+        }
 
         //build this archive's archive-button!
-        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <li class='info'>".$archive[$i][title]."<br>".$startYear."/".$endYear."</li>";
+        echo "<li data-internalid='".$archive[$i][index]."' class='".$type." archive-button ".$activeState."'></li> <li class='info'>".$archive[$i][title]."<br>".$when."</li>";
 
         //place a timeline under this archive button, but not if it's the last!
         //you may be able to get rid of the "project" reference here.
