@@ -166,13 +166,18 @@ function fillAsides($archive, $onDisplay){
 
         //with this new archive, check if you have a current period
         //and if his new archive fits into that period
+        //if the previous period ended, you have to close it up!
+        //to check if the period is empty, just check if the last type was "period"
+        //At this time, there will be no overlapping periods. 
+        //overlapping periods will need to be named, and made into their own periods.
+        //an empty period will have a 4* length timeline
         if ($archive[$i][startDate] >= $lastPeriodEnd && $inPeriod){
             if ($lastType == "period" && $inPeriod ){
-                $lineLength = 80;
-                echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
+                echo "<div class='time-line' style='height: ".$lineLength * 4 ."px;'></div>";
               }
            echo "</section>";
            echo "<section class='out-of-period'>";
+           //when we skip out of a period, 
             if ($type =="project"){
                 echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
             }
@@ -194,7 +199,7 @@ function fillAsides($archive, $onDisplay){
         //start and one for end.
         if ($startYear !== $lastPrintedYear && $type == "project"){
             $lastPrintedYear = $startYear;
-            if ($lastType == "period"){
+            if ($lastType == "period" && $inPeriod){
                 echo "<div class='time-line' style='height: ".$lineLength."px;'></div>";
             }
             echo "<div class='timeline-year'>".$startYear."</div>";
@@ -242,7 +247,7 @@ function fillAsides($archive, $onDisplay){
             }
         }
 
-        //make sure the title is no longer than 15char
+        //make sure the title is no longer than 17char
         $max_length = 17;
         $title = $archive[$i][title];
         if ($type == "project" && strlen($title) > $max_length){
