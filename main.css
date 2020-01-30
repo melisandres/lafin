@@ -23,6 +23,7 @@ body{
     justify-content: center;
     z-index: -2;  
 }
+
 figcaption{
     text-align: center;
 }
@@ -31,6 +32,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-style: solid;
     height: 60vh;
 }
 
@@ -39,7 +43,7 @@ img {
     display: flex;
     justify-items: start;
     align-items: center;
-    background-color: beige;
+    background-color: rgb(247, 247, 231);
     padding: 20px;
     z-index: -10;
     border-radius: 1rem;
@@ -50,6 +54,21 @@ footer{
     grid-area: bottom;
     background-color: teal;
 }
+
+.join-us{
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.join-us:hover{
+    background-color: gold;
+    color:whitesmoke;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: -5px;
+  }
 
 nav{
     grid-area: nav;
@@ -232,20 +251,7 @@ nav a{
 }
 
 
-.nav-link{
-    display: block;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-}
-  
-.nav-link:hover{
-    background-color: gold;
-    color:whitesmoke;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    margin-top: -5px;
-  }
+
   
 .left_aside{
     visibility:hidden;

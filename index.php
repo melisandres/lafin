@@ -16,12 +16,12 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image" id="c-image">	
+<section class="c-image">	
 	<?php $page ='home'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
-	<article class="explanation" id="c-text">
+	<article class="explanation">
 		<?php $page ='home'; include 'includes/c-text.php'; ?>
 	</article>
 </section>
@@ -35,7 +35,7 @@
 
 <footer>
 <!--- Join us Section -->
-	<a href="#default" class=nav-link>join us</a>
+	<a href="#default" class="join-us">join us</a>
 <!--- End Join us Section -->
 </footer>
 

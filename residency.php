@@ -41,7 +41,7 @@
 
 <footer>
 <!--- Join us Section -->
-	<a href="#default" class=nav-link>join us</a></li>
+	<a href="#default" class="join-us">join us</a></li>
 <!--- End Join us Section -->
 </footer>
 
