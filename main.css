@@ -42,9 +42,11 @@ img {
     background-color: beige;
     padding: 20px;
     z-index: -10;
+    border-radius: 1rem;
 }
 
 footer{
+    padding-top: 5px;
     grid-area: bottom;
     background-color: teal;
 }
@@ -85,14 +87,13 @@ nav .description{
 }
 nav .logo{
     grid-area: logo;
-    font-size: 32px;
+    font-size: 40px;
 }
 nav .lafinButtons{
     display: flex;
     justify-content: space-between;
 }
 nav .desc{
-    grid-area: desc;
     justify-self: center;
 }
 
@@ -242,6 +243,8 @@ nav a{
     background-color: gold;
     color:whitesmoke;
     padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: -5px;
   }
   
 .left_aside{
