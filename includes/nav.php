@@ -1,4 +1,4 @@
-<ul class="nav-buttons">
+<ul class="nav-menu">
 		<li class="logo"><a class="<?php if($page =='home'){echo 'active';}?>" href="index.php"><strong>LAFIN</strong></a><li>
 		<div class="lafinButtons">
 			<!--- Fiction links -->
@@ -19,7 +19,7 @@
 			<!--- End WE  -->
 			<!--- DO  -->
 			<ul class ="dropdown">
-				<li><a class="do dropbtn <?php if($page =='residency'Or $page =='academics'or $page =='presses'or $page =='gallery'or $page =='research'){echo 'active';}?>" href="#default">do</a><li>
+				<li><a class="do dropbtn <?php if($page =='residency'or $page =='academics'or $page =='presses'or $page =='gallery'or $page =='research'){echo 'active';}?>" href="#default">do</a><li>
 			<ul class="dropdown-content">
 				<li><a class="<?php if($page =='residency'){echo 'active';}?>" href="residency.php">residency</a></li>
 				<li><a class="<?php if($page =='academics'){echo 'active';}?>" href="academics.php">academics</a></li>
@@ -30,7 +30,7 @@
 		</ul>
 	</div>
 				<!--- End DO  -->
-	<li class="desc">
+	<li class="hovers">
 		<div class="fiction-hover">fiction</div>
 		<div class="we-hover">we</div>
 		<div class="do-hover">do</div>
@@ -38,18 +38,4 @@
 </ul>
 
 	<?php include 'includes/scripts.php'; ?>
-
-<script>
-	function myFunction(myObj){
-		//window.alert("FUCK "+myObj);
-		//$.ajax({
-		//	type: 'POST',
-		//	url: 'includes/archive-refresh.php',
-		//	success: function(myObj) {
-		//		//$("p").text(myObj);
-		//		<?php echo 'THIS '+ myObj +' !!!!!!'; ?>
-		//	}
-		//});
-	}
-</script>
 

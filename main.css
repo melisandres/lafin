@@ -16,7 +16,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+/* the following 3 style the center image*/
 .c-image{
     grid-area: c-image;
     align-items: center;
@@ -25,6 +25,7 @@ body{
 }
 
 figcaption{
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -38,17 +39,20 @@ img {
     height: 60vh;
 }
 
+/*this styles the center text*/
 .c-text{
     grid-area: c-text;
     display: flex;
     justify-items: start;
     align-items: center;
     background-color: rgb(247, 247, 231);
-    padding: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     z-index: -10;
     border-radius: 1rem;
 }
-
+/*the following 3 style the join us button, which is at the foot of the page*/
 footer{
     padding-top: 5px;
     grid-area: bottom;
@@ -70,6 +74,8 @@ footer{
     margin-top: -5px;
   }
 
+/*nav includes everythng on the top of the screen:
+the menu, a current page text, and a page description*/
 nav{
     grid-area: nav;
     height: 180px;
@@ -93,7 +99,10 @@ nav .description{
     text-align: left;
 }
 
-.nav-buttons{
+/*the menu itself is a collection of:
+logo, buttons, and "hovers".
+these are displayed in a css grid*/
+.nav-menu{
     display: grid;
     grid-template-columns: 160px;
     margin-right: 60px;
@@ -101,7 +110,7 @@ nav .description{
     grid-template-areas:
     "logo"
     "lafinButtons"
-    "desc";
+    "hovers";
     gap: 0.5rem;
 }
 nav .logo{
@@ -109,13 +118,17 @@ nav .logo{
     font-size: 40px;
 }
 nav .lafinButtons{
+    grid-area: buttons;
     display: flex;
     justify-content: space-between;
 }
-nav .desc{
+nav .hovers{
+    grid-area: hovers;
     justify-self: center;
 }
 
+/*these are... to make sure that the a and ul elements
+inside nav are properly styled */
 nav ul{
     list-style-type: none;
     margin: 0;
@@ -130,9 +143,11 @@ nav a{
     text-decoration: none;
 }
 
+/*in the time-line, there are titles for each node
+these are "info"*/
 .info{
     position: absolute;
-    visibility:hidden;
+    visibility: hidden;
     list-style-type: none;
     text-decoration: none;
     pointer-events: none;
@@ -149,7 +164,6 @@ nav a{
     text-align: center;
 }
 .project + .info{
-    border-width: 1px;
     background-color: white;
     z-index: 3;
     font-size: 10pt;
@@ -160,6 +174,49 @@ nav a{
 }
 
 
+
+/*time-line periods is the whole time-line. 
+It should probably be renamed... */
+.periods{
+    grid-area: left;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    padding-left:10px;
+    justify-content: center; /* this is where I will need to align "now" to center*/
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*project & period are the time-line nodes... */
+.project{
+    background-color:lightgrey;
+    width: 25px;  /* Or whatever */
+    height: 25px; /* Or whatever */
+    margin-left: 25px;
+    text-align: center;
+    line-height: 100px;
+    list-style-type: none;
+}
+
+.period{
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0; left: -14px; bottom: 0; right: 0;
+    background-color: lightgrey;
+    width: 25px;  /* Or whatever */
+    height: 25px; /* Or whatever */
+    border-radius: 50%;
+    list-style-type: none;
+}
+
+/*this is the active color for time-line node*/
+.p-active{
+    background-color: lightsalmon;
+}
+
+/*the time-line node whem: 
+pressed and hovered*/
 .archive-button:active{
     background-color: rgb(241, 193, 176);
     /* halfway to .p-active colour */
@@ -177,39 +234,8 @@ nav a{
     visibility: visible;
 }
 
-.periods{
-    grid-area: left;
-    padding-top: 100px;
-    padding-bottom: 200px;
-    padding-left:10px;
-    /*display: flex;
-    flex-flow: column;
-    justify-content: center; /* this is where I will need to align "now" to center*/
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-}
-
-.project{
-    background-color: blanchedalmond;
-    width: 25px;  /* Or whatever */
-    height: 25px; /* Or whatever */
-    margin-left: 25px;
-    text-align: center;
-    line-height: 100px;
-    list-style-type: none;
-}
-
-.period{
-    position: absolute;
-    margin-top:auto;
-    margin-bottom:auto;
-    top: 0; left: -14px; bottom: 0; right: 0;
-    background-color: blanchedalmond;
-    width: 25px;  /* Or whatever */
-    height: 25px; /* Or whatever */
-    border-radius: 50%;
-    list-style-type: none;
-}
+/*this structures the time-line areas that 
+fall outsde of a period*/
 .out-of-period{
     position: relative;
     margin-left: 51px;
@@ -218,6 +244,8 @@ nav a{
     text-align: center;
 }
 
+/*this structures the brackets that 
+encapsulate certain parts of the time-line*/
 .period-line{
     position: relative;
     margin-left: 50px;
@@ -233,6 +261,7 @@ nav a{
     text-align: center;
 }
 
+/*this is the line of the time-line*/
 .time-line{
     width: 1px;
     /*height: 20px; it may be better to send the height over from PHP*/
@@ -240,19 +269,13 @@ nav a{
     margin-left: 37px;
     z-index: 1;
 }
+/*these are the years that punctuate the time-line*/
 .timeline-year{
     text-align: center;
     font-size: 8pt;
     margin-left: 25px;
 }
-
-.p-active{
-    background-color: lightsalmon;
-}
-
-
-
-  
+/*  
 .left_aside{
     visibility:hidden;
     margin: auto;
@@ -267,29 +290,28 @@ nav a{
   }
 
   .periods::after {
-    /*content:"meow";
+    content:"meow";
     position: absolute;
     z-index: -1;
     top: 0;
     bottom: 0;
     left: 50%;
     border-left: 2px dotted #ff0000;
-    transform: translate(-50%);*/
+    transform: translate(-50%);
 }
 
 aside {
-    /*
     height: auto;
     position:relative;
     text-align:center
-    */
 }
+
 
 .vert_centered {
     display: grid;
     align-self: center;
     top:0;
-    height: 100%; /* Full width */
+    height: 100%;
     overflow: hidden;
     position: fixed;
  }
@@ -298,6 +320,7 @@ aside {
     display: grid;
     margin: 0 auto;
   }
+  */
 
   @media screen and (max-width: 768px){
       body{
