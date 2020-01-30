@@ -16,12 +16,12 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image">
+<section class="c-image" id="c-image">
 	<?php $page ='presses'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
-	<article class="explanation">
+	<article class="explanation"  id="c-text">
 		<?php $page ='presses'; include 'includes/c-text.php'; ?>
 	</article>
 </section>
