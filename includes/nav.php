@@ -5,7 +5,7 @@
 			<ul class ="dropdown fiction">
 				<li><a class="dropbtn fiction <?php if($page =='fiction'){echo 'active';}?>" href="fiction.php">fiction</a><li>
 				<ul class="dropdown-content">
-					<li>let's not and say we did...</li>te
+					<li>let's not and say we did...</li>
 				</ul>
 			</ul>
 			<!--- End Fiction -->

@@ -9,19 +9,19 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : PRESSES</div>
 	<?php $page ='presses'; include 'includes/nav.php'; ?>
+	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : PRESSES</div>
 	<div class="description">What does fiction bring to mind, if not a good book? What about a fictional book?</div>
 </nav>
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image" id="c-image">
+<section class="c-image">
 	<?php $page ='presses'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
-	<article class="explanation" id="c-text">
+	<article class="explanation">
 		<?php $page ='presses'; include 'includes/c-text.php'; ?>
 	</article>
 </section>

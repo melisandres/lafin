@@ -9,19 +9,19 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : ACADEMICS</div>
 	<?php $page ='academics'; include 'includes/nav.php'; ?>
+	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : ACADEMICS</div>
 	<div class="description">What's the value of a free education?</div>
 </nav>
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image" id="c-image">
+<section class="c-image">
 	<?php $page ='academics'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
-	<article class="explanation" id="c-text">
+	<article class="explanation">
 		<?php $page ='academics'; include 'includes/c-text.php'; ?>
 	</article>
 </section>

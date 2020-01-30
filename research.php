@@ -9,8 +9,8 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESEARCH</div>
 	<?php $page ='research'; include 'includes/nav.php'; ?>
+	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESEARCH</div>
 	<div class="description">Is fiction a useful tool when it comes to rigourous scientific research? Many would say that it's the enemy of research. We are not amongst the many.</div>
 </nav>
 <!--- End Navigation -->
@@ -21,7 +21,7 @@
 </section>
 
 <section class="c-text">
-	<article class="explanation" id="c-text">
+	<article class="explanation">
 		<?php $page ='research'; include 'includes/c-text.php'; ?>
 	</article>
 </section>

@@ -9,8 +9,8 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESIDENCY</div>
 	<?php $page ='residency'; include 'includes/nav.php'; ?>
+	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESIDENCY</div>
 	<div class="description">Various members of our board of directors have taken on the honour of hosting our residency program.</div>
 </nav>
 <!--- End Navigation -->
