@@ -1,3 +1,7 @@
+html{
+    margin: 0px;
+    padding: 0px;  
+}
 body{
     display:grid;
     grid-template-columns: 220px 1fr 1fr;
@@ -9,7 +13,7 @@ body{
     height: 100vh;
     margin: 0px;
     padding: 0px;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -17,7 +21,6 @@ body{
     grid-area: c-image;
     align-items: center;
     justify-content: center;
-    /*background-color: goldenrod;*/
     z-index: -2;  
 }
 figcaption{
@@ -57,21 +60,22 @@ nav{
     }
 
 nav .name{
-    padding: 30px;
-    /*width: 30vw;*/
+    padding: 50px;
+    width: 25vw;
     text-align: left;
 }
 
 nav .description{
     text-align: left;
     color: darkkhaki;
-    /*width: 30vw;*/
-    padding: 30px;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .nav-buttons{
     display: grid;
-    grid-template-columns: 180px;
+    grid-template-columns: 160px;
+    margin-right: 60px;
     grid-template-rows: 50px 30px 100px;
     grid-template-areas:
     "logo"
@@ -155,7 +159,7 @@ nav a{
 
 .periods{
     grid-area: left;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 200px;
     padding-left:10px;
     /*display: flex;
@@ -231,13 +235,13 @@ nav a{
     display: block;
     color: #000;
     text-align: center;
-    padding: 10px 10px;
     text-decoration: none;
 }
   
 .nav-link:hover{
     background-color: gold;
     color:whitesmoke;
+    padding-bottom: 10px;
   }
   
 .left_aside{
