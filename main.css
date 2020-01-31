@@ -25,6 +25,7 @@ both image and figcaption */
     grid-area: c-image;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     z-index: -2;  
 }
 
@@ -36,7 +37,7 @@ figcaption{
     display: table-caption; 
     caption-side: bottom ;
     margin-top: 10px;
-    text-align: center;
+    text-align: right;
 }
 
 img {
