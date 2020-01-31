@@ -5,7 +5,7 @@ html{
 body{
     display:grid;
     grid-template-columns: 220px 1fr 1fr;
-    grid-template-rows: 180px 1fr 30px;
+    grid-template-rows: 140px 1fr 30px;
     grid-template-areas:
     "nav nav nav"
     "left c-image c-text"
@@ -78,29 +78,52 @@ footer{
 the menu, a current page text, and a page description*/
 nav{
     grid-area: nav;
-    height: 180px;
+    height: 140px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
-    align-items: center;
+    align-content: flex-start;
+    background-color: lightgray;
+    border-color: grey;
+    border-style: dashed;
+    border-width: 1px;
+    border-left: none;
+    border-right:none;
     }
 
-nav .name{
-    padding: 50px;
+nav .title-area{
+    padding-left: 0px;
+    margin-top: 15px;
     width: 25vw;
+    min-width: 320px;
     text-align: left;
+    margin-left: -50px;
 }
+
+nav .lafin{
+    display: inline-block;
+
+}
+
+nav .current-page{
+    display: inline-block;
+}
+
 
 nav .description{
     text-align: left;
-    color: darkkhaki;
+    color: grey;
     flex-grow: 1;
-    text-align: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    border-left: grey;
+    border-width: 0px 0px 0px 1px;
+    border-style: dashed;
 }
 
 /*the menu itself is a collection of:
-logo, buttons, and "hovers".
+logo, buttons, and "menu-items".
 these are displayed in a css grid*/
 .nav-menu{
     display: grid;
@@ -110,7 +133,7 @@ these are displayed in a css grid*/
     grid-template-areas:
     "logo"
     "lafinButtons"
-    "hovers";
+    "menuItems";
     gap: 0.5rem;
 }
 nav .logo{
@@ -123,14 +146,17 @@ nav .lafinButtons{
     display: flex;
     justify-content: space-between;
 }
-nav .hovers{
-    grid-area: hovers;
+nav .menu-items{
+    grid-area: menuItems;
     justify-self: center;
 }
 
 /*these make sure that the a and ul elements
 inside nav are properly styled 
-HOWEVER, they affect all elements of the menu*/
+HOWEVER, they affect all elements of the menu
+
+these styles need to be cleaned up, so that 
+it's clear what style is responsible for what*/
 nav ul{
     list-style-type: none;
     margin: 0;

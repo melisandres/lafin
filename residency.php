@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='residency'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESIDENCY</div>
+		<div class="title-area">
+			<span class="lafin">
+				<strong>Liberal Arts Fictional Institute of Narrative</strong>
+			</span>
+			<span class="current-page">
+				CURRENT PAGE : RESIDENCY
+			</span>
+		</div>
 	<div class="description">Various members of our board of directors have taken on the honour of hosting our residency program.</div>
 </nav>
 <!--- End Navigation -->

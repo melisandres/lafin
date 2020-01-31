@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='we'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : WHO WE ARE</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : WHO WE ARE
+		</span>
+	</div>
 	<div class="description">We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.</div>
 </nav>
 <!--- End Navigation -->

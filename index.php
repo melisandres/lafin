@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='home'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : HOME</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : HOME
+		</span>
+		</div>
 	<div class="description">The Liberal Arts Fictional Institute of Narrative was named in France, in the early nineteen-tens. It was the end of a period, and with every end, a new beginning.</div>
 </nav>
 <!--- End Navigation -->

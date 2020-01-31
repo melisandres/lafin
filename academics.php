@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='academics'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : ACADEMICS</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : ACADEMICS
+		</span>
+	</div>
 	<div class="description">What's the value of a free education?</div>
 </nav>
 <!--- End Navigation -->

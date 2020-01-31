@@ -30,7 +30,7 @@
 		</ul>
 	</div>
 				<!--- End DO  -->
-	<li class="hovers">
+	<li class="menu-items">
 		<div class="fiction-hover">fiction</div>
 		<div class="we-hover">we</div>
 		<div class="do-hover">do</div>

@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='presses'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : PRESSES</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : PRESSES
+		</span>
+	</div>
 	<div class="description">What does fiction bring to mind, if not a good book? What about a fictional book?</div>
 </nav>
 <!--- End Navigation -->

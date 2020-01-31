@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='research'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : RESEARCH</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : RESEARCH
+		</span>
+	</div>
 	<div class="description">Is fiction a useful tool when it comes to rigourous scientific research? Many would say that it's the enemy of research. We are not amongst the many.</div>
 </nav>
 <!--- End Navigation -->

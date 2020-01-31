@@ -10,7 +10,14 @@
 <!--- Navigation -->
 <nav>
 	<?php $page ='gallery'; include 'includes/nav.php'; ?>
-	<div class="name"><strong>Liberal Arts Fictional Institute of Narrative</strong><br><br><br>CURRENT PAGE : GALLERY</div>
+	<div class="title-area">
+		<span class="lafin">
+			<strong>Liberal Arts Fictional Institute of Narrative</strong>
+		</span>
+		<span class="current-page">
+			CURRENT PAGE : GALLERY
+		</span>
+	</div>
 	<div class="description">An online gallery space with a buffalo as a curator.</div>
 </nav>
 <!--- End Navigation -->
