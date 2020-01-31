@@ -36,9 +36,7 @@
 
 <!--- Aside Left-->
 <aside class="left">
-	<a href="#default" 
-	class="nav-link left_aside vert_centered">our past
-	</a>
+
 </aside>
 <!--- End Aside Left-->
 

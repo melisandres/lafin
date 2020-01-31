@@ -5,7 +5,7 @@ html{
 body{
     display:grid;
     grid-template-columns: 220px 1fr 1fr;
-    grid-template-rows: 140px 1fr 30px;
+    grid-template-rows: 135px 1fr 30px;
     grid-template-areas:
     "nav nav nav"
     "left c-image c-text"
@@ -16,22 +16,32 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-/* the following 3 style the center image*/
+/* the following 4 style the center image
+c-image is in the html on each page, and contains:
+centre-image, which is a style placed on the figure
+that is echoed out via the php script, and contains
+both image and figcaption */
 .c-image{
     grid-area: c-image;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-end;
     z-index: -2;  
 }
 
+.center-image{
+    display: table;
+}
+
 figcaption{
+    display: table-caption; 
+    caption-side: bottom ;
     margin-top: 10px;
     text-align: center;
 }
 
 img {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     display: block;
     border-color: lightgrey;
     border-width: 1px;
@@ -46,8 +56,9 @@ img {
     justify-items: start;
     align-items: center;
     background-color: rgb(247, 247, 231);
-    padding-left: 50px;
-    padding-top: 50px;
+    padding-left: 40px;
+    padding-right:30px;
+    padding-top: 40px;
     padding-bottom: 50px;
     z-index: -10;
     border-radius: 1rem;
@@ -78,7 +89,7 @@ footer{
 the menu, a current page text, and a page description*/
 nav{
     grid-area: nav;
-    height: 140px;
+    height: 135px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -117,9 +128,11 @@ nav .description{
     flex-grow: 1;
     padding-top: 15px;
     padding-left: 20px;
+    padding-right: 15px;
     border-left: grey;
     border-width: 0px 0px 0px 1px;
     border-style: dashed;
+    overflow: scroll;
 }
 
 /*the menu itself is a collection of:
