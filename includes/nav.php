@@ -5,7 +5,7 @@
 			<ul class ="dropdown fiction">
 				<li><a class="dropbtn fiction <?php if($page =='fiction'){echo 'active';}?>" href="fiction.php">fiction</a><li>
 				<ul class="dropdown-content">
-					<li>let's not and say we did...</li>
+					<li class="secret">let's not and say we did...</li>
 				</ul>
 			</ul>
 			<!--- End Fiction -->
@@ -13,7 +13,7 @@
 			<ul class ="dropdown we">
 				<li><a class="dropbtn we <?php if($page =='we'){echo 'active';}?>" href="we.php">we</a></li>
 				<ul class="dropdown-content">
-					<li><a <?php if($page =='we'){echo 'active';}?> href="we.php">who we are</a></li>
+					<li class="who"><a <?php if($page =='we'){echo 'active';}?> href="we.php">who we are</a></li>
 				</ul>
 			</ul>
 			<!--- End WE  -->

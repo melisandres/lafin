@@ -116,6 +116,7 @@ these are displayed in a css grid*/
 nav .logo{
     grid-area: logo;
     font-size: 40px;
+    text-align: center;
 }
 nav .lafinButtons{
     grid-area: buttons;
@@ -127,8 +128,9 @@ nav .hovers{
     justify-self: center;
 }
 
-/*these are... to make sure that the a and ul elements
-inside nav are properly styled */
+/*these make sure that the a and ul elements
+inside nav are properly styled 
+HOWEVER, they affect all elements of the menu*/
 nav ul{
     list-style-type: none;
     margin: 0;
@@ -136,7 +138,7 @@ nav ul{
   }
 
 nav a{
-    display: block;
+    display: inline-block;
     color: #000;
     text-align: center;
     padding: 10px 10px;
@@ -320,75 +322,93 @@ aside {
   }
   */
 
-  @media screen and (max-width: 768px){
-      body{
-          display:none;
-      }
-  }
+    @media screen and (max-width: 768px){
+        body{
+            display:none;
+        }
+    }
 
   /* Dropdown Button */
-  .dropbtn {
-    background-color: lightgrey;
-    color: white;
-    padding: 2px 8px;
-    font-size: 20px;
-  }
+    .dropbtn {
+        color: grey;
+        padding: 2px 8px;
+        font-size: 20px;
+        display: inline-block;
+    }
   
   /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+    .dropdown {
+        position: relative;
+        display: block;
+    }
   
   /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 180px;
-    z-index: 1;
-  }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 9px 9px;
-  }
+    .dropdown-content a {
+        color: grey;
+        padding-bottom: 9px;
+    }
+    .secret{
+        position: absolute;
+        margin-left: 9px;
+        white-space: nowrap;
+        z-index: 90;
+    }
+    .who{
+        white-space: nowrap;
+        margin-top: -9px;
+    }
   
-  .active{
+    .active{
         color:firebrick;
-  }
+    }
 
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown-content a:hover {
+    color: black;
+    }
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: grey;} 
-
-.fiction-hover{
-    display:none;
-    font-size: 100px;
-    z-index: 5;
-}
-.we-hover{
-    display:none;
-    font-size: 100px;
-    z-index: 5;
-}
-.do-hover{
-    display:none;
-    font-size: 100px;
-    z-index: 5;
-}
- .do:hover > .do-hover{
-    display:block;
-}
- .we:hover > .we-hover{
-    display:block;
+    .dropdown:hover .dropdown-content {
+      display: inline-block;
     }
- .fiction:hover + .fiction-hover{
-    display:block;
+  
+  /* Change the background color of the dropdown 
+  button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      color: black;
+    } 
+
+    .fiction-hover{
+        display: none;
+        font-size: 100px;
+        z-index: 5;
+        text-align: left;
+    }
+    .we-hover{
+        display: none;
+        font-size: 100px;
+        z-index: 5;
+        text-align: left;
+    }
+    .do-hover{
+        display: none;
+        font-size: 100px;
+        z-index: 5;
+        text-align: left;
+    }
+    .do:hover > .do-hover{
+        display: inline-block;
+    }
+    .we:hover > .we-hover{
+        display: inline-block;
+    }
+    .fiction:hover + .fiction-hover{
+        display: inline-block;
     }
