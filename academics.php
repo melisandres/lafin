@@ -23,12 +23,12 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image">
+<section class="c-image" id="c-image">
 	<?php $page ='academics'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
-	<article class="explanation">
+	<article class="explanation" id="c-text">
 		<?php $page ='academics'; include 'includes/c-text.php'; ?>
 	</article>
 </section>

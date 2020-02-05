@@ -47,7 +47,8 @@ img {
     border-color: lightgrey;
     border-width: 1px;
     border-style: solid;
-    height: 60vh;
+    max-height: 60vh;
+    max-width: 60vh;
 }
 
 /*this styles the center text*/
