@@ -31,6 +31,12 @@ both image and figcaption */
 
 .center-image{
     display: table;
+    width: 500px;
+    height: 500px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: firebrick;
+    background-color: black;
 }
 
 figcaption{
@@ -41,13 +47,16 @@ figcaption{
 }
 
 img {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     display: block;
-    border-color: lightgrey;
+    /*border-color: lightgrey;
     border-width: 1px;
-    border-style: solid;
-    max-height: 60vh;
+    border-style: solid;*/
+    max-height: 500px;
+    min-height: 500px;
     max-width: 60vh;
 }
 
@@ -65,7 +74,8 @@ img {
     z-index: -10;
     border-radius: 1rem;
 }
-/*the following 3 style the join us button, which is at the foot of the page*/
+/*the following 3 style the join us button, 
+which is at the foot of the page*/
 footer{
     padding-top: 5px;
     grid-area: bottom;
@@ -253,7 +263,7 @@ It should probably be renamed... */
 
 /*this is the active color for time-line node*/
 .p-active{
-    background-color: lightsalmon;
+    background-color: crimson;
 }
 
 /*the time-line node whem: 
