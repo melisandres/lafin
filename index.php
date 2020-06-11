@@ -18,7 +18,7 @@
 			CURRENT PAGE : HOME
 		</span>
 		</div>
-	<div class="description">The Liberal Arts Fictional Institute of Narrative was named in France, in the early nineteen-tens. It was the end of a period, and with every end, a new beginning.</div>
+	<div class="description">The Liberal Arts Fictional Institute of Narrative was named in France, in the early nineteen-tens. Formerly Le Coup de Grace, and before that Le Pavillon Marcault, Lafin marked the end of a period, and with every end, a new beginning.</div>
 </nav>
 <!--- End Navigation -->
 
