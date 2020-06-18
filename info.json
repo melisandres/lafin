@@ -354,7 +354,7 @@
     "countdown": false,
     "icon": "",
     "preBlurb": "",
-    "blurb": "Every relationship is it's own special economy, defined by its unique brand of transactionality. That's why, the protagonist that journeys through a capitalist framework is isolated by it, ensconced in predictable relationships and plastic drama. And why not? When economics and poetry can no longer share the stage, the individual is left with nothing.",
+    "blurb": "Every relationship is its own special economy, defined by its unique brand of transactionality. That's why, the protagonist that journeys through a capitalist framework is isolated by it, ensconced in predictable relationships and plastic drama. And why not? When economics and poetry can no longer share the stage, the individual is left with nothing.",
     "postBlurb": ""
 },
 {   "index": 21,
@@ -388,7 +388,7 @@
     "countdown": false,
     "icon": "img/residency/2019-10-01.jpg",
     "preBlurb": "",
-    "blurb": "trying to pin things down in a dream causes a kind of spiralling, a written note whose symbols morph, and float, and where meaning never stands still.",
+    "blurb": "trying to pin things down in a dream causes a kind of spiralling, a written note whose symbols morph, and float, and where meaning never stands st.",
     "postBlurb": ""
 },
 {   "index": 23,
@@ -457,6 +457,23 @@
     "icon": "",
     "preBlurb": "",
     "blurb": "Inside the clamber bondyo shinset boo of the pommel pommel blintz, there are secrets no one will tell, but I heard, because, well... listen, I can't say it too loud, you know, but it's a fact that the stuff you hear through the walls are only as true as all that. ",
+    "postBlurb": ""
+},
+{   "index": 27,
+    "type": "project",
+    "page": "research",
+    "image1": "/img/egg_head.jpg",
+    "alt1": "Image of a humpty dumpty as an elizabethan egg.",
+    "caption1": "The perils of walls: sitting on, writing on, building up, breaking down.",
+    "startDate": "2010-11-13",
+    "endDate": "2014-11-13",
+    "title": "The Walls",
+    "lead": "Fred Morse, Robert Kozlowski et al.",
+    "collaborators": [],
+    "countdown": false,
+    "icon": "",
+    "preBlurb": "",
+    "blurb": "The Chinese Wall of wall-related research, with as large a scope as possible, and absolutely no funding. Embracing cross disciplinary approaches and scientific antagonism, this four-year expedition through Wall Investigations brings together anthropology, dream experiments, travel, thought experiments, and glue-slathered popsicle sticks. ",
     "postBlurb": ""
 }
 ]
