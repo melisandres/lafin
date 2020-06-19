@@ -5,7 +5,6 @@ function displayText($onD){
 
         if ($onD[index] == "27") {
                 include '../infos/'.$onD[index].'.php'; 
-                echo "got it!";
         }
         else { 
                 echo "<p>".$onD[blurb]."</p>";

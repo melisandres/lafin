@@ -59,10 +59,11 @@ img {
 
 /*this styles the center text*/
 .c-text{
+    max-height: 600px;
     grid-area: c-text;
     display: flex;
     justify-items: start;
-    align-items: center;
+    /*align-items: center;*/
     background-color: rgb(247, 247, 231);
     padding-left: 40px;
     padding-right:30px;
@@ -70,6 +71,8 @@ img {
     padding-bottom: 50px;
     z-index: -10;
     border-radius: 1rem;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
 /*the following 3 style the join us button, 
 which is at the foot of the page*/
