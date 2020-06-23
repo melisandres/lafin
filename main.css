@@ -4,7 +4,7 @@ html{
 }
 body{
     display:grid;
-    grid-template-columns: 220px 1fr 1fr;
+    grid-template-columns: 220px 600px 1fr;
     grid-template-rows: 135px 1fr 30px;
     grid-template-areas:
     "nav nav nav"
@@ -45,14 +45,14 @@ figcaption{
 }
 
 img {
-    margin-left: auto;
+   /* margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    display: block;
+    display: block;*/
     max-height: 500px;
     min-height: 500px;
-    max-width: 60vh;
+    /*max-width: 60vh;*/
     border-width: 0em;
     border-color: black;
 }
@@ -63,7 +63,7 @@ img {
     grid-area: c-text;
     display: flex;
     justify-items: start;
-    /*align-items: center;*/
+/*    align-items: center;*/
     background-color: rgb(247, 247, 231);
     padding-left: 40px;
     padding-right:30px;
@@ -71,9 +71,42 @@ img {
     padding-bottom: 50px;
     z-index: -10;
     border-radius: 1rem;
-    overflow-x: scroll;
     overflow-y: scroll;
 }
+/*inside the center text, there are multiple 
+parts, that are "collapsible"... well, not 
+exactly, but the different parts will be accessible
+via buttons that are given the "collapsible" class
+the code is built on W3's tutorial on collapsibles */
+
+/* Style the button that is used to open and close 
+the collapsible content/stuff */
+.collapsible{
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+}
+/* Add a background color to the button 
+if it is clicked on (add the .active class with JS), 
+and when you move the mouse over it (hover) */
+.collapsible:active, .collapsible:hover {
+    background-color: green;
+}
+      
+/* Style the collapsible /stuff. 
+Note: hidden by default */
+.content{
+    padding: 0 18px;
+    overflow: hidden;
+    display: none;
+    background-color: transparent;
+}
+      
+    
 /*the following 3 style the join us button, 
 which is at the foot of the page*/
 footer{
@@ -115,6 +148,7 @@ nav{
     border-right:none;
     }
 
+    
 nav .title-area{
     padding-left: 0px;
     margin-top: 15px;

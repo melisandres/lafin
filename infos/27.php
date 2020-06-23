@@ -1,17 +1,15 @@
 	<button type="button" class="collapsible">about</button>
-	<div class=“content”>
+	<div class="content">
 		<p>Walls. We built our research with as large a scope as possible, as many researchers as we could manage with absolutely no funding. Embracing cross-disciplinary approaches and scientific agnosticism, this four-year expedition ties together anthropology, biology, dream research, travel, art, thought experiments, and glue-slathered popsicle sticks.</p>
 	</div>
 
 	<button type="button" class="collapsible">researcher statement</button>
-	<div class=“content”>
-		<h4>researcher statement</h4>
+	<div class="content">
 		<p>In pulling together the team, Robert and I placed a special attention on differences in research approach. We considered the theme as a metaphor that could inform our collaborative practices.</p>
 	</div>	
 
 	<button type="button" class="collapsible">archivist statement</button>
 	<div class="content">
-		<h4>archivist statement</h4>
 		<p>Although we're able to confirm that this research gave rise to a number of strange wall-like structures in and around the Boston area, where M. Kozlowski lives and works, we have not been able to acquire fuller documentation of research activities and notes pertinent to this multi-faceted work. We have come to believe that the archives are most likely being stored in the garage of the grandparents of one of the unnamed grad students who worked on this project in late 2014.</p>
 	</div>
 
@@ -26,3 +24,4 @@
 	</div>
 
 
+	
