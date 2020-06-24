@@ -1,3 +1,4 @@
+<div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
 		<p>Walls. We built our research with as large a scope as possible, as many researchers as we could manage with absolutely no funding. Embracing cross-disciplinary approaches and scientific agnosticism, this four-year expedition ties together anthropology, biology, dream research, travel, art, thought experiments, and glue-slathered popsicle sticks.</p>
@@ -24,5 +25,5 @@
 		<h4>Anonymous Underlings</h4>
 			<p>A number of citizen scientists, artists, and grad students worked tirelessly to make this research possible.</p>			
 	</div>
-
+</div>
 
