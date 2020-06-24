@@ -17,18 +17,27 @@ function SetUpArchiveText(){
                         for(i = 0; i < coll.length; i++){
                                 if ($(coll[i]).hasClass("archive-info-active")){
                                         coll[i].classList.toggle("archive-info-active");
-                                        coll[i].nextElementSibling.style.display = "none";
+                                        coll[i].nextElementSibling.style.maxHeight = null;
                                 }
                         }
 
                         this.classList.toggle("archive-info-active");
                         var content = this.nextElementSibling;
-                        if (content.style.display === "block") {
-                                content.style.display = "none";
-                        } 
-                        else {
-                                content.style.display = "block";
-                        }
+
+                        if (content.style.maxHeight){
+                                content.style.maxHeight = null;
+                                } else {
+                                content.style.maxHeight = content.scrollHeight + "px";                                
+                                } 
+
+
+
+                 //       if (content.style.display === "block") {
+                 //               content.style.display = "none";
+                 //       } 
+                 //       else {
+                 //               content.style.display = "block";
+                 //       }
                 });
         }
 } 

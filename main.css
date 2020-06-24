@@ -117,12 +117,14 @@ Note: hidden by default */
     padding: 0 18px;
     margin-left: -17px;
     margin-top: 50px;
-    overflow: hidden;
-    display: none;
+    /*overflow: hidden;
+    display: none;*/
     background-color: transparent;
     position: absolute;
     /*pointer-events: none;*/
-    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
       
     
