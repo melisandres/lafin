@@ -11,11 +11,17 @@
 function SetUpArchiveText(){
         var coll = document.getElementsByClassName("collapsible");
         var i;
-
+        
         for (i = 0; i < coll.length; i++) {
                 coll[i].addEventListener("click", function() {
-                        window.alert("got it!");
-                        this.classList.toggle("active");
+                        for(i = 0; i < coll.length; i++){
+                                if ($(coll[i]).hasClass("archive-info-active")){
+                                        coll[i].classList.toggle("archive-info-active");
+                                        coll[i].nextElementSibling.style.display = "none";
+                                }
+                        }
+
+                        this.classList.toggle("archive-info-active");
                         var content = this.nextElementSibling;
                         if (content.style.display === "block") {
                                 content.style.display = "none";
