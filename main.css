@@ -128,7 +128,7 @@ Note: hidden by default */
     overflow: hidden;
     transition: max-height 0.2s ease-out;*/
     /*left: 20px;*/
-    left: 120%;
+    left: -80%;
     width: 80%;
     /*overflow: hidden;*/
     display: block;

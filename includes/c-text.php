@@ -27,7 +27,7 @@ function SetUpArchiveText(){
                                                 //coll[i].nextElementSibling.style.maxHeight = null;
                                                 //window.alert("animating out");
                                                 console.log("animating lastContent out");
-                                                $(lastContent.nextElementSibling).animate({left: '-90%'}, 'slow');
+                                                $(lastContent.nextElementSibling).animate({left: '90%'}, 'slow');
                                                 //lastContent.nextElementSibling.style.display = "none";
                                         }
                                 }
@@ -40,11 +40,11 @@ function SetUpArchiveText(){
                         var newContent = this.nextElementSibling;
 
                         //if (newContent.style.display === "none") {
-                        //        newContent.style.display = "block";
-                                newContent.style.left= "-80%";
+                                //newContent.style.display = "block";
+                                newContent.style.left = "-80%";
                                 console.log("animatingg in");
-                                $(newContent.nextElementSibling).animate({left: '5%'}, 'slow')
-                                newContent.style.left= "20px";
+                                $(newContent).animate({left: '20px'}, 'slow');
+                                //newContent.style.left= "20px";
                         //} 
                         //else {
                         //        window.alert("falling into the else 'block'");
