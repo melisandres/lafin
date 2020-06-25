@@ -84,33 +84,41 @@ the code is built on W3's tutorial on collapsibles */
 .archive-c-text{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 /* Style the button that is used to open and close 
 the collapsible content/stuff */
 .collapsible{
-    background-color: #eee;
-    color: #444;
+    background-color:whitesmoke;
+    color: #777;
     cursor: crosshair;
     padding: 4px;
-    width: auto;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: bolder;
+    border-top-left-radius: 30%;
+    border-width: 2px, 2px, 1px, 2px;
 }
 /* Add a background color to the button 
 if it is clicked on (add the .active class with JS), 
 and when you move the mouse over it (hover) */
 .collapsible:hover {
-    background-color:whitesmoke;
-    color:black;
+    background-color: white;
+    color: #444;
     font-weight: bolder;
-
+    font-size: 11px;
+}
+.collapsible:focus {
+    outline: 0;
 }
 /*this is for the button in the c-text area that 
 opens the archive info currently being viewed*/
 .archive-info-active, .archive-info-active:hover{
-    background-color: fuchsia;
+    border-bottom: none;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 231);
+    color: #444;
+    font-size: 11px;
 }
       
 /* Style the collapsible /stuff. 
@@ -123,7 +131,7 @@ Note: hidden by default */
     /*pointer-events: none;*/
     /*max-height: 0;
     transition: max-height 0.2s ease-out;*/
-    left: -80%;
+    left: -100%;
     width: 80%;
     /*overflow: hidden;*/
 }

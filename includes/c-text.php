@@ -33,14 +33,14 @@ function SetUpArchiveText(){
                                         }
                                         else{
                                                 lastContent.classList.toggle("archive-info-active");
-                                                $(lastContent.nextElementSibling).animate({left: '100%'}, "fast");
+                                                $(lastContent.nextElementSibling).animate({left: '100%'}, 450, "swing");
                                         }
                                 }
                         }
                         this.classList.toggle("archive-info-active");
                         var newContent = this.nextElementSibling;
-                        newContent.style.left = "-80%";
-                        $(newContent).animate({left: '20px'});
+                        newContent.style.left = "-100%";
+                        $(newContent).animate({left: '20px'}, 700);
                 });
         }
 } 
