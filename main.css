@@ -117,21 +117,15 @@ opens the archive info currently being viewed*/
 Note: hidden by default */
 .content{
     padding: 0 18px;
-    /*margin-left: -17px;*/
     top: 200px;
-    /*overflow: hidden;
-    display: none;*/
     background-color: transparent;
     position: absolute;
     /*pointer-events: none;*/
     /*max-height: 0;
-    overflow: hidden;
     transition: max-height 0.2s ease-out;*/
-    /*left: 20px;*/
     left: -80%;
     width: 80%;
     /*overflow: hidden;*/
-    display: block;
 }
       
     

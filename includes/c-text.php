@@ -8,7 +8,16 @@
 //define it here, as a function. and then call it
 //from the php file function displayText() in c-text.php
 
-
+//what this does is:
+// -it gets all the elements with class "collapsible" (buttons)
+// -it places an event listener on each
+// -the event listener, listens for click. 
+// -when a click occurs, the script cycles through "collapsibles"
+// -for each, it determines if that button is currently active.
+// -if the button is active and just clicked, it exits the function
+// -otherwise, is deactivates the button and slides it's content out.
+// -NOW, it can look at itself, the button clicked
+// -set that button to active, and slide it's content onscreen
 
 function SetUpArchiveText(){
         var coll = document.getElementsByClassName("collapsible");
@@ -20,48 +29,18 @@ function SetUpArchiveText(){
                                 if ($(coll[i]).hasClass("archive-info-active")){
                                         var lastContent = coll[i];
                                         if (lastContent === this){
-                                                console.log("detecting an ACTIVE button was clicked again");
+                                                return;
                                         }
                                         else{
                                                 lastContent.classList.toggle("archive-info-active");
-                                                //coll[i].nextElementSibling.style.maxHeight = null;
-                                                //window.alert("animating out");
-                                                console.log("animating lastContent out");
-                                                $(lastContent.nextElementSibling).animate({left: '90%'}, 'slow');
-                                                //lastContent.nextElementSibling.style.display = "none";
+                                                $(lastContent.nextElementSibling).animate({left: '100%'}, "fast");
                                         }
                                 }
-                                else{
-                                        //coll[i].nextElementSibling.style.display = "none";  
-                                }
                         }
-         //       });
                         this.classList.toggle("archive-info-active");
                         var newContent = this.nextElementSibling;
-
-                        //if (newContent.style.display === "none") {
-                                //newContent.style.display = "block";
-                                newContent.style.left = "-80%";
-                                console.log("animatingg in");
-                                $(newContent).animate({left: '20px'}, 'slow');
-                                //newContent.style.left= "20px";
-                        //} 
-                        //else {
-                        //        window.alert("falling into the else 'block'");
-                        //        content.style.display = "block";
-                        //}
-                 //       if (content.style.maxHeight){
-                 //               content.style.maxHeight = null;
-                 //               } else {
-                 //               content.style.maxHeight = content.scrollHeight + "px";                                
-                 //               } 
-                 
-                 //       if (content.style.display === "block") {
-                 //               content.style.display = "none";
-                 //       } 
-                 //       else {
-                 //               content.style.display = "block";
-                 //       }
+                        newContent.style.left = "-80%";
+                        $(newContent).animate({left: '20px'});
                 });
         }
 } 
