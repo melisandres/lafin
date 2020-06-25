@@ -72,6 +72,7 @@ img {
     border-radius: 1rem;
     position: relative;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*inside the center text, there are multiple 
@@ -83,6 +84,7 @@ the code is built on W3's tutorial on collapsibles */
 .archive-c-text{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /* Style the button that is used to open and close 
@@ -93,7 +95,7 @@ the collapsible content/stuff */
     cursor: crosshair;
     padding: 4px;
     width: auto;
-    text-align: left;
+    text-align: center;
     font-size: 12px;
 }
 /* Add a background color to the button 
@@ -115,16 +117,21 @@ opens the archive info currently being viewed*/
 Note: hidden by default */
 .content{
     padding: 0 18px;
-    margin-left: -17px;
-    margin-top: 50px;
+    /*margin-left: -17px;*/
+    top: 200px;
     /*overflow: hidden;
     display: none;*/
     background-color: transparent;
     position: absolute;
     /*pointer-events: none;*/
-    max-height: 0;
+    /*max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;*/
+    /*left: 20px;*/
+    left: 120%;
+    width: 80%;
+    /*overflow: hidden;*/
+    display: block;
 }
       
     

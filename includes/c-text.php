@@ -8,6 +8,8 @@
 //define it here, as a function. and then call it
 //from the php file function displayText() in c-text.php
 
+
+
 function SetUpArchiveText(){
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -16,22 +18,44 @@ function SetUpArchiveText(){
                 coll[i].addEventListener("click", function() {
                         for(i = 0; i < coll.length; i++){
                                 if ($(coll[i]).hasClass("archive-info-active")){
-                                        coll[i].classList.toggle("archive-info-active");
-                                        coll[i].nextElementSibling.style.maxHeight = null;
+                                        var lastContent = coll[i];
+                                        if (lastContent === this){
+                                                console.log("detecting an ACTIVE button was clicked again");
+                                        }
+                                        else{
+                                                lastContent.classList.toggle("archive-info-active");
+                                                //coll[i].nextElementSibling.style.maxHeight = null;
+                                                //window.alert("animating out");
+                                                console.log("animating lastContent out");
+                                                $(lastContent.nextElementSibling).animate({left: '-90%'}, 'slow');
+                                                //lastContent.nextElementSibling.style.display = "none";
+                                        }
+                                }
+                                else{
+                                        //coll[i].nextElementSibling.style.display = "none";  
                                 }
                         }
-
+         //       });
                         this.classList.toggle("archive-info-active");
-                        var content = this.nextElementSibling;
+                        var newContent = this.nextElementSibling;
 
-                        if (content.style.maxHeight){
-                                content.style.maxHeight = null;
-                                } else {
-                                content.style.maxHeight = content.scrollHeight + "px";                                
-                                } 
-
-
-
+                        //if (newContent.style.display === "none") {
+                        //        newContent.style.display = "block";
+                                newContent.style.left= "-80%";
+                                console.log("animatingg in");
+                                $(newContent.nextElementSibling).animate({left: '5%'}, 'slow')
+                                newContent.style.left= "20px";
+                        //} 
+                        //else {
+                        //        window.alert("falling into the else 'block'");
+                        //        content.style.display = "block";
+                        //}
+                 //       if (content.style.maxHeight){
+                 //               content.style.maxHeight = null;
+                 //               } else {
+                 //               content.style.maxHeight = content.scrollHeight + "px";                                
+                 //               } 
+                 
                  //       if (content.style.display === "block") {
                  //               content.style.display = "none";
                  //       } 
