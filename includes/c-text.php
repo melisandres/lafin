@@ -22,7 +22,12 @@
 function SetUpArchiveText(){
         var coll = document.getElementsByClassName("collapsible");
         var i;
-        
+        //add script here that loads, and makes active, the ABOUT section (or the FIRST section)
+        var firstContent = coll[0].nextElementSibling;
+        coll[0].classList.toggle("archive-info-active");
+        firstContent.style.left = "20px";
+
+
         for (i = 0; i < coll.length; i++) {
                 coll[i].addEventListener("click", function() {
                         for(i = 0; i < coll.length; i++){
