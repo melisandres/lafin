@@ -1,0 +1,33 @@
+<div class="archive-c-text">	
+	<button type="button" class="collapsible">about</button>
+	<div class="content">
+	<p>In this era of doomsday meteorology, emerges a strange subgroup of citizen scientists mesuring rain, not with modern day tools and technologies, not even with pre-modern instruments. This is a careful and long-term study of those who use just their bodies, and sometimes a mug full of coffee, to delve into the phenomenological study of the thining line between rain and hail.</p>
+	</div>
+
+	<button type="button" class="collapsible">...sleeping?</button>
+	<div class="content">
+		<h4>sleeping in the closet, with a monster</h4>
+		<p></p>
+	</div>	
+
+	<button type="button" class="collapsible">notes</button>
+	<div class="content">
+		<h4>These were trying times...</h4>
+		<p></p>
+	</div>
+
+	<button type="button" class="collapsible">excerpt</button>
+	<div class="content">
+		<h4>They all jumped over a fence. Over, and over, and over...</h4>
+		<p></p>
+	</div>
+
+
+	<button type="button" class="collapsible">bio</button>
+	<div class="content">
+		<h4>Emerson Norman</h4>
+			<p>Emerson's father always said the weatherman was a fool, and Emerson set out to prove him right.</p>  		
+	</div>
+</div>
+
+
