@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>about</p>
+	<p>University basements are connected with tunnels.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>

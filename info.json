@@ -41,7 +41,7 @@
 {   "index": 2,
     "type": "period",
     "page": "residency",
-    "infos": "resi-p-middle_r",
+    "infos": "resi-p-mid_r",
     "image1": "",
     "alt1": "A muddle of jumbled middles.",
     "caption1": "The middle room was often empty, as it was in the middle of everything.",
@@ -73,7 +73,7 @@
     "countdown": false,
     "icon": "img/residency/2000-10-01.jpg",
     "preBlurb": "",
-    "blurb": "Fullscript evaluates his life, as it stacks like tetris peices into a moving truck going nowhere.",
+    "blurb": "Fullscript evaluates his life, as it stacks like tetris pieces into a moving truck going nowhere.",
     "postBlurb": ""
 },
 {   "index": 4,

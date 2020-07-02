@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>about</p>
+	<p>between October 1999 and January 2001, the residency lives in a truck--a moving truck.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
@@ -22,9 +22,9 @@
 		<p>other description.</p>
 	</div>
 
-	<button type="button" class="collapsible">bio</button>
+	<button type="button" class="collapsible">the truck</button>
 	<div class="content">
-		<h4>Name</h4>
-		<p>bio</p>  		
+		<h4>Carmen</h4>
+		<p>We named the truck Carmen.</p>  		
 	</div>
 </div>
