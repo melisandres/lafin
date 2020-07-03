@@ -61,17 +61,7 @@ function displayText($onD){
         if (file_exists('infos/'.$onD[infos].'.php')){
                 include 'infos/'.$onD[infos].'.php';
         };
-        //include '../infos/'.$onD[infos].'.php';
-        //include 'infos/'.$onD[infos].'.php';
         echo '<script>SetUpArchiveText();</script>';
-
-        //if ($onD[index] == "27") {
-        //        include '../infos/'.$onD[index].'.php'; 
-        //        echo '<script>SetUpArchiveText();</script>';
-        //}
-        //else { 
-        //        echo "<p>".$onD[blurb]."</p>";
-        //}
 }
 
 displayText($onDisplay);
