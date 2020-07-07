@@ -28,7 +28,7 @@
 </section>
 
 <section class="c-text">
-	<article class="explanation">
+	<article class="explanation" id="c-text">
 		<?php $page ='we'; include 'includes/c-text.php'; ?>
 	</article>
 </section>

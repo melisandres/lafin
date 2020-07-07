@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">what</button>
 	<div class="content">
-	<p>Who we are, on days like today, is a mystery even to ourselves.<br><br>Meeting once a year, Lafin engages narratives with texts, ideas, questions, cross-structures, images...<br><br><span class="different">1. Different disciplines stand side by side for a photo.<br><br>2. The cameraman inspects the seams and grounds for dangling threads, or common threads, or unravelling. <br><br>3. A few disciplines undress for the camera, while the others fidget, or tell stories, to alleviate the awkwardness. <br><br>4. The resulting photographs are transfered onto tracing paper, and then superimposed, photoshoped, and brought into a robotics lab. </p>
+	<p>Who we are, on days like today, is a mystery even to ourselves.<br><br>Meeting once a year, Lafin engages narratives with texts, ideas, questions, cross-structures, images...<br><br><div class="different">1. Different disciplines stand side by side for a photo.<br><br>2. The cameraman inspects the seams and grounds for dangling threads, or common threads, or threads to unravel. <br><br>3. A few disciplines undress for the camera, while the others fidget, or tell stories, to alleviate the awkwardness. <br><br>4. The resulting photographs are transfered onto tracing paper, and then superimposed, photoshoped, and brought into a robotics lab.</div> </p>
 	</div>
 
 	<button type="button" class="collapsible">who</button>
