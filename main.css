@@ -147,7 +147,11 @@ Note: hidden by default */
     width: 80%;
     /*overflow: hidden;*/
 }
-      
+/*I want a different look for some inline
+texts. Maybe I need a few versions. Maybe just one*/  
+.different{
+    color: firebrick;
+}  
     
 /*the following 3 style the join us button, 
 which is at the foot of the page*/

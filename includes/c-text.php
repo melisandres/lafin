@@ -56,12 +56,13 @@ function displayText($onD){
         echo "<h1>".$onD[title]."</h1>";
         echo "<h4>".$onD[lead]."</h4>";
         if (file_exists('../infos/'.$onD[infos].'.php')) {
-                        include '../infos/'.$onD[infos].'.php';
-                };
+                include '../infos/'.$onD[infos].'.php';
+                echo '<script>SetUpArchiveText();</script>';
+        };
         if (file_exists('infos/'.$onD[infos].'.php')){
                 include 'infos/'.$onD[infos].'.php';
+                echo '<script>SetUpArchiveText();</script>';
         };
-        echo '<script>SetUpArchiveText();</script>';
 }
 
 displayText($onDisplay);
