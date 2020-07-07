@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>Based in Brooklyn, Vaughn is director of Lafin's Education Wing. Known internationally for his large scale paper sculptures, Vaughn's work combines sculpture, theatre, costume/set design, and narrative investigations.Vaughn Knee is working with Lafin in the development of its curriculum.</p>
+	<p>Frank Mayfield has written extensively on theoretical links between death and contemporary culture. Active as an artist and a curator, over the last 5 years, Frank has been E. D. of the <em>Centre de Recherches et d'Etudes Nouvelles</em>. She is based in Chicago, from where she oversees Lafin's research department.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>

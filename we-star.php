@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>Based in Brooklyn, Vaughn is director of Lafin's Education Wing. Known internationally for his large scale paper sculptures, Vaughn's work combines sculpture, theatre, costume/set design, and narrative investigations.Vaughn Knee is working with Lafin in the development of its curriculum.</p>
+	<p>about</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>

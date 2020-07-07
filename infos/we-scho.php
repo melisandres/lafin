@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>Based in Brooklyn, Vaughn is director of Lafin's Education Wing. Known internationally for his large scale paper sculptures, Vaughn's work combines sculpture, theatre, costume/set design, and narrative investigations.Vaughn Knee is working with Lafin in the development of its curriculum.</p>
+	<p>Mélisandre Schofield is based in Montreal. With a background in visual arts, Mé layers narratives into wedding cakes, writting and directing works meant to be skated on. Founder of the Middle Room Residency, Mé provides administrative support for many of Lafin's programs and incentives. </p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>

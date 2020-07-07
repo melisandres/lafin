@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>Based in Brooklyn, Vaughn is director of Lafin's Education Wing. Known internationally for his large scale paper sculptures, Vaughn's work combines sculpture, theatre, costume/set design, and narrative investigations.Vaughn Knee is working with Lafin in the development of its curriculum.</p>
+	<p>C. A. Swintak is the Lafin gallery's Interim Executive Director. Former Director of Communications at the Centre for Art Tapes, and Executive Project Manager at Paradise Lost and Found, Swintak is now full-time sculptor, media and performance artist. Her work has been shown across North America.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
