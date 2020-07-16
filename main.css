@@ -176,7 +176,7 @@ which is at the foot of the page*/
     color: black;
     grid-area: bottom;
     padding-top: 7px;
-    max-height:610px;
+    max-height: 610px;
     height: 25px;
     display: block;
     text-align: center;
@@ -186,29 +186,35 @@ which is at the foot of the page*/
     position: relative;
     width: 100%;
     bottom: 0;
+    cursor: pointer;
 }
-#resizer{
-    content: " ";
-    width: 100%;
-    border-top: 2px;
-    height: 7px;
-    border-color:black;
-    margin-top: -7px;
-    z-index: 12;
-    cursor: n-resize;
+
+#greyed-out{
+   width: 100vw;
+   max-height: 100vh;
+   height: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.3); 
+   pointer-events: inherit;
+   z-index: 11;
+   transition: 700ms;
+   /*display: none;*/
+   overflow-y: hidden;
 }
 
 .big-square{
     text-align: center;
     background-color: fuchsia;
-    height: 50vh;
-    width: 50vw;
-    top: 25%;
-    left: 25%;
+    top: 139px;
+    left: 160px;
+    right: 160px;
+    bottom: 30px;
     outline: 999px solid rgba(0,0,0,0.5);
     z-index: 13;
     position: absolute;
-    pointer-events: none;
 }
   
 .join-us:hover{

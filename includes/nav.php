@@ -38,4 +38,7 @@
 </ul>
 
 	<?php include 'includes/scripts.php'; ?>
+	<script>
+		<?php include 'script.js'; ?>
+	</script>
 

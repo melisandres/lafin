@@ -47,11 +47,20 @@
 <!--- End Centre page -->
 
 <!--- Join us Section -->
-<section class="join-us">
-	<div id="resizer">	</div>
+<section class="join-us" onclick="openNav()">
 	<div>join us</div>
 </section>
-<div class="big-square">my my my, what a BIG square!</div>
+
+<section id="greyed-out">
+	<div class="big-square">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+		&times;
+	</a>
+	<p>
+		my my my, what a BIG square!
+	</p>
+	</div>
+</section>
 <!--- End Join us Section -->
 <footer>
 </footer>
