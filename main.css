@@ -16,6 +16,18 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+/*this was added to break apart the grid display 
+into 
+.centre{
+    display: grid;
+    grid-template-columns: 220px 600px 1fr;
+    grid-template-areas:
+    "left c-image c-text";
+    resize: vertical;
+    position: static;*/
+    /*overflow: auto;
+}*/
+
 /* the following 4 style the center image
 c-image is in the html on each page, and contains:
 centre-image, which is a style placed on the figure
@@ -26,7 +38,9 @@ both image and figcaption */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 1;  
+    z-index: 0;  
+    /*overflow: hidden;*/
+    overflow: auto;
 }
 
 .center-image{
@@ -155,17 +169,37 @@ texts. Maybe I need a few versions. Maybe just one*/
     
 /*the following 3 style the join us button, 
 which is at the foot of the page*/
-footer{
-    padding-top: 5px;
-    grid-area: bottom;
-    background-color: teal;
-}
+
 
 .join-us{
+    grid-area: bottom;
+    padding-top: 10px;
+    max-height:610px;
+    height: 30px;
     display: block;
-    color: #000;
     text-align: center;
-    text-decoration: none;
+    background-color: teal;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+#resizer{
+    content: " ";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    margin-top: -10px;
+    z-index: 12;
+    cursor: n-resize;
+}
+
+.big-square{
+    height:100px;
+    width:100px;
+    background-color: fuchsia;
 }
   
 .join-us:hover{
@@ -315,7 +349,8 @@ It should probably be renamed... */
     padding-bottom: 200px;
     padding-left:10px;
     justify-content: center; /* this is where I will need to align "now" to center*/
-    overflow: scroll;
+    /*overflow: scroll;*/
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 

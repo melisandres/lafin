@@ -23,27 +23,37 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image" id="c-image">
-	<?php $page ='academics'; include 'includes/c-image.php'; ?>
-</section>
+<section class="centre">
+	<!--- Aside Left-->
+	<aside class="periods">
+		<?php include 'includes/aside-left.php'; ?>
+	</aside>
+	<!--- End Aside Left-->
 
-<section class="c-text">
-	<article class="explanation" id="c-text">
-		<?php $page ='academics'; include 'includes/c-text.php'; ?>
-	</article>
+	<!--- Centre image -->
+	<section class="c-image" id="c-image">
+		<?php $page ='academics'; include 'includes/c-image.php'; ?>
+	</section>
+	<!--- End Centre image -->
+
+	<!--- Centre text -->
+	<section class="c-text">
+		<article class="explanation" id="c-text">
+			<?php $page ='academics'; include 'includes/c-text.php'; ?>
+		</article>
+	</section>
+	<!--- End Centre text -->
 </section>
 <!--- End Centre page -->
 
-<!--- Aside Left-->
-<aside class="periods">
-	<?php include 'includes/aside-left.php'; ?>
-</aside>
-<!--- End Aside Left-->
-
-<footer>
 <!--- Join us Section -->
-	<a href="#default" class="join-us">join us</a></li>
+<section class="join-us">
+	<div id="resizer">	</div>
+	<div>join us</div>
+	<div class="big-square">my my my, what a BIG square!</div>
+</section>
 <!--- End Join us Section -->
+<footer>
 </footer>
 
 </body>

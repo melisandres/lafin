@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>about</p>
+	<p>Melancholy Starfield is a world traveler and a fictionalist. Based in economy flights and rail across Europe and Asia, Melancholy divides her time evenly between her duties as a waitress, a private investigator, an actress, a floating sand bag, and a fictionalist for the Lafin Institute.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
