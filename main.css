@@ -202,6 +202,7 @@ which is at the foot of the page*/
     height:100px;
     width:100px;
     background-color: fuchsia;
+    margin-top: 10px;
 }
   
 .join-us:hover{
@@ -214,6 +215,7 @@ the menu, a current page text, and a page description*/
 nav{
     grid-area: nav;
     height: 135px;
+    margin-top: 2px;/*keeps top dotted-line visible*/
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -227,12 +229,6 @@ nav{
     border-right:none;
     z-index:1;
     }
-
-nav::before{
-    height:200px;
-    background-color: white;
-    content: " ";
-}
 
     
 nav .title-area{

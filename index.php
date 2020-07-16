@@ -40,10 +40,14 @@
 </aside>
 <!--- End Aside Left-->
 
-<footer>
 <!--- Join us Section -->
-	<a href="#default" class="join-us">join us</a>
+<section class="join-us">
+	<div id="resizer">	</div>
+	<div>join us</div>
+	<div class="big-square">my my my, what a BIG square!</div>
+</section>
 <!--- End Join us Section -->
+<footer>
 </footer>
 
 </body>
