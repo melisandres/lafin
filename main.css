@@ -199,10 +199,16 @@ which is at the foot of the page*/
 }
 
 .big-square{
-    height:100px;
-    width:100px;
+    text-align: center;
     background-color: fuchsia;
-    margin-top: 10px;
+    height: 50vh;
+    width: 50vw;
+    top: 25%;
+    left: 25%;
+    outline: 999px solid rgba(0,0,0,0.5);
+    z-index: 13;
+    position: absolute;
+    pointer-events: none;
 }
   
 .join-us:hover{

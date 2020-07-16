@@ -50,8 +50,8 @@
 <section class="join-us">
 	<div id="resizer">	</div>
 	<div>join us</div>
-	<div class="big-square">my my my, what a BIG square!</div>
 </section>
+<div class="big-square">my my my, what a BIG square!</div>
 <!--- End Join us Section -->
 <footer>
 </footer>
