@@ -23,27 +23,27 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="centre">
-	<!--- Aside Left-->
-	<aside class="periods">
-		<?php include 'includes/aside-left.php'; ?>
-	</aside>
-	<!--- End Aside Left-->
 
-	<!--- Centre image -->
-	<section class="c-image" id="c-image">
-		<?php $page ='academics'; include 'includes/c-image.php'; ?>
-	</section>
-	<!--- End Centre image -->
+<!--- Aside Left-->
+<aside class="periods">
+	<?php include 'includes/aside-left.php'; ?>
+</aside>
+<!--- End Aside Left-->
 
-	<!--- Centre text -->
-	<section class="c-text">
-		<article class="explanation" id="c-text">
-			<?php $page ='academics'; include 'includes/c-text.php'; ?>
-		</article>
-	</section>
-	<!--- End Centre text -->
+<!--- Centre image -->
+<section class="c-image" id="c-image">
+	<?php $page ='academics'; include 'includes/c-image.php'; ?>
 </section>
+<!--- End Centre image -->
+
+<!--- Centre text -->
+<section class="c-text">
+	<article class="explanation" id="c-text">
+		<?php $page ='academics'; include 'includes/c-text.php'; ?>
+	</article>
+</section>
+<!--- End Centre text -->
+
 <!--- End Centre page -->
 
 <!--- Join us Section -->

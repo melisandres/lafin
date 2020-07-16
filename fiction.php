@@ -32,7 +32,6 @@
 		<?php $page ='fiction'; include 'includes/c-text.php'; ?>
 	</article>
 </section>
-<!--- End Centre page -->
 
 <!--- Aside Left-->
 <aside class="left">
@@ -40,7 +39,9 @@
 </aside>
 <!--- End Aside Left-->
 
-<footer>
+<!--- End Centre page -->
+
+<footer class="join-us">
 <!--- Join us Section -->
 	<a href="#default" class="join-us">join us</a></li>
 <!--- End Join us Section -->
