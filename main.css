@@ -218,18 +218,27 @@ which is at the foot of the page*/
     font-size: 17pt;
     text-align: justify;
 }
+
 .closebtn{
     top: -20px;
     right: 20px;
     font-size: 90pt;
     text-decoration: none;
     position: absolute;
-    color: lightseagreen;
+    color: lightseagreen; 
+    transition: 900ms;  
 }
+
+.closebtn:hover, .join-us-link:hover{
+    
+    color: rgb(19, 104, 100);
+}
+
 .join-us-link{
     color: lightseagreen;
     text-decoration: none;
     font-size: 18pt;
+    transition: 900ms;
 }
   
 .join-us:hover{

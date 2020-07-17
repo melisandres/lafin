@@ -68,7 +68,8 @@
 		</p>
 		<p>
 			If you are like us, devoted to education regardless of whether or 
-			not it is "real," find out <a class="join-us-link" href="javascript:;">more</a>.
+			not it exists in the realm of fiction, find out
+			<a class="join-us-link" href="javascript:;">more</a>.
 		</p>
 	</div>
 </section>
