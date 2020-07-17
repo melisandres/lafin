@@ -216,6 +216,13 @@ which is at the foot of the page*/
     z-index: 13;
     position: absolute;
 }
+.closebtn{
+    top: -20px;
+    right: 20px;
+    font-size: 90pt;
+    text-decoration: none;
+    position: absolute;
+}
   
 .join-us:hover{
     background-color: gold;
