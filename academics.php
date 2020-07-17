@@ -53,12 +53,23 @@
 
 <section id="greyed-out">
 	<div class="big-square">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
 		&times;
-	</a>
-	<p>
-		my my my, what a BIG square!
-	</p>
+		</a>
+		<p>
+			We are not currently admitting new students, or hiring new faculty. 
+			We are, however, always on the lookout for driven and adventurous 
+			collaborators. 
+		</p>
+		<p>
+			We believe the journey is tricky; innovation requires the same
+			kind of unshakable optimism that makes dangerous ideas seem good, 
+			and plunges headlong into the worst and the best indiscriminately.
+		</p>
+		<p>
+			If you are like us, devoted to education regardless of whether or 
+			not it is "real," find out <a class="join-us-link" href="javascript:;">more</a>.
+		</p>
 	</div>
 </section>
 <!--- End Join us Section -->

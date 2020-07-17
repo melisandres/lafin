@@ -206,8 +206,7 @@ which is at the foot of the page*/
 }
 
 .big-square{
-    text-align: center;
-    background-color: fuchsia;
+    background-color: gold;
     top: 139px;
     left: 160px;
     right: 160px;
@@ -215,6 +214,9 @@ which is at the foot of the page*/
     outline: 999px solid rgba(0,0,0,0.5);
     z-index: 13;
     position: absolute;
+    padding: 100px;
+    font-size: 17pt;
+    text-align: justify;
 }
 .closebtn{
     top: -20px;
@@ -222,6 +224,12 @@ which is at the foot of the page*/
     font-size: 90pt;
     text-decoration: none;
     position: absolute;
+    color: lightseagreen;
+}
+.join-us-link{
+    color: lightseagreen;
+    text-decoration: none;
+    font-size: 18pt;
 }
   
 .join-us:hover{
