@@ -63,13 +63,14 @@
 		</p>
 		<p>
 			We believe the journey is tricky; innovation requires the same
-			kind of unshakable optimism that makes dangerous ideas seem good, 
-			and plunges headlong into the worst and the best indiscriminately.
+			kind of unshakable optimism that makes dangerous ideas seem good. 
+			It plunges headlong into the unknown. This will always be a world of
+			unnexplored continents.  
 		</p>
 		<p>
-			If you are like us, devoted to education regardless of whether or 
-			not it contributes to anything complete or easily definable, find
-			out <a class="join-us-link" href="javascript:;">more</a>.
+			At Lafin, the fictional study of narrative expands into every crevice  
+			of knowledge, reimagining what it means to engage in study. 
+			Find out <a class="join-us-link" href="javascript:;">more</a>.
 		</p>
 	</div>
 </section>
