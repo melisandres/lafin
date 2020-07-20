@@ -52,8 +52,19 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		At Lafin, we see the world as a display of constructs, a collection
+		of quasi-impossibilities often held together by blind faith and twine. 
+		But however each of us experiences reality, being fictional has its 
+		advantages. 
 	</p>
+	<p>
+		If it were possible to reshape the stuff this world is made of (and we
+		would argue that it is), there's an infinite array of solutions we'd 
+		like to try. There's a world of worlds that we feel are more viable than
+		this one.
+
+		We challenge you to join us. Find out 
+		<a class="join-us-link" href="javascript:;">more</a>. 
 	</div>
 </section>
 <!--- End Join us Section -->

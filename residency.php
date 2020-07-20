@@ -51,7 +51,13 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		Over the years, a few Lafin board members have sought to expand their 
+		private spaces, adapting them for visiting artists, hosting both short
+		and long term residencies.
+		
+		Unfortunatly, none of our residencies are available at this time. 
+		Find out <a class="join-us-link" href="javascript:;">more</a> about 
+		how to get involved, when and if a space opens up.
 	</p>
 	</div>
 </section>

@@ -51,7 +51,15 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		With Lafin's board primarily comming from backgrounds in fine arts,
+		<i>research</i> is approached as a maleable notion that embraces both
+		science and pseudio-science, introspection and extrospection. Even fact
+		and fiction can be allies. We create an environment in which these 
+		different sensibilities can come together to uncover small truthes.  
+	</p>
+	<p>
+		Interested in joining us as a researcher or suresearch participant? 
+		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>
 </section>

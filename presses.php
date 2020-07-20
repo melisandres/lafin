@@ -51,7 +51,15 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		We publish distortions&#8211fictions self-aware enough to do their own 
+		laundry. Somewhat lifelike, sometimes frail, experiments in being. We
+		publish work that doesn't work for a living. We publish those like us, 
+		who only exist at certain times, in discrete situations, under a certain
+		quality of light. 
+	</p>
+	<p>
+		Would your work fit? How real do you expect to be? 
+		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>
 </section>

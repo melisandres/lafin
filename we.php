@@ -51,7 +51,10 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		Become someone new. Forget about who you are, reality is just a construct
+		anyway. Think for a moment about who you could never be, but might like
+		to try being, just sometimes. Join us. 
+		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>
 </section>

@@ -51,7 +51,16 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		Our gallery, not as much of a space as a shifting notion of space.
+		Our exhibitions are rare, and hard-to-find. Our artists embrace this 
+		inversion of location and object. 
+	</p>
+	<p>
+		Find out <a class="join-us-link" href="javascript:;">more</a>. 
+		Our archives are shut clamshells under tide-flooded sands, locked safes
+		under wild-fire debris, rusted manholes in lost alleyways. We 
+		collaborate with fishermen, locksmiths, and city workers. Art is 
+		everywhere.
 	</p>
 	</div>
 </section>
