@@ -18,7 +18,7 @@
 			CURRENT PAGE : RESEARCH
 		</span>
 	</div>
-	<div class="description">Is fiction a useful tool when it comes to rigourous scientific research? Many would say that it's the enemy of research. We are not amongst the many.</div>
+	<div class="description">Is fiction a useful tool when it comes to rigourous scientific research? Many would say that it's the enemy of truth. We are of a different view.</div>
 </nav>
 <!--- End Navigation -->
 
@@ -51,14 +51,20 @@
 		&times;
 	</a>
 	<p>
-		With Lafin's board primarily comming from backgrounds in fine arts,
-		<i>research</i> is approached as a maleable notion that embraces both
-		science and pseudio-science, introspection and extrospection. Even fact
-		and fiction can be allies. We create an environment in which these 
-		different sensibilities can come together to uncover small truthes.  
+		With Lafin's board members primarily comming from backgrounds in fine 
+		arts, <i>research</i> at Lafin is a framework that embraces both science
+		and pseudio-science, introspection and extrospection, invention and 
+		documentation.
+	</p>
+	<p>	
+		Although our methodologies differ wildly from project to project, and 
+		sometimes even within the same project, from one researcher to another
+		We generally try to recognize the moments where fact and fiction can be
+		allies. We create an environment in which the stregths of each can come
+		to serve the broader goal of uncovering what could be.  
 	</p>
 	<p>
-		Interested in joining us as a researcher or suresearch participant? 
+		Interested in joining us as a researcher or participant? 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>

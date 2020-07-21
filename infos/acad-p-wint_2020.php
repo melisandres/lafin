@@ -6,8 +6,8 @@
 
 	<button type="button" class="collapsible">statement</button>
 	<div class="content">
-		<h4>we foresee a pandemic</h4>
-		<p>not exactly, but we started social distancing before it was cool</p>
+		<h4>we foresaw a pandemic</h4>
+		<p>not exactly, but we did start social distancing before it was cool</p>
 	</div>	
 
 	<button type="button" class="collapsible">notes</button>
