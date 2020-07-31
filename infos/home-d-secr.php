@@ -7,8 +7,8 @@
 
 	<button type="button" class="collapsible">more</button>
 	<div class="content">
-		<h4>no more</h4>
-		<p>We are, indeed, up to no good.</p>
+		<h4>official comment, from a reliable source</h4>
+		<p>"We are, indeed, up to no good."<br><i>-reliable source</i></p>
 	</div>	
 
 </div>

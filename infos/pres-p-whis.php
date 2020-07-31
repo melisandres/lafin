@@ -8,13 +8,13 @@
 	<button type="button" class="collapsible">the collection</button>
 	<div class="content">
 		<h4>the collection</h4>
-		<p>a floral blah blah blah, and we brought together, arrangement, wonderful... scrumptious, enmeshed... with multifaceted... but silent. SENSORY. the world SENSORY, and all the words, all the whispers.</p>
+		<p>a baby's breath, and we brought together, arrangement, wonderful... scrumptious, enmeshed... with multifaceted... but silent. SENSORY. The world is SENSORY. And all the words, all the whispers coalesce.</p>
 	</div>	
 
 	<button type="button" class="collapsible">samples</button>
 	<div class="content">
 		<h4>samples</h4>
-		<p>"...", "...", "...".........</p>
+		<p>"...", "...", "..."........."</p>
 	</div>
 
 	<button type="button" class="collapsible">thanks</button>

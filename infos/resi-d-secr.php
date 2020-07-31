@@ -2,6 +2,7 @@
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
 	<p>The residency program is currently being all too secretive.</p>
+	<p>Check the time-line for past and/or future exhibitions.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>

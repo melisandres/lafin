@@ -1,30 +1,42 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>In this era of doomsday meteorology, emerges a strange subgroup of citizen scientists mesuring rain, not with modern day tools and technologies, not even with pre-modern instruments. This is a careful and long-term study by those who use just their bodies, and sometimes a mug full of coffee, to delve into the phenomenological study of the thining line between rain and hail.</p>
+	<p>In this era of doomsday meteorology, emerges a strange subgroup of citizen scientists measuring rain, not with modern day tools and technologies, not even with pre-modern instruments. This is a careful and long-term study by those who use just their bodies, or hand-made apparatus, or a mug full of coffee, to delve into the phenomenological study of the thinning line between rain and hail.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
 	<div class="content">
-		<h4>statement title</h4>
-		<p>statement description.</p>
+		<h4>We do whatever it is we do</h4>
+		<p>When Bob Jones came to me with his two-year plan to go for a walk every time it rained, I didn't get it. Nope, I didn't get it at all. What's more, he made a point of the fact that he was not planning on using any special gear. "No umbrellas!" He said, "no raincoat, no gumboots, no hat of any kind." The bugger was convinced that we were getting hailed on way more often than the people at the weather services were admitting to, and that the only real way to tell the difference between rain and hail was to consider the feel of it on bare skin.</p>
+		<p>Now, Bob never convinced me of any of his hail nonsense, just to make that part of it clear. But since he's my neighbour, and I enjoy a stroll regardless of the weather, I got sucked into this whole business. And it just snowballed from there, if you pardon my pun.</p>
+		<p>There aren't any scientists in our group--well, Marie Bishop is a dentist, if that counts as anything. But most of us have been keen on sticking to the plan, collecting our observations, and doing what they call <i>citizen science</i>, which we like to think may have its uses someday, for someone. A few of us even have some background in writing, so now that some of us have moved on, I figured it might make for an interesting read.</p>
 	</div>	
 
 	<button type="button" class="collapsible">notes</button>
 	<div class="content">
-		<h4>recovered notes:</h4>
-		<p>Notes description</p>
-	</div>
-
-	<button type="button" class="collapsible">other</button>
-	<div class="content">
-		<h4>other title</h4>
-		<p>other description.</p>
+		<h4>Bob Jones:</h4>
+		<p>-If it rains and I'm awake, I leave the house in whatever I'm wearing--unless it's indecent, nobody needs to see that! I slip into the galoshes I leave by the door, and I knock on my buddy Em's front window. He's a lazy one this guy--I usually wait for him a good five minutes. Then we go to the river. The rain never feels that bad when you're standing by the river. Sometimes we bring the fishing rods.</p>
+		<h4>Florence LeJeune:</h4>
+		<p>I think Bob has been on this for years. A personal obsession. I don't know when it started, but I remember it being a thing in our college days. I studied in Ohio. I was the only foreign student and used to the harsher winters in Sweden. It was my second year, and the weather was awful. So humid, and wet. It came down like glass pingpong balls, I think more than once. Bob just got fixated. He kept a handful in his freezer. When I tried to throw them out, he was irate. He said he was keeping them for science. But he came off as a bit more of a hoarder than a scientist. I thought he kept them like trophies. I can say that now, we all grow up in our own ways. In any case, we got back in touch, something like ten years ago, online. And this hail thing came up again. I thought it was funny, and I also thought, <i>what the hell</i>. He writes to me every time it rains, or hails, or snows, as the case may be. And I respond when I get similar weather here. Sometimes, if we are both free, and it's coming down for both of us, we chat. I don't like to be strict about it... but I do quite enjoy keeping notes about the weather, about what I'm feeling in that weather. All these experiences are very much about emotion for me.</p>
+		<h4>Emerson Norman:</h4>
+		<p>So, my friend Bob Jones likes to feel the rain on his skin. And so he calls out: "It stings! It's hail, buddy. Third time this month!" Or "rain, definitely rain." But I just like to walk, you know. And I've got all the equipment. I'm no spring chick, no time to tempt fate, and catch one of those colds going around. I've got these little vials--I got my first box from eBay. Those lasted the first year. I just fill them up with whatever's pouring down--Bob sops it up like a sponge, and I just ring him out a little, a few drops into one of these, write the date on it, and put it in the freezer. I'm  kidding, Em couldn't hold water on the best days. I sterilize an aluminum funnel, and use it to gather a few drops. It's not much, and I'm not sure what it proves, but it's what I do.</p>
+		<h4>Nora Coles-Fox:</h4>
+		<p>I've always loved looking at, and taking pictures of the sky. Bob saw some of those pictures, and then he started pestering me: "those photos, those photos," he kept saying, "you've got to do something with them." I'm glad I listened to him. It's meditative. I take pictures of the sky, a few a day. I excuse myself from meetings, or take an inconspicuous snapshot of the nearest window. Sometimes there are images in the clouds. I can't say with 100% certainty that these images have nothing to do with whether or not something will fall from the sky. I keep a file on my computer for those kinds of observations. People used to be able to just look at the sky and at their environment, and tell you if it was going to rain, or hail, or snow. My grandma always knew. She'd get an ache in her bones, that's what she called it. With every photo, I try to hazard a guess, and record it. Will we get weather? My guess isn't always blind, I can't always avoid the weather forecast. Still, I think I'm getting a hang of it. I'm usually right.</p>
+		<h4>Marie Bishop:</h4>
+		<p>I collect the rain water, and I bake bread with it. I only bake after I've accumulated enough rainwater for a loaf or two. I eat half of the bread myself, and feed the other half to the pigeons. There are many ways to gather rain water, but I've found the best has been  to hang clean ultra absorbent fabric on the clothesline. I'm not worried about microbes or dust. I figure, if it's in the air, I breath it in anyway, If I think about it half a minute, I basically bathe in it. Besides, we can only go so far with all these aseptic notions about the good life. Life arose from the murky swamps. I look inside people's mouths for a living. I have to tell you, that changes how you think about cleanliness, and about the cleanliness of what you put into your mouth vs the cleanliness of the environment you're bringing that thing into. Oh, and when I don't gather enough water for bread, I just brew it into my morning coffee.</p>
 	</div>
 
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
-		<h4>Name</h4>
-		<p>bio</p>  		
+		<h4>Bob Jones:</h4>
+		<p>To say that Bob founded this ragtag team of <i>citizen scientists</i> might be overstating the level of foresight he brought to it, however any other framing would be to downplay his importance in leading this project. Long-time amateur meteorologist, Bob has invited a brave but small group of International to join him on his search. The retired private detective, grandfather of eight, and father of three, makes a mean peach cobbler, and an even meaner lamb-mint stew.</p>
+		<h4>Florence LeJeune:</h4>
+		<p>Florence LeJeune has spent the last four decades building a name for herself as an oral story-teller. For many years, she taught music in elementary schools, and, for a few after that, she taught workshops in seniors homes. Now that she's approaching that time in life herself, she keeps her life simple, observing the weather and caring for her four dogs.</p>
+		<h4>Emerson Norman:</h4>
+		<p>Columnist for the Something County Review since 1995, Emerson has published in such distinguished publications as: ---, ---, and ---. In 2009 he was short-listed for a Pen Award for his short-story: <i>Not a Real Short-Story</i>. Widower, ex-refrigerator salesman. Emerson is working on his third unpublished book of poetry.</p>
+		<h4>Nora Coles-Fox:</h4>
+		<p>Is a part-time librarian, and teaches yoga on weekends. She joined the <i>We can no longer differentiate between rain and hail</i> group in 2015, and has been taking daily photos since. "I'm not sure I would have started on this path, had Bob not encouraged me, but now, I can't imagine my life without this."</p>
+		<h4>Marie Bishop:</h4>
+		<p>Dentist and amateur scientist, Marie is an avid baker. She shares her love of artisanal loaves with her son Jeremy, who now owns and runs a bakery in Vermont, and answers any and all questions she has about her wild rain-fed yeast cultures.</p>	
 	</div>
 </div>

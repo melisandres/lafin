@@ -65,7 +65,7 @@
 			We believe the journey is tricky; innovation requires the same
 			kind of unshakable optimism that makes dangerous ideas seem good. 
 			It plunges headlong into the unknown. It relishes in the steadfast
-			belief that this will always be a world of unexplored continents.  
+			belief that ours will always be a world of unexplored continents.  
 		</p>
 		<p>
 			At Lafin, the fictional study of narrative expands into every crevice  

@@ -7,13 +7,13 @@
 	<button type="button" class="collapsible">host</button>
 	<div class="content">
 		<h4>Don't be fooled, Millefeuilles was a fantastic guest.</h4>
-		<p>is boring.</p>
+		<p></p>
 	</div>	
 
 	<button type="button" class="collapsible">the work</button>
 	<div class="content">
 		<h4>The Work</h4>
-		<h4>While a resident at Lafin, Millefeuilles collected moments. These moments were not to act as moments in isolation, but rather as...</h4>
+		<p>While a resident at Lafin, Millefeuilles collected moments. These moments were not to act as moments in isolation, but rather as...</p>
 		<p></p>
 	</div>
 
@@ -22,7 +22,7 @@
 		<h4>a day in the residency</h4>
 		<p>	
 			<ul>Fix the hair, and the suit. Look presentable.</ul>
-			<ul>Kitchen, for a social moment with M.</ul>>
+			<ul>Kitchen, for a social moment with M.</ul>
 			<ul>Make the coffee, like a solid guest. F*ck it up.</ul>
 			<ul>Get out. Talk to the strangers who seem nice.</ul>
 			<ul>Follow them, if they let you.</ul>
@@ -35,7 +35,7 @@
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
 		<h4>Millefeuilles</h4>
-			<p>Millefeuilles</p>  		
+		<p>Millefeuilles</p>  		
 	</div>
 </div>
 

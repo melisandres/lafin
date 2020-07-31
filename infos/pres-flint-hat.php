@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>Inside the clamber bondyo shinset boo of the pommel pommel blintz, there are secrets no one will tell, but I heard, because, well... listen, I can't say it too loud, you know, but it's a fact that the stuff you hear through the walls are only as true as all that.</p>
+	<p>Inside the clamber bondyo shinset boo of the pommel pommel blintz, there are five additional  quinzen, but I heard, because, well... I was listening, that four of them--possibly the most intriguing ones, have gone missing. I wouldn't be surprised. There are a few things that I suspect. I've been watching, across the vivinfaire, when the colours turn to dirty minsboo, like soaked crimson. On nights like last night, when I've seen the moving shadows swallow everything.</p>
 	</div>
 
 	<button type="button" class="collapsible">other</button>
@@ -12,8 +12,8 @@
 
 	<button type="button" class="collapsible">HUSH</button>
 	<div class="content">
-		<h4>Seriously: don't breathe a word!</h4>
-		<p>there are things that are best not shared.<br><br><br><br>even if you really want to say<br><br><br><br>...even if you really really want to know.</p>
+		<h4>Seriously: don't breathe a syllable!</h4>
+		<p>there are things that shouldn't be things, or acknowledged to be things.<br><br><br><br>even if you really want to say<br><br><br><br>...even if you really really want to know.</p>
 	</div>
 
 	<button type="button" class="collapsible">bio</button>
