@@ -6,8 +6,10 @@
 
 	<button type="button" class="collapsible">statement</button>
 	<div class="content">
-		<h4>statement title</h4>
-		<p>statement description.</p>
+		<h4>three things to know about the moving truck:</h4>
+		<p>Although it represented a period of upheaval as Mé moved from one place to another, it was never used to move Mé, at least not in the way one would expect.</p>
+		<p>It was sometimes there, sometimes not, sometimes not quite itself.</p>
+		<p>It was not exactly real</p>
 	</div>	
 
 	<button type="button" class="collapsible">notes</button>

@@ -527,9 +527,150 @@ aside {
   */
 
     @media screen and (max-width: 768px){
-        body{
-            /*display:none;*/
+
+        .c-text{
+            width: 100vw;
         }
+
+        body{
+            display: grid;
+            grid-template-columns: 69vw 80vw;
+            grid-template-rows: 30px 1fr 1fr 30px;
+            grid-template-areas:
+            "nav nav"
+            "left c-image"
+            "left c-text"
+            "bottom bottom";
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+        nav .title-area{
+            padding-left: 0px;
+            margin-top: 15px;
+            width: 25vw;
+            /*min-width: 200px;*/
+            text-align: left;
+            margin-left: -50px;
+        }
+
+        nav .logo{
+            grid-area: logo;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        nav{
+            grid-area: nav;
+            height: 100px;
+            margin-top: 2px;/*keeps top dotted-line visible*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: left;
+            align-content: flex-start;
+            background-color: lightgray;
+            border-color: grey;
+            border-style: dashed;
+            border-width: 1px;
+            border-left: none;
+            border-right:none;
+            z-index:1;
+            }
+           
+        nav .title-area{
+            display: none;
+            padding-left: 0px;
+            margin-top: 15px;
+            width: 25vw;
+            min-width: 320px;
+            text-align: left;
+            margin-left: -50px;
+        }
+        
+        nav .lafin{
+            display: inline-block;
+        }
+        
+        nav .current-page{
+            display: inline-block;
+        }
+        
+        nav .description{
+            text-align: left;
+            color: grey;
+            flex-grow: 1;
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 15px;
+            border-left: grey;
+            border-width: 0px 0px 0px 1px;
+            border-style: dashed;
+            overflow: scroll;
+        }
+        .center-image{
+            display: table;
+            width: 700px;
+            height: 700px;
+            background-color: black;
+            border-width: 0em;
+        }
+
+        .c-image{
+            grid-area: c-image;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 0;  
+            /*overflow: hidden;*/
+            overflow: auto;
+        }
+        
+        figcaption{
+            display: table-caption; 
+            caption-side: bottom;
+            margin-top: 10px;
+            /*background-color:white;*/
+            text-align: right;
+        }
+        
+        .cell{
+            display:table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        
+        img {
+            /*margin-top: auto;
+            display: table-cell;
+            vertical-align: middle;*/
+            display: table;
+            margin-left: auto;
+            margin-right:auto;
+            height: 500px;
+            width: 500px;
+            border-width: 0em;
+            border-color: black;  
+        }
+
+        .big-square{
+            background-color: gold;
+            top: 99px;
+            left: 1px;
+            right: 1px;
+            bottom: 25px;
+            outline: 99px solid rgba(0,0,0,0.5);
+            z-index: 13;
+            position: absolute;
+            padding: 5px;
+            font-size: 12pt;
+            text-align: justify;
+            
+        }
+        
     }
 
   /* Dropdown Button */
