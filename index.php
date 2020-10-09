@@ -18,7 +18,11 @@
 			CURRENT PAGE : HOME
 		</span>
 		</div>
-	<div class="description">The Liberal Arts Fictional Institute of Narrative was named in France, in the early nineteen-tens. Formerly Le Coup de Grace, and before that Le Pavillon Marcault, Lafin marked the end of a period, and with every end, a new beginning.</div>
+	<div class="description">Lafin is a loosely knit collective of 
+		artists and intellectuals investigating narrative, anti-narrative,
+		 and narrautonomy. 
+		 <br><br><i>*narrautonomy: an autonomous term that redefines 
+		itself through singular narrative musings.</i></div>
 </nav>
 <!--- End Navigation -->
 
@@ -51,9 +55,26 @@
 		&times;
 	</a>
 	<p>
-		my my my, what a BIG square!
+		There are a number of ways to become involved. 
 	</p>
-	</div>
+	<p>
+		At Lafin, we are curious about so many of the things 
+		embodied by the words: <i>a crisis in imagination</i>. 
+		We believe imagined and unimagined truthes are generally
+		humble, speaking to the small and the specific. However,
+		we also embrace bold claims, things made of whole cloth, 
+		worlds softened with silk, feathers, dry 
+		leaves&mdash;spikes, and spider jaws.
+	</p>
+	<p>	
+		We support archival excavations of long forgetten Lafin 
+		projects, memories lost in the weeds, events slipped into 
+		the unconscious. We welcome follow artists, researchers, and 
+		thinkers to join us in rebuilding Lafin's past and future.
+	</p>
+	<p>
+		To join us, administration@lafin.org
+	</p>
 </section>
 <!--- End Join us Section -->
 <footer>

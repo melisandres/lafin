@@ -18,7 +18,7 @@
 			CURRENT PAGE : ACADEMICS
 		</span>
 	</div>
-	<div class="description">What's the value of a free education?</div>
+	<div class="description">At Lafin, early on, we had to tackle two important questions: <br><li>What's the value of a free education?</li><li>What are the limits of a fictional education?</li>These questions shape our Education Wing.</div>
 </nav>
 <!--- End Navigation -->
 

@@ -1,16 +1,62 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">by fiction</button>
 	<div class="content">
-		<p>So much is afforded by the guise of fiction--by the privilege of being sometimes fictional. Conversely credibility is made harder to earn. We continue to work tirelessly in our negotiations with the boundary between what's real, and what is not interested in being so. We take nothing for granted, as should you.</p>
-		<p>We interrogate reality because it often feels foreign to us.</p>
+		<p>
+			So much is afforded by the guise of fiction&mdash;by the 
+			privilege of being sometimes fictional. We work 
+			tirelessly in our negotiations, broadening the 
+			grey between what is real, and what is not 
+			interested in being so. It takes a special finess, 
+			to maneuver correctly. We take nothing for 
+			granted, as should you.
+		</p>
+		<p>
+			It is said that in deviating from fact, it is 
+			difficult to keep one's stories straight. But the 
+			shapes narratives can fold into are infinite, and 
+			origami, amongst other disciplines, is within our 
+			sphere of inquiry. 
+		</p>
 	</div>
 
 	<button type="button" class="collapsible">you mean fake?</button>
 	<div class="content">
-		<h4>recovered memory:</h4>
-		<p>"Vaughn accused me of being fake, and I suppose he's right. I never quite feel real. Often the emotions I perform are just that, performance."<br><i>-F. Mayfield</i></p>
-		<h4>extra thoughts on <i>fake</i>:</h4>
-		<p></p>
+		<h4>on being fake: </h4>
+		<p>
+			"Vaughn accused me of being fake, and I suppose he's
+			right. I never quite feel real. Often the emotions 
+			I perform are just that, performance."<br>
+			<i>-F. Mayfield</i>
+		</p>
+		<h4>on deviating from reality:</h4>
+		<p>
+			"We interrogate reality because it often feels 
+			foreign to us."
+			<br>
+			<i>-M. Starfield</i>
+		</p>
+		<h4>on immitation:</h4>
+		<p>
+			"Immitation is rarely trickery. Usually it's just
+			the act of working through deepening layers of 
+			understanding"
+			<br>
+			<i>-V. Knee</i>
+		</p>
+		<h4>on the essence of reality:</h4>
+		<p>
+			"Meh. Things are what they are."
+			<br>
+			<i>-S. Ruggenbaum</i>
+		</p>
+		<h4>on whether or not we mean <i>fake</i>:</h4>
+		<p>
+			"We're the <i>Fictional</i> Institute of Narrative, 
+			not the <i>Fake</i> Institute of Narrative. So no, 
+			we do not mean <i>fake</i>."
+			<br>
+			<i>-M. Schofield</i>
+		</p>
 	</div>
 
 	<button type="button" class="collapsible">or literary?</button>

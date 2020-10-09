@@ -17,14 +17,14 @@ body{
     overflow-x: hidden;
 }
 /*this was added to break apart the grid display 
-into 
+into
 .centre{
     display: grid;
     grid-template-columns: 220px 600px 1fr;
     grid-template-areas:
     "left c-image c-text";
     resize: vertical;
-    position: static;*/
+    position: static;
     /*overflow: auto;
 }*/
 
@@ -526,7 +526,7 @@ aside {
   }
   */
 
-    @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px){  
 
         .c-text{
             width: 100vw;
