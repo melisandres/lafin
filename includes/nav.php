@@ -14,6 +14,7 @@
 				<li><a class="dropbtn we <?php if($page =='we'){echo 'active';}?>" href="we.php">we</a></li>
 				<ul class="dropdown-content">
 					<li class="who"><a <?php if($page =='we'){echo 'active';}?> href="we.php">who we are</a></li>
+					<li><a <?php if($page =='board'){echo 'active';}?> href="board.php">who we've been</a></li>
 				</ul>
 			</ul>
 			<!--- End WE  -->
