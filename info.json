@@ -740,5 +740,24 @@
     "preBlurb": "<strong>Those were</strong> the days of middle rooms.",
     "blurb": "There's no room for doubt.",
     "postBlurb": "<strong>These will be</strong> the days of middle rooms"
+},
+{   "index": 39,
+    "type": "project",
+    "page": "history",
+    "infos": "hist-corr-blah",
+    "image1": "",
+    "alt1": "a hand-written letter from 1977",
+    "caption1": "found in a shoe box, a letter from James Knee to Olivia and Vaughn",
+    "toolTip1": "",
+    "startDate": "1977-06-02",
+    "endDate": "1977-06-02",
+    "title": "&quot;find me in the cupboard&quot;",
+    "lead": "James Knee",
+    "collaborators": [],
+    "countdown": false,
+    "icon": "img/residency/2019-10-01.jpg",
+    "preBlurb": "",
+    "blurb": "hints that should send you on crisscrossing journeys",
+    "postBlurb": ""
 }
 ]

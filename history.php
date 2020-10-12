@@ -9,27 +9,27 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<?php $page ='we'; include 'includes/nav.php'; ?>
+	<?php $page ='history'; include 'includes/nav.php'; ?>
 	<div class="title-area">
 		<span class="lafin">
 			<strong>Liberal Arts Fictional Institute of Narrative</strong>
 		</span>
 		<span class="current-page">
-			CURRENT PAGE : WHO WE ARE
+			CURRENT PAGE : OUR HISTORY
 		</span>
 	</div>
-	<div class="description">We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.</div>
+	<div class="description">click <a data-internalid="14" class="archive-button">here</a></div>
 </nav>
 <!--- End Navigation -->
 
 <!--- Centre page -->
 <section class="c-image">
-	<?php $page ='we'; include 'includes/c-image.php'; ?>
+	<?php $page ='history'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
 	<article class="explanation" id="c-text">
-		<?php $page ='we'; include 'includes/c-text.php'; ?>
+		<?php $page ='history'; include 'includes/c-text.php'; ?>
 	</article>
 </section>
 <!--- End Centre page -->
@@ -51,7 +51,12 @@
 		&times;
 	</a>
 	<p>
-		Become someone new. Forget about who you are, reality is just a construct
+		Over the decades, many artists, intellectuals, and pseudoscientists have collaborated with 
+		Lafin to create or investigate aspects of . 
+	</p>
+	<p>
+		Time travel is something we approach with some degree of trepidation&mdash;but if that's 
+		the only way to set a meeting, we'll 
 		anyway. Think for a moment about who you could never be, but might like
 		to try being, just sometimes. Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.

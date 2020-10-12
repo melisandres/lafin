@@ -11,10 +11,10 @@
 			<!--- End Fiction -->
 			<!--- WE -->
 			<ul class ="dropdown we">
-				<li><a class="dropbtn we <?php if($page =='we'){echo 'active';}?>" href="we.php">we</a></li>
+				<li><a class="we dropbtn <?php if($page =='we'or $page =='board'){echo 'active';}?>" href="">we</a></li>
 				<ul class="dropdown-content">
-					<li class="who"><a <?php if($page =='we'){echo 'active';}?> href="we.php">who we are</a></li>
-					<li><a <?php if($page =='board'){echo 'active';}?> href="board.php">who we've been</a></li>
+					<li class="who"><a class="<?php if($page =='we'){echo 'active';}?>" href="history.php">our history</a></li>
+					<li class="who"><a class="<?php if($page =='board'){echo 'active';}?>" href="board.php">our board</a></li>
 				</ul>
 			</ul>
 			<!--- End WE  -->

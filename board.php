@@ -15,10 +15,10 @@
 			<strong>Liberal Arts Fictional Institute of Narrative</strong>
 		</span>
 		<span class="current-page">
-			CURRENT PAGE : WHO WE'VE BEEN
+			CURRENT PAGE : OUR BOARD
 		</span>
 	</div>
-	<div class="description">What is it we are anyway?  click <a data-internalid="14" class="archive-button p-active">here</a></div>
+	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button">here</a></div>
 </nav>
 <!--- End Navigation -->
 
