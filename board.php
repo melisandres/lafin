@@ -9,7 +9,7 @@
 <header> </header>
 <!--- Navigation -->
 <nav>
-	<?php $page ='we'; include 'includes/nav.php'; ?>
+	<?php $page ='board'; include 'includes/nav.php'; ?>
 	<div class="title-area">
 		<span class="lafin">
 			<strong>Liberal Arts Fictional Institute of Narrative</strong>
@@ -24,12 +24,12 @@
 
 <!--- Centre page -->
 <section class="c-image">
-	<?php $page ='we'; include 'includes/c-image.php'; ?>
+	<?php $page ='board'; include 'includes/c-image.php'; ?>
 </section>
 
 <section class="c-text">
 	<article class="explanation" id="c-text">
-		<?php $page ='we'; include 'includes/c-text.php'; ?>
+		<?php $page ='board'; include 'includes/c-text.php'; ?>
 	</article>
 </section>
 <!--- End Centre page -->
@@ -37,6 +37,14 @@
 <!--- Aside Left-->
 <aside class="periods">
 	<?php include 'includes/aside-left.php'; ?>
+	<br><br>
+	<p>   Our current Board of Directors</p>
+	<li><a data-internalid="28" class="archive-button">Vaughn Knee</a></li>
+	<li><a data-internalid="29" class="archive-button">Frank Mayfield</a></li>
+	<li><a data-internalid="30" class="archive-button">Mélisandre Schofield</a></li>
+	<li><a data-internalid="31" class="archive-button">Stacey Ruggenbaum</a></li>
+	<li><a data-internalid="32" class="archive-button">Melancholy Starfield</a></li>
+	<li><a data-internalid="33" class="archive-button">C.A. Swintak</a></li>
 </aside>
 <!--- End Aside Left-->
 
