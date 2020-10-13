@@ -18,7 +18,7 @@
 			CURRENT PAGE : OUR BOARD
 		</span>
 	</div>
-	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button">here</a></div>
+	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button top-desc-link">here</a></div>
 </nav>
 <!--- End Navigation -->
 
@@ -39,12 +39,12 @@
 	<?php include 'includes/aside-left.php'; ?>
 	<br><br>
 	<p>   Our current Board of Directors</p>
-	<li><a data-internalid="28" class="archive-button">Vaughn Knee</a></li>
-	<li><a data-internalid="29" class="archive-button">Frank Mayfield</a></li>
-	<li><a data-internalid="30" class="archive-button">Mélisandre Schofield</a></li>
-	<li><a data-internalid="31" class="archive-button">Stacey Ruggenbaum</a></li>
-	<li><a data-internalid="32" class="archive-button">Melancholy Starfield</a></li>
-	<li><a data-internalid="33" class="archive-button">C.A. Swintak</a></li>
+	<li><a data-internalid="28" class="archive-button bod">Vaughn Knee</a></li>
+	<li><a data-internalid="29" class="archive-button bod">Frank Mayfield</a></li>
+	<li><a data-internalid="30" class="archive-button bod">Mélisandre Schofield</a></li>
+	<li><a data-internalid="31" class="archive-button bod">Stacey Ruggenbaum</a></li>
+	<li><a data-internalid="32" class="archive-button bod">Melancholy Starfield</a></li>
+	<li><a data-internalid="33" class="archive-button bod">C.A. Swintak</a></li>
 </aside>
 <!--- End Aside Left-->
 

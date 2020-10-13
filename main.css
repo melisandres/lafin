@@ -415,8 +415,16 @@ It should probably be renamed... */
 }
 
 /*this is the active color for time-line node*/
-.p-active{
-    background-color: crimson;
+.p-active:not(.bod){
+    background-color: red;
+}
+/*some links are not on a timeline. I want these to look different*/
+.p-active.bod{
+    background-color: yellow;
+}
+
+.p-active.top-desc-link{
+    background-color: goldenrod;
 }
 
 /*the time-line node whem: 
@@ -437,6 +445,8 @@ pressed and hovered*/
 .archive-button:hover + .info {
     visibility: visible;
 }
+
+
 
 /*this structures the time-line areas that 
 fall outsde of a period*/
