@@ -23,7 +23,7 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image">
+<section class="c-image" id="c-image">
 	<?php $page ='board'; include 'includes/c-image.php'; ?>
 </section>
 
@@ -59,9 +59,10 @@
 		&times;
 	</a>
 	<p>
-		Become someone new. Forget about "you," reality is a construct. 
-		Think for a moment about who you could never be, but might like
-		to try being, when the feeling strikes. Join us. 
+		Become someone new. Forget about <i>you</i>, who you believe 
+		yourself to be, reality is a construct. Think for a moment about 
+		who you could never be, but might like to try being, at times,
+		when the feeling strikes. Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>

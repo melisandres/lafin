@@ -23,7 +23,7 @@
 <!--- End Navigation -->
 
 <!--- Centre page -->
-<section class="c-image">
+<section class="c-image" id="c-image">
 	<?php $page ='history'; include 'includes/c-image.php'; ?>
 </section>
 
@@ -51,14 +51,15 @@
 		&times;
 	</a>
 	<p>
-		Over the decades, many artists, intellectuals, and pseudoscientists have collaborated with 
-		Lafin to create or investigate aspects of . 
+		Over the decades, many artists, intellectuals, pseudoscientists,
+		and narrautonomists have collaborated with Lafin to question, or 
+		to further the mission. 
 	</p>
 	<p>
-		Time travel is something we approach with some degree of trepidation&mdash;but if that's 
-		the only way to set a meeting, we'll 
-		anyway. Think for a moment about who you could never be, but might like
-		to try being, just sometimes. Join us. 
+		Time travel is something we approach with some degree of 
+		trepidation&mdash;but if that's the only way to set a meeting, 
+		we'll oblige. Every time-line stands apart from time, a birds eye 
+		view, a . Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>

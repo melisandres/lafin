@@ -47,7 +47,10 @@ $(document).ready(function(){
             },
             success: function(data, status) { 
                 $("#c-image").html(data);
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+     alert("some error");
+  }
         });
 
         

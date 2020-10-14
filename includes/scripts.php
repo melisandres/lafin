@@ -293,7 +293,7 @@ function fillAsides($archive, $onDisplay){
     //reposition the left-aside and right aside, so that currents are centred
 function onIconClick($thisArchive) {
     displayText($thisArchive);
-    displayImage ($thisArchive);
+    displayImage($thisArchive);
 }
 
 
