@@ -38,13 +38,13 @@
 <aside class="periods">
 	<?php include 'includes/aside-left.php'; ?>
 	<br><br>
-	<p>   Our current Board of Directors</p>
-	<li><a data-internalid="28" class="archive-button bod">Vaughn Knee</a></li>
-	<li><a data-internalid="29" class="archive-button bod">Frank Mayfield</a></li>
-	<li><a data-internalid="30" class="archive-button bod">Mélisandre Schofield</a></li>
-	<li><a data-internalid="31" class="archive-button bod">Stacey Ruggenbaum</a></li>
-	<li><a data-internalid="32" class="archive-button bod">Melancholy Starfield</a></li>
-	<li><a data-internalid="33" class="archive-button bod">C.A. Swintak</a></li>
+	<h3 class="time-line-sub">Our Board of Directors:</h3>
+	<li class="time-line-sub"><a data-internalid="28" class="archive-button bod">Vaughn Knee</a></li>
+	<li class="time-line-sub"><a data-internalid="29" class="archive-button bod">Frank Mayfield</a></li>
+	<li class="time-line-sub"><a data-internalid="30" class="archive-button bod">Mélisandre Schofield</a></li>
+	<li class="time-line-sub"><a data-internalid="31" class="archive-button bod">Stacey Ruggenbaum</a></li>
+	<li class="time-line-sub"><a data-internalid="32" class="archive-button bod">Melancholy Starfield</a></li>
+	<li class="time-line-sub"><a data-internalid="33" class="archive-button bod">C.A. Swintak</a></li>
 </aside>
 <!--- End Aside Left-->
 
@@ -59,9 +59,9 @@
 		&times;
 	</a>
 	<p>
-		Become someone new. Forget about who you are, reality is just a construct
-		anyway. Think for a moment about who you could never be, but might like
-		to try being, just sometimes. Join us. 
+		Become someone new. Forget about "you," reality is a construct. 
+		Think for a moment about who you could never be, but might like
+		to try being, when the feeling strikes. Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>

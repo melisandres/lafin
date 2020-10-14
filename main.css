@@ -427,6 +427,11 @@ It should probably be renamed... */
     background-color: goldenrod;
 }
 
+.time-line-sub{
+    list-style-type: none;
+    margin: 8px;
+}
+
 /*the time-line node whem: 
 pressed and hovered*/
 .archive-button:active{
