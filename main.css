@@ -416,7 +416,7 @@ It should probably be renamed... */
 
 /*this is the active color for time-line node*/
 .p-active:not(.bod){
-    background-color: red;
+    background-color: firebrick;
 }
 /*some links are not on a timeline. I want these to look different*/
 .p-active.bod{
@@ -424,13 +424,13 @@ It should probably be renamed... */
 }
 
 .p-active.top-desc-link{
-    color: darkgrey;
+    color: firebrick;
     background-color: transparent;
 
 }
 
 .top-desc-link{
-    color: teal;
+    color: darkgrey;
 }
 
 .time-line-sub{
