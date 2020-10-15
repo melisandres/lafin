@@ -51,15 +51,29 @@
 		&times;
 	</a>
 	<p>
-		Over the decades, many artists, intellectuals, pseudoscientists,
-		and narrautonomists have collaborated with Lafin to question, or 
-		to further the mission. 
+		Over the decades, many artists, intellectuals, 
+		pseudoscientists, and narrautonomists have collaborated
+		with Lafin to further the mission. 
 	</p>
 	<p>
-		Time travel is something we approach with some degree of 
-		trepidation&mdash;but if that's the only way to set a meeting, 
-		we'll oblige. Every time-line stands apart from time, a birds eye 
-		view, a . Join us. 
+		In writing our history, we observe the way moments 
+		stick to their neighbours, almost as rigidly as how 
+		every time-line stands apart from the natural flow of 
+		time, chopping the shapeless into pieces, pretending 
+		moments could properly be represented by nodes on a 
+		two-dimentional surface squished into 
+		quasi-unidimentionality. Time travel is one way to 
+		describe the activity of archiving. It is something we
+		approach with some degree of trepidation&mdash;but if 
+		that's the only way to set a meeting, we'll oblige. 
+	</p>
+	<p> 
+		At Lafin, the end in french, we consider the meeting of
+		ends, the strands of time. On the page, we try to smooth
+		over the gaps and the inconsistencies. In the world, 
+		we try to crate the moments that will mark the obvious
+		breaks, that might be welded together in their telling.
+		Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
 	</p>
 	</div>

@@ -424,7 +424,13 @@ It should probably be renamed... */
 }
 
 .p-active.top-desc-link{
-    background-color: goldenrod;
+    color: darkgrey;
+    background-color: transparent;
+
+}
+
+.top-desc-link{
+    color: teal;
 }
 
 .time-line-sub{
