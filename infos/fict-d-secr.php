@@ -62,13 +62,30 @@
 	<button type="button" class="collapsible">or literary?</button>
 	<div class="content">
 		<h4>the <i>literary</i> theory</h4>
-		<p>What if we were just characters in a novel? We are... but what if we were only that? This isn't about reflecting on the overdone: "What if we are all a simulation?" question... But it's a different sort of question, a transformative and creative approach to selfhood... maybe. When we figure out if there is indeed a selfhood to redefine.</p>
+		<p>
+		What if we were just characters in a novel? We 
+		are... but what if we were only that? This isn't 
+		about reflecting on the overdone: <i>"What if we are all 
+		a simulation?"</i> question. It's a different sort 
+		of question, a transformative and creative approach to 
+		selfhood&mdash;maybe.... to be fair, we might first have 
+		to figure out if there is indeed a selfhood to redefine.
+		</p>
 	</div>
 
 	<button type="button" class="collapsible">I don't understand</button>
 	<div class="content">
 		<h4></h4>
-		<p>Neither do we.</p>  		
+		<p>
+			Someone we love once said, <i>"immitation is [...]
+			the act of working through deepening layers of 
+			understanding."</i> Reflecting on this, at this 
+			particular juncture, is probably our way of saying 
+			that we don't quite understand either.
+		</p>
+		<p>
+
+		</p>		
 	</div>
 </div>
 
