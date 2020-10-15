@@ -18,7 +18,7 @@
 			CURRENT PAGE : OUR BOARD
 		</span>
 	</div>
-	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button top-desc-link">here</a></div>
+	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button top-desc-link p-active">here</a></div>
 </nav>
 <!--- End Navigation -->
 
@@ -38,7 +38,7 @@
 <aside class="periods">
 	<?php include 'includes/aside-left.php'; ?>
 	<br><br>
-	<h3 class="time-line-sub">Our Board of Directors:</h3>
+	<h3 class="time-line-sub">Board of Directors:</h3>
 	<li class="time-line-sub"><a data-internalid="28" class="archive-button bod">Vaughn Knee</a></li>
 	<li class="time-line-sub"><a data-internalid="29" class="archive-button bod">Frank Mayfield</a></li>
 	<li class="time-line-sub"><a data-internalid="30" class="archive-button bod">Mélisandre Schofield</a></li>
@@ -60,7 +60,7 @@
 	</a>
 	<p>
 		Become someone new. Forget about <i>you</i>, who you believe 
-		yourself to be, reality is a construct. Think for a moment about 
+		yourself to be. Reality is a construct. Think for a moment about 
 		who you could never be, but might like to try being, at times,
 		when the feeling strikes. Join us. 
 		Find out <a class="join-us-link" href="javascript:;">more</a>.
