@@ -18,7 +18,14 @@
 			CURRENT PAGE : OUR HISTORY
 		</span>
 	</div>
-	<div class="description">click <a data-internalid="40" class="archive-button top-desc-link p-active">here</a></div>
+	<div class="description">click<a data-internalid="40" class="archive-button top-desc-link">here</a></div>
+	<script>
+		var myLinks = document.getElementsByClassName("top-desc-link");
+		if (defaulted){
+			myLinks[0].classList.add("p-active");
+		}
+
+	</script>
 </nav>
 <!--- End Navigation -->
 

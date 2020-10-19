@@ -58,13 +58,13 @@
 		There are a number of ways to become involved. 
 	</p>
 	<p>
-		At Lafin, we are curious about so many of the things 
-		embodied by the words: <i>a crisis in imagination</i>. 
-		We believe imagined and unimagined truthes are generally
-		humble, speaking to the small and the specific. However,
-		we also embrace bold claims, things made of whole cloth, 
-		worlds softened with silk, feathers, dry 
-		leaves&mdash;spikes, and spider jaws.
+		At Lafin, we are curious about so many things. 
+		We believe truthes are generally humble, 
+		speaking to the small and the specific. However,
+		we also embrace bold claims, larger than life, 
+		made of whole cloth, worlds softened with silk,
+		feathers, dry leaves&mdash;spikes, and spider 
+		jaws.
 	</p>
 	<p>	
 		We support archival excavations of long forgetten Lafin 

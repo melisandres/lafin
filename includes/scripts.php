@@ -115,19 +115,31 @@ function chooseDisplay($projects, $periods, $json, $page){
     $onDisplay;
     if(count($projects) > 0) {
         $onD = $projects[0];
+        echo "<script> let defaulted = false; </script>";
     }
     elseif(count($periods) > 0) {
         $onD = $periods[0];
+        echo "<script> let defaulted = false; </script>";
     }else{
         foreach($json as $value){
             if($value[type]=="default" && $value[page]== $page){
                 $onD = $value;
+                echo "<script> let defaulted = true; </script>";
             }
         }
     }
     return $onD;
 }
 $onDisplay = chooseDisplay($currentProjects, $currentPeriods, $datas, $page);
+
+//a few links have been added to some pages, that don't get fed through this process, because 
+//they are not destined to be on the timeline. These links are currently hardcoded into the 
+//html. The only issue this is creating so far is the p-active class on the top-desc-link only
+//sets on click... and takes it's hardcoded state on load, regardless of whether or not its 
+//archive is displayed. DEFAULTED exists to check whether or not the to-desc-link
+//should have the class p-active or not when loading the page. A some javascript inserted in 
+//the page's navigation does a quick check and adjusts p-active in consequence.
+
 
 
 
