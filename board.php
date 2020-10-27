@@ -18,7 +18,11 @@
 			CURRENT PAGE : OUR BOARD
 		</span>
 	</div>
-	<div class="description">What is it we are anyway? We are a tight knit, loosely woven group. Our Board of Directors, or collective, has seen better and worse, and things you couldn't even imagine.  click <a data-internalid="14" class="archive-button top-desc-link p-active">here</a></div>
+	<div class="description">
+		Our Board of Directors is tight knit and loosely woven. 
+		A quick overview of our current board structure can be found
+		<a data-internalid="14" class="archive-button top-desc-link p-active">here</a>.
+	</div>
 </nav>
 <!--- End Navigation -->
 
