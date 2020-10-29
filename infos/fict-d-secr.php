@@ -79,14 +79,14 @@
 		<p>
 			Someone we love once said, <i>"immitation is [...]
 			the act of working through deepening layers of 
-			understanding."</i> Reflecting on this, at this 
-			particular juncture, is probably our way of saying 
-			that we don't quite understand either.
+			understanding."</i> We like to think of 
+			understanding both as a process and as a sensation. In 
+			both cases, the concept of layers helps to illustrate 
+			our sometimes wintry, enmeshed, and labourious journey 
+			we've embarked on. 
 		</p>
 		<p>
 
 		</p>		
 	</div>
 </div>
-
-

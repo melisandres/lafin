@@ -18,7 +18,7 @@
 			CURRENT PAGE : OUR HISTORY
 		</span>
 	</div>
-	<div class="description">click<a data-internalid="40" class="archive-button top-desc-link">here</a></div>
+	<div class="description">Our history extends past the projects we've crafted, the programs we've spearheaded, and drifts through our community, the ways we've met, the people we've <a data-internalid="40" class="archive-button top-desc-link">become</a>.</div>
 	<script>
 		var myLinks = document.getElementsByClassName("top-desc-link");
 		if (defaulted){

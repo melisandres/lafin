@@ -3,7 +3,7 @@
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
 		<p>
-		Lafin (pronounced like the French for <i>the end</i>) 
+		Lafin (pronounced like <i>the end</i> in French) 
 		is a community scattered across the globe.
 		</p>
 		<p>

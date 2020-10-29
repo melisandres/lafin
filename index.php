@@ -58,13 +58,15 @@
 		There are a number of ways to become involved. 
 	</p>
 	<p>
-		At Lafin, we are curious about so many things. 
+		At Lafin, we are curious.
+	</p>
+	<p>
 		We believe truthes are generally humble, 
 		speaking to the small and the specific. However,
 		we also embrace bold claims, larger than life, 
 		made of whole cloth, worlds softened with silk,
 		feathers, dry leaves&mdash;spikes, and spider 
-		jaws.
+		jaws of every size.
 	</p>
 	<p>	
 		We support archival excavations of long forgetten Lafin 
