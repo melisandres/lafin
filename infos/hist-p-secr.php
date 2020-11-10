@@ -1,30 +1,26 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>about</p>
+	<p>On the sidewalk across from the residency, on the subway towards the 
+	Education Wing, through the crack in the door where Stacey keeps the printing
+	press, in the empty café chair still warm from our gallerist, we write 
+	the back pages of Lafin's history.</p>
+	<p>At Lafin, we feel it is important to pierce small holes in the veil 
+	between the professional and the personal, allowing light to 
+	spill through. In the warm glow of pin-prick lights, we trace 
+	the lines of our journeys.</p>
 	</div>
 
-	<button type="button" class="collapsible">statement</button>
+	<button type="button" class="collapsible">archivist statement</button>
 	<div class="content">
-		<h4>statement title</h4>
-		<p>statement description.</p>
+		<h4>the inbetween</h4>
+		<p>In seeking out institutional archives, we are often faced with the 
+		challenge of deciphering between the incidental memories, and those of 
+		consequence, private musings and institutional shifts.</p>
+		<p>We've decided to archive, however possible, the ephemera... 
+		the extra-curricular musings of an institution.</p>
+		<p>As with the archives of our programs and projects, these 
+		are&mdash;by necessity&mdash;reconstructed from imagination as well
+		as memory.</p>
 	</div>	
-
-	<button type="button" class="collapsible">notes</button>
-	<div class="content">
-		<h4>recovered notes:</h4>
-		<p>Notes description</p>
-	</div>
-
-	<button type="button" class="collapsible">other</button>
-	<div class="content">
-		<h4>other title</h4>
-		<p>other description.</p>
-	</div>
-
-	<button type="button" class="collapsible">bio</button>
-	<div class="content">
-		<h4>Name</h4>
-		<p>bio</p>  		
-	</div>
 </div>

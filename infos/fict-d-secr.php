@@ -82,7 +82,7 @@
 			understanding."</i> We like to think of 
 			understanding both as a process and as a sensation. In 
 			both cases, the concept of layers helps to illustrate 
-			our sometimes wintry, enmeshed, and labourious journey 
+			the sometimes wintry, enmeshed, and labourious journey 
 			we've embarked on. 
 		</p>
 		<p>
