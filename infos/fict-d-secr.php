@@ -14,8 +14,7 @@
 			It is said that in deviating from fact, it is 
 			difficult to keep one's stories straight. But the 
 			shapes narratives can fold into are infinite, and 
-			origami, amongst other disciplines, is within our 
-			sphere of inquiry. 
+			origami is within our broad sphere of inquiry. 
 		</p>
 	</div>
 
@@ -68,7 +67,7 @@
 		about reflecting on the overdone: <i>"What if we are all 
 		a simulation?"</i> question. It's a different sort 
 		of question, a transformative and creative approach to 
-		selfhood&mdash;maybe.... to be fair, we might first have 
+		selfhood&mdash;although, to be fair, we might first have 
 		to figure out if there is indeed a selfhood to redefine.
 		</p>
 	</div>
@@ -83,7 +82,7 @@
 			understanding both as a process and as a sensation. In 
 			both cases, the concept of layers helps to illustrate 
 			the sometimes wintry, enmeshed, and labourious journey 
-			we've embarked on. 
+			we've embarked on, and invite you to join us in.
 		</p>
 		<p>
 

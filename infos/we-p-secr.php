@@ -2,17 +2,16 @@
 	<button type="button" class="collapsible">what</button>
 	<div class="content">
 		<p>
-			While our annual board meetings create a platform to briefly 
-			address institutional concerns, our primary interests lay 
-			somewhere in the synthesis of narrautonomous practices with
+			Our annual board meetings are only tangentially 
+			administrative, as our primary interests lay elsewhere, 
+			in the synthesis of narrautonomous practices with
 			experiments, images, texts, and etc.    
 			<br><br>
-			Our collective has been shaped by a few generations
-			of renegade intellectuals plotting Oulipo-style realities, 
-			'pataphysical expeditions, un-happenings, surveys suspended 
-			in time and space. Lafin continues the tradition of being 
-			navigated by a board that does whatever the hell it feels 
-			like doing.
+			Our collective has been shaped by generations of renegade 
+			intellectuals plotting Oulipo-style realities, 'pataphysical 
+			expeditions, un-happenings, surveys suspended in time and 
+			space. Lafin continues the tradition of being navigated by a
+			board that does whatever the hell it feels like doing.
 		</p>
 	</div>
 

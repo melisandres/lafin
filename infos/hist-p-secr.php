@@ -15,9 +15,9 @@
 	<button type="button" class="collapsible">archivist statement</button>
 	<div class="content">
 		<h4>the inbetween</h4>
-		<p>In seeking out institutional archives, we are often faced with the 
-		challenge of deciphering between the incidental memories, and those of 
-		consequence, private musings and institutional shifts.</p>
+		<p>In seeking out institutional archives, we are often given a mish 
+		mash of incidental memories. Private musings are the colour and 
+		vitality of institutional shifts.</p>
 		<p>We've decided to archive, however possible, the ephemera... 
 		the extra-curricular musings of an institution.</p>
 		<p>As with the archives of our programs and projects, these 
