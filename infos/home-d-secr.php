@@ -20,7 +20,7 @@
 		</p>
 		</div>
 
-	<button type="button" class="collapsible">working from home (2020)</button>
+	<button type="button" class="collapsible">working from home (2021)</button>
 	<div class="content">
 		<h4>Welcome to our homes : local restrictions apply</h4>
 		<p>
