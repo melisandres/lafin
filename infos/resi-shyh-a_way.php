@@ -1,8 +1,8 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>An insomniac's drawings of shadows on the walls. What happens when God closes a window? What happens when the wind blows through, and messes up all the papers?</p>
-	<p>While a resident at the middle room, Shyhorn worked on a scatter of projects, drawing late into the night, and seeking out public and private spaces with interesting acoustics, where he could perform for small audiences while testing out new compositions. The theme of his sketches during this period was <i>escape</i>.</p>
+	<p><i>An insomniac's drawings of shadows on the walls. What happens when God closes a window? What happens when the wind blows through, and messes up all the papers?</i></p>
+	<p>While a resident at the middle room, Shyhorn worked on a scatter of projects. He drew on an array of surfaces, late into the night. During the day and evening, he saught out public and private spaces with interesting acoustics, where he could perform for small audiences while testing out new compositions. He slept late into the morning, speaking soliloquies into the small shared apartment. The theme of his sketches during this period was <i>escape</i>.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
@@ -24,7 +24,7 @@
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
 		<h4>Fergus ShyHorn</h4>
-			<p>Fergus started his artistic career as a street musician. Although his voice was too quiet to pierce through the noise of the city, he developped a small cult followingof curious listeners who sat on the sidewalk next to him while he busked. They described his voice as a thin ribbon rippling through the cacaphonous city. The intimacy created by these performances pushed ShyHorn to further develop increasingly quiet performances that spilled outside of his musical beginnings, and into story-telling and performance art. His performances are designed to create unique moments between himself and very small audiences.</p>  		
+			<p>Fergus started his artistic career as a street musician. Although his voice was too quiet to pierce through the noises of the city, he developped a small cult following of curious listeners who would sit on the sidewalk next to him while he busked. One of his fans, in an article for <i>The Coast</i>, described his voice as a thin ribbon rippling through the cacaphonous city.</p> <p>The intimacy created by these performances pushed ShyHorn to further develop increasingly quiet performances that spilled into story-telling and performance art. His performances are designed to create unique moments between himself and very small audiences.</p>  		
 	</div>
 </div>
 

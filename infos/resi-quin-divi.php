@@ -1,30 +1,18 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>about</p>
+		<p>While a resident at the middle room, Alex Foxberry continued his overarching body of work, iterating images in sets of five, attributing the third attempt to himself and the other four to his brothers. His work and life are centered around the tension between the physical reality of being one, and the internal sense of being one of multiple, and multiple embodied in one.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
 	<div class="content">
-		<h4>statement title</h4>
-		<p>statement description.</p>
+		<h4>versions of us</h4>
+		<p><i>"Somehow, my brothers and I, we've all become artists. We've always loved to compete. We try the same thing, each in our own way, and we see which attempt resonates most deeply." </i></p>
+		<p><i>"On a more personal note, in order to survive childhood, I spoke in the first person. But now, I find the availability of the third person so freeing that I've also come to use the second, fourth and fifth."</i></p>
 	</div>	
-
-	<button type="button" class="collapsible">notes</button>
-	<div class="content">
-		<h4>recovered notes:</h4>
-		<p>Notes description</p>
-	</div>
-
-	<button type="button" class="collapsible">other</button>
-	<div class="content">
-		<h4>other title</h4>
-		<p>other description.</p>
-	</div>
 
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
-		<h4>Name</h4>
-		<p>bio</p>  		
+		<p>The Foxberry kids are numerous, but it's impossible to tell them apart. Alex Foxberry, a middle child nee only child, a quintuplet sidled by older and younger identical pairs, has long enjoyed the notion of imaginary friends, and further, imaginary sibblings. His art work is an exploration of this obsession: he explores the strange and complexe rivalry he has embodied secretly since childhood.</p>		
 	</div>
 </div>
