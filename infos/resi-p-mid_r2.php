@@ -4,10 +4,10 @@
 	<p>These are the latter-days of the middle room.</p>
 	</div>
 
-	<button type="button" class="collapsible">statement</button>
+	<button type="button" class="collapsible">host statement</button>
 	<div class="content">
-		<h4>An empty spot at the centre</h4>
-		<p>I squeezed everything at the peripheries of the apartment, and I slept of the floor. I made an empty space in the middle, like there was in the weird novel I was writing in my off hours. I kept the linens clean. I kept the middle room ready for guests who didn't mind my tip toeing through to get from one extremity of the apartment to the other.<br>The residency was a fixture in my life from 2003-2012. Sometimes a room, sometimes a truck, sometimes the whole apartment--when I went on vacation.</p>
+		<i><p>I squeezed everything at the peripheries of the apartment, and I slept of the floor. I made an empty space in the middle, like there was in the weird novel I was writing in my off hours. I kept the linens clean. I kept the middle room ready for guests who didn't mind my tip toeing through to get from one extremity of the apartment to the other.<br>The residency was a fixture in my life from 2003-2012. Sometimes a room, sometimes a truck, sometimes the whole apartment--when I went on vacation.</p></i>
+		<p>-Mélisandre Schofield</p>
 	</div>	
 
 	<button type="button" class="collapsible">other</button>
