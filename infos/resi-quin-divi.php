@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-		<p>While a resident at the middle room, Alex Foxberry continued his overarching body of work, iterating images in sets of five, attributing the third attempt to himself and the other four to his brothers. His work and life are centered around the tension between the physical reality of being one, and the internal sense of being one of multiple, and multiple embodied in one.</p>
+		<p>While a resident at the middle room, Alex Foxberry continued his overarching body of work, iterating images in sets of five, attributing the third attempt to himself, the other four to his brothers, and compositing these iterations. His work and life are centered around the tension between the physical reality of being one, and the internal sense of being one of multiple, and multiple embodied in one.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
@@ -13,6 +13,6 @@
 
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
-		<p>The Foxberry kids are numerous, but it's impossible to tell them apart. Alex Foxberry, a middle child nee only child, a quintuplet sidled by older and younger identical pairs, has long enjoyed the notion of imaginary friends, and further, imaginary sibblings. His art work is an exploration of this obsession: he explores the strange and complexe rivalry he has embodied secretly since childhood.</p>		
+		<p>The Foxberry kids are numerous, but it's impossible to tell them apart. Alex Foxberry, a middle child nee only child, a quintuplet sidled by older and younger identical pairs, has long enjoyed the notion of imaginary friends, and further, imaginary sibblings. His art work is an exploration of this obsession: he examines the strange and complexe rivalry he has embodied secretly since childhood.</p>		
 	</div>
 </div>

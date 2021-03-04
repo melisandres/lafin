@@ -1,12 +1,11 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>An experiment in the field of arts administration</p>
+	<p>As a resident of the middle room residency, Vincent Applebee created and hosted a residency of his own. His resident, Jeremy Swimmer, lived and worked in the middle room residency closet, or what became known as the 'Closet Residency.'</p>
 	</div>
 
-	<button type="button" class="collapsible">more info</button>
+	<button type="button" class="collapsible">final report</button>
 	<div class="content">
-		<h4>Report</h4>
 		<p>Boy, have the last few months been jam-packed with activity!</p>
 		<p>Working hand in hand with the Lafin contingency in Halifax has been a very memorable experience. Here's the last few months in review:</p>
 		<h5>January 2005</h5>
@@ -19,13 +18,14 @@
 
 	<button type="button" class="collapsible">bio</button>
 	<div class="content">
-		<p>Vincent Applebee has been active in multiple communities, both in the UK and abroad, as an artist-symbiote.  Working under his name, or others, like a forgetter, an impersonator, or in anonymity, Applebee has an extensive and secretive exhibition record.</p>
-		<p>One time repetitions, mistakable echos, and situations where the same thing over again is actually something quite different, are parallel branches on which his work swings, like a rotten apple.</p>
+		<p>Vincent Applebee has been active in multiple communities, both in the UK and abroad, as an artist-symbiote.  Working under his name, or others, like a forger, an impersonator, or in anonymity, Applebee has an extensive and secretive exhibition record.</p>
+		<p>One-time repetitions, mistakable echos, and situations where the same thing over again is actually something quite different, are parallel branches on which his work swings like a rotten apple.</p>
 		<p>Applebee holds a BFA with a major in painting from the Royal Academy in London, works as a copy editor for the Modalis Review, and seldom shows his work under his real name.</p>
 	</div>
 
 	<button type="button" class="collapsible">artist statement</button>
 	<div class="content">
-		<p>"I have nothing more to say."<br><i>-Geneva Applebee, our last phone conversation.</i></p>  		
+		<i><p>"I have nothing more to say."</p></i>
+		<p>-Geneva Applebee, our last phone conversation.</p>  		
 	</div>
 </div>

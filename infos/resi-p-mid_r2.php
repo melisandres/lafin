@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>These are the days of middle rooms.</p>
+	<p>These are the latter-days of the middle room.</p>
 	</div>
 
 	<button type="button" class="collapsible">statement</button>
@@ -14,6 +14,8 @@
 	<div class="content">
 		<h4>other</h4>
 		<p>It was risky.</p>
+		<p>In its early days, the middle room residency's slanted floor seemed new, like the structure had perhaps settled recently and the angle of ascent from the front room to the kitchen might increase day by day. Guests were forwarned that I would have to tip toe through their room to get from one extremity of the apartment to the other.</p>
+
 	</div>
 
 	<button type="button" class="collapsible">bio</button>

@@ -5,9 +5,9 @@
 	<p>In the summer 1976, on their first full summer trip, they brought their friend Julianna Kotowsky. During her stay, she wrote her first draft of the award-winning <i>Modus Nautica</i>, a novel-length account of their summer together, told from the perspective of the lost tuna that followed them. This was one of the many beginnings of the Lafin residency program. Other writers and artists in residence during its nautical era include: the Ice Cream Barron, Maude Hollenberg, and Bobby Dylan (the food artist).</p>
 	</div>
 
-	<button type="button" class="collapsible">statement</button>
+	<button type="button" class="collapsible">host statement</button>
 	<div class="content">
-		<p><i>"We didn't know what we were getting into, and we didn't care. We built ourselves from the mechanical parts of carelessness. The world was a bottomless blue, and we controled nothing."</i></p>
+		<p><i>"We didn't know what we were getting into, and we didn't care. We built ourselves from the mechanical parts of carelessness. The world was a bottomless blue, a topless blue, and we controled nothing."</i></p>
 		<p>-Frank Mayfield</p>
 	</div>	
 </div>
