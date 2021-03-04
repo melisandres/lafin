@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p>These are the latter-days of the middle room.</p>
+		<p>The middle room residency ran from 2003 to 2005, with a short hiatus in 2005 while middle room resident Vincent Applebee used his residency as an opportunity to host a residency of his own&mdash;in the closet. After Vincent and Jeremy finished their work for the closet residency, and returned home, the middle room residency only hosted a few more residents, as Mélisandre packed her belongings and prepared for a move to Toronto. </p>
 	</div>
 
 	<button type="button" class="collapsible">host statement</button>
@@ -16,12 +16,6 @@
 		<p>It was risky.</p>
 		<p>In its early days, the middle room residency's slanted floor seemed new, like the structure had perhaps settled recently and the angle of ascent from the front room to the kitchen might increase day by day. Guests were forwarned that I would have to tip toe through their room to get from one extremity of the apartment to the other.</p>
 
-	</div>
-
-	<button type="button" class="collapsible">bio</button>
-	<div class="content">
-		<h4>Mé</h4>
-		<p>lead by Mé, following Mé... but only for a short while.</p>  		
 	</div>
 </div>
 

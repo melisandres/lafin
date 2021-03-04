@@ -8,7 +8,7 @@
 	<button type="button" class="collapsible">host statement</button>
 	<div class="content">
 		<i><p>"I prepared for guests by squeezing everything I owned into the peripheries of the three-room apartment. The floors were so slanted, that I worried about balancing the weight of the objects in the kitchen with the weight of the objects in the front room. I was convinced that the angle of the slanting floors was increasing daily." </p>
-		<p>"I readied my bed in the central room, and slept alternatively in the kitchen and the front room (to compensate for the weight of my sleeping body), which both had comfortable floors. The middle room was always kept clean and ready for last-minute guests."</p></i>
+		<p>"I readied the only bed in the central room, and slept alternatively in the kitchen and the front room (to compensate for the weight of my sleeping body). The middle room was always kept clean and ready for last-minute guests."</p></i>
 		<p>-Mélisandre Schofield</p>
 		
 	</div>	

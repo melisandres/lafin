@@ -1,7 +1,7 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-		<p>In the early 2000's, board member Mélisandre Schofield began hosting informal artist residencies in her home. Although these were not exactly thought of as residencies, and were organized with a fluidity and spontaneity that becomes difficult to maintain over time, this experience shaped what later became <i>the middle room</i> residency.</p>
+		<p>In the early 2000's, board member Mélisandre Schofield began hosting informal artist residencies in her home. Although these were not exactly thought of as residencies, and were organized with a fluidity and spontaneity that becomes difficult to maintain over time, this experience shaped what later became <i>the middle room</i> residency, and all its future incarnations.</p>
 		<p></p>
 	</div>
 
