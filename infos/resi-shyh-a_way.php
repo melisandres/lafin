@@ -2,10 +2,10 @@
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
 	<p><i>An insomniac's drawings of shadows on the walls. What happens when God closes a window? What happens when the wind blows through, and messes up all the papers?</i></p>
-	<p>While a resident at the middle room, Shyhorn worked on a scatter of projects. He drew on an array of surfaces, late into the night. During the day and evening, he saught out public and private spaces with interesting acoustics, where he could perform for small audiences while testing out new compositions. He slept late into the morning, speaking soliloquies into the small shared apartment. The theme of his sketches during this period was <i>escape</i>.</p>
+	<p>While a resident at <i>the floor residency</i>, Shyhorn worked on a scatter of projects. He drew on an array of surfaces, late into the night. During the day and evening, he saught out public and private spaces with interesting acoustics, where he could test out new compositions on small audiences. While working within the residency space, he practiced vocalizations. Unsurprisingly, the theme of his sketches during his residence was <i>escape</i>, which became the theme of the residency host's work during this time as well.</p>
 	</div>
 
-	<button type="button" class="collapsible">statement</button>
+	<button type="button" class="collapsible">artist statement</button>
 	<div class="content">
 		<h4>screaming for a way out</h4>
 		<p>The bridge to Prince Edward's Island is almost 13 km long, which means that it would take the average person more than two hours to walk off the island. I once spent a fraction of that on a bridge in Brussels. In the five minutes it took to sing a song about waiting for a lost love to cross the ocean, I was interrupted by a well-meaning someone who came to ask me if I was okay, thinking for sure I was looking for a way out.</p>

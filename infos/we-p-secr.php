@@ -53,7 +53,7 @@
 			 by a Norwegian pond. In 2001, all met at Charles
 			de Gaule, during someone's 3 hour layover.
 			<br><br>
-			The details of 2020's meeting are still undisclosed.
+			The details of this year's meeting are still undisclosed.
 		</p>  		
 	</div>
 	<button type="button" class="collapsible">no how</button>
