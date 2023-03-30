@@ -1,0 +1,207 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 0;  /*When the menu takes two lines, the body becomes invisible... */
+    width: 100%; /*so the image goes to the edge*/
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+
+[role=menu]{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding: 8px 16px 100px 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(white, transparent);
+    height: 240px;
+    z-index: 10;
+}
+
+[role=menuitem] {
+    display: inline;
+}
+
+[role=menuitem] > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 30px 16px;
+    font-size: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;  
+}
+
+[role=menuitem] > a:hover{
+    background-color:  rgb(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    border-radius: 0 0 150px 150px;
+}
+
+[role=menuitem] > a.active{
+    background-color: rgb(0, 0, 0, 0.3);
+    color: hsl(329, 49%, 39%);
+    border-radius: 0 0 150px 150px;
+    background-color: #eeeeed;
+}
+
+.innerlink {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.innerlink:visited{
+    color: #943265;
+    text-decoration: none;
+}
+
+.innerlink:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.toparea{
+   /* https://dev-bay.com/css-center-text-image-div-vertically-and-horizontally/#:~:text=Setting%20some%20element%20in%20the,block%20)and%20it%20is%20done.*/
+    position:relative;
+}
+
+.filmstrip{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px; /*the concept for this section started as a flimstrip and evolved to a string of beads--perhaps a very subtle reference to my interest in beading? More likely, the repetition of circles in the design helps it feel light and airy.*/
+}
+
+.line{
+    height: 2px;
+    width: 100%;
+    background-color: rgb(202, 196, 196);
+    position:absolute;
+    top:50%;
+    z-index: -1;
+}
+
+.circle-img{
+    border-radius: 50%;
+}
+
+.circle-realisations{
+    /*the images destined for this area could be 250pxx250px rather than 200px*/
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    text-align: right;
+    margin-right:10%;
+}
+
+h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    font-size: 80px;
+    margin-bottom:0;
+}
+h3{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+h4{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    margin-left: 15px;
+}
+
+.school{
+    margin-left: 40%;
+    margin-top: 0px;
+}
+
+.bigyear{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    margin-left: 40%;
+    color: #eeeeed;
+    position: absolute;
+    margin-top: -275px;
+    z-index: -10;
+}
+
+p{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-top: 65px;
+    margin-right: 40px;
+    letter-spacing: 1.5px;
+}
+.contact{
+    margin: 200px;
+    /*https://getcssscan.com/css-box-shadow-examples*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+input, select, textarea{
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+}
+
+footer{
+    text-align: center;
+}
+
+@media screen and (max-width:750px) {
+    body{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    main{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    [role=menuitem] > a{
+        padding: 30px 16px;
+        font-size: 18px;
+        font-weight: 300;  
+    }
+    
+}

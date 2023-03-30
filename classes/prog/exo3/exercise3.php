@@ -18,7 +18,7 @@
         $remTimeInHours = $overallTimeInHours % 24;
         $overallTimeInDays = ($overallTimeInHours-$remTimeInHours)/24;
     
-        echo "<div>You will have spent approximately: ".$overallTimeInDays." days, ".$remTimeInHours." hours, and ".$remTimeInMins." minutes brushing your teeth, by the time you are ".$actArr["endAge"]."!</div>";
+        echo "You will have spent approximately: ".$overallTimeInDays." days, ".$remTimeInHours." hours, and ".$remTimeInMins." minutes brushing your teeth, by the time you are ".$actArr["endAge"]."!";
 }
 
 calcActTime($userArr);
