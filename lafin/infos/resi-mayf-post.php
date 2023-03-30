@@ -17,7 +17,7 @@
 		And I destroy for the flavour.</p>
 		<h4>Anita Beaumont</h4>
 		<p>My life changed drastically after I survived a life-threatening accident in my early twenties. I remember each moment of that day with vivid clarity: my world rushed back to me with all its important pieces in place, but somehow uncomplicated by bull-shit, bathing in a sense of crisp possibility.</p>
-		<p>I try to inject that clarity into my work. I combine photography, performance, and ceramics, and use these mediums to pull reality into focus, to peal back the layers and reveal the possibility of each moment to defy expectation and provoke wonder.</p>
+		<p>I try to inject that clarity into my work. I combine photography, performance, and ceramics. I use these mediums to pull reality into focus, to peal back the layers and reveal the possibility of each moment to defy expectation and provoke wonder.</p>
 	</div>	
 
 	<button type="button" class="collapsible">recovered notes</button>

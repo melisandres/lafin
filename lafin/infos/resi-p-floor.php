@@ -9,7 +9,7 @@
 	<div class="content">
 		<h4>naming things later</h4>
 		<i><p>"Between 1999 and 2003, I was renting short-term, subletting, sharing with roomates, moving a lot, and I felt particularly lucky when the parts of the floor that were mine had a length and a width that could accomodate a small matt where a guest could sleep."</p>
-		<p>"Guests were not called residents, and the work they made in the hours that the matt was a vacant heap of sheets and blanket-like clothing was just the stuff we did&mdash;nothing more, nothing less."</p></i>
+		<p>"Guests were not called residents, and the work they made in the hours that the matt was a vacant heap of sheets and blanket-like clothing was just the stuff we did&mdash;we were just artists, doing what we could."</p></i>
 		<p>-Mélisandre Schofield</p>
 	</div>	
 

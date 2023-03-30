@@ -6,7 +6,7 @@
 
 	<button type="button" class="collapsible">host statement</button>
 	<div class="content">
-		<i><p>After Vincent and Jeremy left, the middle room felt empty. I was writing a novel at the time, and there was an empty space in the very centre of my novel. It felt like circumstances were conspiring to teach me something meaningful, about emptiness.</p></i>
+		<i><p>Vaughn's residency was barely a week after Jeremy and Vincent left. And once the appartment was empty, it felt incredibly hollow, and cavernous, and cold. I was writing a novel at the time, and there was an empty space in the very centre of my novel. It felt like circumstances were conspiring to teach me something meaningful, about emptiness.</p></i>
 		<p>-Mélisandre Schofield</p>
 	</div>	
 </div>
