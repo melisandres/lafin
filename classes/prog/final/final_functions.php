@@ -164,6 +164,25 @@ function calculDesRemises($arr, $arrTE){
     return array($arr, $arrTE);
 }
 
+function bestAndWorstInClass($classArr, $bestWorst){
+    $lastValue = 0;
+    $position = "";
+    for($i = 0; $i < count($classArr); $i++){
+        if ($classARR[$bestWorst] > $lastValue){
+                $lastValue = $classARR[$bestWorst];
+                $position = "Travail ".$i;
+        }
+    }
+    for($i = 0; $i < count($classArr); $i++){
+        if ($classARR[$bestWorst] > $lastValue){
+            $lastValue = $classARR[$bestWorst];
+            $position = "Examen ".$i;
+        }
+        //check one number against another
+        //keep variables to track their positions
+    }
+}
+
 
 
 /* function calculDesRemises($arr){
