@@ -15,6 +15,21 @@ body{
 
 main{
     flex: 1;
+/*     display: flex; */
+}
+
+.validation {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.validation > section{
+    flex: 1 1 calc(33.33% - 20px);
+}
+
+.validation > section > img {
+    height: 200px; 
+    width: 300px;
 }
 
 nav {
@@ -22,11 +37,12 @@ nav {
     flex-direction: column;
 }
 
-/* form{
+form{
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+} 
+
 
 
 [role=menu]{
@@ -37,8 +53,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient(white, transparent);
-    height: 240px;
+    background-image: linear-gradient(white, rgba(255, 255, 255, 0.7), transparent);
+    height: 140px;
     z-index: 10;
 }
 
@@ -142,7 +158,7 @@ h4{
     font-family: 'Work Sans', sans-serif;
     font-weight: 100;
     font-size: 50px;
-    margin-left: 15px;
+/*     margin-left: 15px; */
 }
 
 .school{
@@ -170,16 +186,36 @@ p{
     margin-right: 40px;
     letter-spacing: 1.5px;
 }
+
+/*contact page styling*/
 .contact{
-    margin: 200px;
-    /*https://getcssscan.com/css-box-shadow-examples*/
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 10% 20% 5% 20%;
+    /*https://getcssscan.com/css-box-shadow-examples by ls grafics*/
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.contact h1{
+    text-align: center;
+    font-family:'Fira Sans', sans-serif;
+    font-weight: 200;
+    font-size: 35px;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+    color: grey;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    border: hsla(329, 49%, 39%, 0.495) solid 1px;
+    box-shadow: hsla(329, 49%, 39%, 0.1) -4px 9px 25px -6px inset, rgba(0, 0, 0, 0.3) 0px 1px 14px -48px inset;
 }
 
 input, select, textarea{
+    width: 80%;
     display: block;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    padding: 16px;
+    border: rgba(73, 70, 70, 0.1) solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
 }
@@ -203,5 +239,12 @@ footer{
         font-size: 18px;
         font-weight: 300;  
     }
-    
+    p{
+        width: 95vw;
+        margin: 10px;
+        text-align: justify;
+    }
+    h1{
+        text-align: right;
+    }
 }

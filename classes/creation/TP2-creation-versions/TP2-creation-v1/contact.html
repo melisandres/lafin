@@ -13,9 +13,6 @@
 
 </head>
 <body>
-    <header>
-        <h1>Contactez Mélisandre</h1>
-    </header>
     <nav>
         <ul role="menu">
             <li role="menuitem" aria-label="Menu acceuil"> <a href="index.html"> Acceuil </a></li>
@@ -27,12 +24,18 @@
     </nav>
     <main  class="contact">
         <section>
-            <h3>par telephone</h3>
-            <h4>555.555.5555</h4>
+            <h1>contactez Mélisandre</h1>
         </section>
         <section>
-            <h3>par message direct</h3>
             <form action="contact.html" method="post">
+                <label for="nom"></label>
+                <input type="text" id="nom" name="nom" placeholder="nom">
+                <label for="prenom"></label>
+                <input type="text" id="prenom" name="prenom" placeholder="prenom">
+                <label for="email"></label>
+                <input type="email" id="email" name="couriel" placeholder="email">
+                <label for="message"></label>
+                <textarea name="message" id="message" rows="10" cols="60" placeholder="ecrivez un message pour melisandre">Soyons amis!</textarea>
                 <select name="sujet" id="" required> <!--required means it will not accept an empty response. Here the selectioner une ville is empty so it will not allow-->
                     <option value="">selectioner le tier voulu</option>
                     <optgroup label="options de base">
@@ -49,14 +52,6 @@
                         <option value="tier3.2">Intelligence artificielle inclus</option>
                     </optgroup>
                 </select>
-                <label for="nom"></label>
-                <input type="text" id="nom" name="nom" placeholder="nom">
-                <label for="prenom"></label>
-                <input type="text" id="prenom" name="prenom" placeholder="prenom">
-                <label for="email"></label>
-                <input type="email" id="email" name="couriel" placeholder="email">
-                <label for="message"></label>
-                <textarea name="message" id="message" rows="10" cols="60" placeholder="ecrivez un message pour melisandre">Soyons amis!</textarea>
                 <input type="submit">
             </form>
         </section>
