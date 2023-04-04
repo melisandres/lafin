@@ -1,11 +1,17 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 /*
 * 582-11B-MA Epreuve Finale
 *
 * Mélisandre Schofield: 2395207
 */
 
-echo "Welcome: ".$_POST["name"]."</br></br>";
+
+displayGreeting();
+
 $notes = array(
 105 => [["Stein", "Gertrude"],[89, 59],[45, 90]],
 106 => [["DeBeauvoir", "Simone"],[100, 100],[100, 99]],
@@ -16,21 +22,43 @@ $notes = array(
 111 => [["Orzick", "Cynthia"], [0,0], [0,0]]
 );
 
+//variables comming in
+$notesABC = array("A" => 90, "B"=> 80, "C" => 70, "D" => 60,"E" => 1, "Abs" => 0);
+$passFailStructure = array("reussites" => 0, "echecs" => 0, "vides" => 0);
+$ponderations = array(20, 20, 25, 35);
+$noteDePassage = 60;
 
 
-function calculateMean($arr){
-    $arrTE = createDynamicArrays($arr);
+//variables comming out
 
 
-    $remiseTravauxEtudiant = array("reussites" => 0, "echecs" => 0, "vides" => 0);
+
+
+
+
+// HTML 
+$br = "<br>";
+
+
+//
+
+
+
+
+function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
+    
+    $arrTE = createDynamicArrays($arr, $passFailS);
+
+
+    $remiseTravauxEtudiant = $passFailS;
     $remisesTravauxClasse = $arrTE[0];
     echo var_dump($remisesTravauxClasse)."<br>does this work?";
 
-    $remiseExamensEtudiant = array("reussites" => 0, "echecs" => 0, "vides" => 0);
+    $remiseExamensEtudiant = $passFailS;
     $remisesExamensClasse = $arrTE[1];
 
-    $remisesTotals = array("reussites" => 0, "echecs" => 0, "vides" => 0);
-    $cour = array("reussites" => 0, "echecs" => 0);
+    $remisesTotals = $passFailS;
+    $cour = $passFailS;
 
     foreach ($arr as $key => $value){
         for ($i = 0; $i < count($value); $i++){
@@ -47,40 +75,35 @@ function calculateMean($arr){
                     calculPlusHauteNote($value[$i]);
 
 
-                    $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse);
+                    $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $passage);
                     $remiseTravauxEtudiant = $returnArr[0];
                     $remisesTravauxClasse = $returnArr[1];
                     echo "<br>";
                     echo "<br>".var_dump($remisesTravauxClasse)."remise Travaux CLass</br>";
 
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant);
+                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $passage);
                     break;
 
                 //looping though the exams 
                 case 2:
-                    $returnArr = calculDesRemises($value[$i], $remisesExamensClasse);
+                    $returnArr = calculDesRemises($value[$i], $remisesExamensClasse, $passage);
                     $remiseExamensEtudiant = $returnArr[0];
                     $remisesExamensClasse = $returnArr[1];
 
                     echo "<br>";
                     echo "<br>".var_dump($remisesExamensClasse)."remise Examens CLass</br>";
 
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant);
+                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant, $passage);
 
-                    //make a function to calculate the mean dynamically? give it two arrays.  
-                    $mean = ($value[$i-1][0] / 100 * 20) + ($value[$i-1][1] / 100 * 20) + ($value[$i][0] / 100 * 25) + ($value[$i][1] / 100 * 35);
+                    $mean = calculateEachMean($pond, $value);
 
                     //add your pass/fail values to an associative array for the class
-                    if ($mean >= 60){
-                        $cour["reussites"] ++;
-                    }
-                    else {
-                        $cour["echecs"] ++;
-                    }
+                    $cour = refreshClassArr($cour, $mean, $passage);
+
 
                     echo "mean: ".$mean;
                     echo "<br>";
-                    echo "Letter Grade: ".getLetterGrade($mean);
+                    echo "Letter Grade: ".getLetterGrade($mean, $aBC);
                     echo "<br>";
                     echo "<br>";
                     break;  
@@ -97,6 +120,48 @@ function calculateMean($arr){
 
 
 
+
+
+
+function calculateEachMean($pond, $value){
+    $mean = 0;
+    $k = 0;
+    for ($i = 1; $i < count($value); $i++){
+        for ($j = 0; $j < count($value[$i]); $j++){
+            $mean += $value[$i][$j] /100 * $pond[$k];
+            $k++; 
+        }
+    }
+    return $mean;
+}
+
+
+
+
+
+//this is surely doing the same thing as some other functions... 
+//I need to compare the functions that seem to do something similar, 
+//and see if they really are, and if they aren't I need to articulate that
+//in some good comments because my comments are not good enough to explain my code 
+//to future me. I'm confused about what I wrote last week. 
+function refreshClassArr($class, $mean, $passage){
+    if ($mean >= $passage){
+        $class["reussites"] ++;
+    }
+    elseif ($mean > 0) {
+        $class["echecs"] ++;
+    }
+    else{
+        $class["vides"] ++;
+    }
+    return $class;
+}
+
+
+
+
+
+
 function calculTotalRemises($arrTotal, $arrAjout){
     foreach ($arrTotal as $key => $value){
         $arrTotal[$key] += $arrAjout[$key];
@@ -104,10 +169,14 @@ function calculTotalRemises($arrTotal, $arrAjout){
     return $arrTotal;
 }
 
-function createDynamicArrays($arr){
+
+
+
+
+
+function createDynamicArrays($arr, $passFailS){
     $arrT = array();
     $arrE = array();
-    $arrPush = array("reussites" => 0, "echecs" => 0, "vides" => 0);
     //only loop once over one student, to see what the template is
     //and only on the value of the associative array
     //start your iterator at one to skip the name
@@ -121,41 +190,48 @@ function createDynamicArrays($arr){
             for($j = 0; $j < count($value[$i]); $j++){
                 if ($i == 1){
                     //as you loop through traveaux, add an array for each
-                    array_push($arrT, $arrPush);
+                    array_push($arrT, $passFailS);
                 }
                 else {
                     //as you loop through exams, add an array for each
-                    array_push($arrE, $arrPush);
+                    array_push($arrE, $passFailS);
                 }
             }
             $loop = false;
         }
     } 
 }
+
+
+
+
+
+
 //would it be possible, while looping through, to check if... for instance, pass exists, 
 //at arrT[$i] position (wherever I've found a pass...)and if it does not, just add it with a 
 //value of 1? would that be less code heavy?
 
 //this returns an array with the values from all the traveau, or all the examens
-function calculDesRemises($arr, $arrTE){
+//what are the two arrays being sent out? 
+function calculDesRemises($arr, $arrTE, $passage){
     $reussites = 0;
     $echecs = 0; 
     $vides = 0; 
     for ($i = 0; $i < count($arr); $i++){
         echo $arr[$i]."this is the value being tested";
-        if ($arr[$i] >= 60){
-            echo "note is (reussi): ".$note;
+        if ($arr[$i] >= $passage){
+            echo "note is (reussi): ".$arr[$i];
             $reussites ++;
             $arrTE[$i]["reussites"] ++;
         }
         if ($arr[$i] == 0){
-            echo "note is (vide): ".$note;
+            echo "note is (vide): ".$arr[$i];
             $vides ++;
             $arrTE[$i]["vides"] ++;
             //would this also count as an echec? 
         }
-        if ($arr[$i] <60 && $arr[$i] > 0) {
-            echo "note is (echec): ".$note;
+        if ($arr[$i] <$passage && $arr[$i] > 0) {
+            echo "note is (echec): ".$arr[$i];
             $echecs ++;
             $arrTE[$i]["echecs"] ++;
         }
@@ -164,26 +240,107 @@ function calculDesRemises($arr, $arrTE){
     return array($arr, $arrTE);
 }
 
-function bestAndWorstInClass($classArr, $bestWorst){
+
+
+
+
+
+
+
+
+//$bestWorst is to let us know if we are checking for Pass or Fail. 
+//Regardless, we will run through the function once for each
+function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
     $lastValue = 0;
     $position = "";
-    for($i = 0; $i < count($classArr); $i++){
-        if ($classARR[$bestWorst] > $lastValue){
-                $lastValue = $classARR[$bestWorst];
-                $position = "Travail ".$i;
+    $combinedArr = array($classArrT, $classArrE);
+    for ($i = 0; $i < count($combinedArr); $i++){
+        for($j = 0; $j < count($combinedArr[$i]); $j++){
+            if ($combinedArr[$i][$j][$bestWorst] > $lastValue){
+                $lastValue = $combinedArr[$i][$j][$bestWorst];
+                if($i == 0){
+                    $position = "travail".$i;
+                }
+                else {
+                    $examOrHomework = "examen".$i;
+                }
+            }
         }
     }
-    for($i = 0; $i < count($classArr); $i++){
-        if ($classARR[$bestWorst] > $lastValue){
-            $lastValue = $classARR[$bestWorst];
-            $position = "Examen ".$i;
+    echo "The most successful of all exams and homeworks for this class was  ".$stringTE.$position;
+}
+
+
+
+
+
+//this will return the final letter grade for each student. 
+
+function getLetterGrade($grade, $aBC){
+    if  ($grade >= 101 | $grade < 0){
+        echo "erreur de tableau. ".$grade." n'est pas une valeur de note permise.";
+    }
+    foreach ($aBC as $key => $value){
+        if ($grade >= $value){
+            return $key;
         }
-        //check one number against another
-        //keep variables to track their positions
     }
 }
 
 
+
+
+
+
+
+
+//this iterates through one array and returns the highest grade, with the 
+//"name"(as a number) of the associated homework. It also sends the "name of 
+//a secondary homework if another homework ties for first place. It will not
+//return a third homework name, if three homeworks have tied for first place
+
+function calculPlusHauteNote($arr){
+    $plusHauteNote = $arr[0];
+    $travail = 1;
+    $travailEgale = 0;
+    for ($j = 1; $j < count($arr); $j++){
+        //vérifier si la présente note est plus grande que la dernière
+        if ($plusHauteNote < $arr[$j]){
+            $plusHauteNote = $arr[$j];
+            $travail = $j + 1;
+        }
+        //vérifier si la présente note est égale à la dernière
+        elseif ($plusHauteNote == $arr[$j]){
+            $travailEgale = $j +1;
+        }
+    //vérifier si la plus grande note a une note égale
+    if ($travailEgale > 0 && $arr[$travailEgale-1] == $plusHauteNote){
+        echo "Best TP: travail ".$travail." & ".$travailEgale."---note: ".$plusHauteNote;
+    }
+    //rendre les infos pour la plus haute note.
+    else 
+        echo "Best TP: travail ".$travail."--- note: ".$plusHauteNote;
+    }
+    echo"<br>";
+    $returnArr = array($plusHauteNote, $travail, $travailEgale);
+    return $returnArr; 
+} 
+
+
+
+
+
+
+
+
+
+
+
+/*HTML DISPLAY FUNCTIONS*/
+
+function displayGreeting(){
+    echo "Welcome: ".$_POST["name"]."</br></br>";
+}
 
 /* function calculDesRemises($arr){
     $reussites = 0;
@@ -266,27 +423,6 @@ function bestAndWorstInClass($classArr, $bestWorst){
 } */
 
 
-function getLetterGrade($grade){
-    switch ($grade){
-        case ($grade >= 101):
-            echo "erreur. Note plus grande que 100.";
-            return;
-        case ($grade >= 90):
-            return "A";
-        case ($grade >= 80):
-            return "B";
-        case ($grade >= 70):
-            return "C";
-        case ($grade >= 60):
-            return "D";
-        case ($grade >= 1):
-            return "E";
-        case ($grade == 0):
-            return "Abs";
-        // case default:
-        //     return "error";
-    }
-}
 
 
 
@@ -294,32 +430,6 @@ function getLetterGrade($grade){
 
 
 
-
-
- function calculPlusHauteNote($arr){
-    $plusHauteNote = $arr[0];
-    $travail = 1;
-    $travailEgale = 0;
-    for ($j = 1; $j < count($arr); $j++){
-        //vérifier si la présente note est plus grande que la dernière
-        if ($plusHauteNote < $arr[$j]){
-            $plusHauteNote = $arr[$j];
-            $travail = $j + 1;
-        }
-        //vérifier si la présente note est égale à la dernière
-        elseif ($plusHauteNote == $arr[$j]){
-            $travailEgale = $j +1;
-        }
-    //vérifier si la plus grande note a une note égale
-    if ($travailEgale > 0 && $arr[$travailEgale-1] == $plusHauteNote){
-        echo "Best TP: travail ".$travail." & ".$travailEgale."---note: ".$plusHauteNote;
-    }
-    //rendre les infos pour la plus haute note.
-    else 
-        echo "Best TP: travail ".$travail."--- note: ".$plusHauteNote;
-    }
-    echo"<br>";
-} 
 
 
 

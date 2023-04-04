@@ -51,7 +51,7 @@
         $name = test_input($_POST["name"]);
 /*         $password = test_input($_POST["password"]); */
         include 'final_functions.php';
-        calculateMean($notes);
+        calculateMean($notes, $passFailStructure, $notesABC, $ponderations, $noteDePassage);
 
     }
  
@@ -73,8 +73,6 @@
 <?php 
 
 //create a form
-//request name and password 
-//use a post
 //send that info to the next functions
 //will the form disappear once you submit?
 
