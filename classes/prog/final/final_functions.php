@@ -29,30 +29,56 @@ $ponderations = array(20, 20, 25, 35);
 $noteDePassage = 60;
 
 
-//variables comming out
+//variables pour tableau
+$nom_etudiant = "";
+$moyene_étudiante = 0;
+$note_lettre = "";
+$best_note = 0;
+$best_travail = "";
+$travail_egale = "";
+
+
+//variables pour haut de la page
+$nb_vides = 0;
+$nb_echecs = 0;
+$nb_reussites = 0;
+$best_remise = "";
+$worst_remise = "";
+$best_remise_egale = "";
+$worst_remise_egale = "";
 
 
 
-
-
-
-// HTML 
+ // HTML 
 $br = "<br>";
-
-
+$table = "<table>";
+$table_end = "</table>";
+$tr = "<tr>";
+$tr_end = "</tr>"; 
+$th = "<th>";
+$th_end = "</th>";
+$td = "<td>";
+$td_end = "</td>";
+$div = "<div>";
+$div_end = "</div>";
+$section = "<section>";
+$section_end = "</section>";
 //
 
 
 
 
 function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
-    
+    $nom =""; 
+    $moyene = ""; 
+    $note = ""; 
+    $meilleur_travail = "";
     $arrTE = createDynamicArrays($arr, $passFailS);
 
 
     $remiseTravauxEtudiant = $passFailS;
     $remisesTravauxClasse = $arrTE[0];
-    echo var_dump($remisesTravauxClasse)."<br>does this work?";
+/*     echo var_dump($remisesTravauxClasse)."<br>does this work?"; */
 
     $remiseExamensEtudiant = $passFailS;
     $remisesExamensClasse = $arrTE[1];
@@ -60,26 +86,29 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
     $remisesTotals = $passFailS;
     $cour = $passFailS;
 
+    initializeTable();
+
     foreach ($arr as $key => $value){
         for ($i = 0; $i < count($value); $i++){
             switch ($i){
                 //looping through the name
                 case 0:
-                    echo "name: ";
+                    $nom = $value[$i][0]. ", ". $value[$i][1];
+  /*                   echo "name: ";
                     echo $value[$i][0]. ", ". $value[$i][1];
-                    echo "<br>";
+                    echo "<br>"; */
                     break;
 
                 //looping through the TPs 
                 case 1:
-                    calculPlusHauteNote($value[$i]);
+                    $meilleur_travail = calculPlusHauteNote($value[$i]);
 
 
                     $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $passage);
                     $remiseTravauxEtudiant = $returnArr[0];
                     $remisesTravauxClasse = $returnArr[1];
-                    echo "<br>";
-                    echo "<br>".var_dump($remisesTravauxClasse)."remise Travaux CLass</br>";
+/*                     echo "<br>";
+                    echo "<br>".var_dump($remisesTravauxClasse)."remise Travaux CLass</br>"; */
 
                     $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $passage);
                     break;
@@ -90,8 +119,8 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
                     $remiseExamensEtudiant = $returnArr[0];
                     $remisesExamensClasse = $returnArr[1];
 
-                    echo "<br>";
-                    echo "<br>".var_dump($remisesExamensClasse)."remise Examens CLass</br>";
+/*                     echo "<br>";
+                    echo "<br>".var_dump($remisesExamensClasse)."remise Examens CLass</br>"; */
 
                     $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant, $passage);
 
@@ -101,19 +130,23 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
                     $cour = refreshClassArr($cour, $mean, $passage);
 
 
-                    echo "mean: ".$mean;
+/*                     echo "mean: ".$mean;
+                    echo "<br>"; */
+                    $note = getLetterGrade($mean, $aBC);
+/*                     echo "Letter Grade: ".$note;
                     echo "<br>";
-                    echo "Letter Grade: ".getLetterGrade($mean, $aBC);
-                    echo "<br>";
-                    echo "<br>";
+                    echo "<br>"; */
+                    addToTable($nom, $mean, $note, $meilleur_travail);
+
                     break;  
 
                 }
         }
     }
-    echo var_dump($remisesTotals);
+    endTable();
+/*     echo var_dump($remisesTotals);
     echo "total pass: ".$cour["reussites"];
-    echo "total fail: ".$cour["echecs"];
+    echo "total fail: ".$cour["echecs"]; */
 }
 
 /*calculateMean($notes);*/
@@ -139,29 +172,11 @@ function calculateEachMean($pond, $value){
 
 
 
-//this is surely doing the same thing as some other functions... 
-//I need to compare the functions that seem to do something similar, 
-//and see if they really are, and if they aren't I need to articulate that
-//in some good comments because my comments are not good enough to explain my code 
-//to future me. I'm confused about what I wrote last week. 
-function refreshClassArr($class, $mean, $passage){
-    if ($mean >= $passage){
-        $class["reussites"] ++;
-    }
-    elseif ($mean > 0) {
-        $class["echecs"] ++;
-    }
-    else{
-        $class["vides"] ++;
-    }
-    return $class;
-}
 
 
 
 
-
-
+//this calculates how many failures, successes, and empties in the whole class, for all traveaux's and exams
 function calculTotalRemises($arrTotal, $arrAjout){
     foreach ($arrTotal as $key => $value){
         $arrTotal[$key] += $arrAjout[$key];
@@ -205,6 +220,9 @@ function createDynamicArrays($arr, $passFailS){
 
 
 
+//the following two functions can be combined, surely. 
+//and the function immediately following may be better a little shorter
+
 
 
 //would it be possible, while looping through, to check if... for instance, pass exists, 
@@ -240,16 +258,32 @@ function calculDesRemises($arr, $arrTE, $passage){
     return array($arr, $arrTE);
 }
 
+//this is surely doing the same thing as some other functions... 
+//I need to compare the functions that seem to do something similar, 
+//and see if they really are, and if they aren't I need to articulate that
+//in some good comments because my comments are not good enough to explain my code 
+//to future me. I'm confused about what I wrote last week. 
+function refreshClassArr($class, $mean, $passage){
+    if ($mean >= $passage){
+        $class["reussites"] ++;
+    }
+    elseif ($mean > 0) {
+        $class["echecs"] ++;
+    }
+    else{
+        $class["vides"] ++;
+    }
+    return $class;
+}
 
 
 
 
 
 
-
-
-//$bestWorst is to let us know if we are checking for Pass or Fail. 
-//Regardless, we will run through the function once for each
+//This is meant to return the exam or homework that the most people passed
+//but it will also be used to return the exam or homework that most people failed
+//$bestWorst is the value that determines which we are checking for. 
 function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
     $lastValue = 0;
     $position = "";
@@ -315,11 +349,13 @@ function calculPlusHauteNote($arr){
         }
     //vérifier si la plus grande note a une note égale
     if ($travailEgale > 0 && $arr[$travailEgale-1] == $plusHauteNote){
-        echo "Best TP: travail ".$travail." & ".$travailEgale."---note: ".$plusHauteNote;
+        //echo "Best TP: travail ".$travail." & ".$travailEgale."---note: ".$plusHauteNote;
+        return "Travail".$travail." & ".$travailEgale.", à ".$plusHauteNote."%";
     }
     //rendre les infos pour la plus haute note.
     else 
-        echo "Best TP: travail ".$travail."--- note: ".$plusHauteNote;
+        //echo "Best TP: travail ".$travail."--- note: ".$plusHauteNote;
+        return "Travail".$travail.", à ".$plusHauteNote."%";
     }
     echo"<br>";
     $returnArr = array($plusHauteNote, $travail, $travailEgale);
@@ -336,11 +372,36 @@ function calculPlusHauteNote($arr){
 
 
 
+
 /*HTML DISPLAY FUNCTIONS*/
 
 function displayGreeting(){
     echo "Welcome: ".$_POST["name"]."</br></br>";
 }
+
+function initializeTable(){
+    echo $GLOBALS['table'];
+    echo $GLOBALS['tr'];
+    echo $GLOBALS['th'].  "étudiant(e)"  .$GLOBALS['th_end'];
+    echo $GLOBALS['th'].  "moyene finale"  .$GLOBALS['th_end'];
+    echo $GLOBALS['th'].  "note finale"  .$GLOBALS['th_end'];
+    echo $GLOBALS['th'].  "travail le mieux réussit"  .$GLOBALS['th_end'];
+    echo $GLOBALS['tr_end'];
+}
+
+function addToTable($nom, $moyene, $note, $meilleur_travail){
+    echo $GLOBALS['tr'];
+    echo $GLOBALS['td'].  $nom  .$GLOBALS['td_end'];
+    echo $GLOBALS['td'].  $moyene  .$GLOBALS['td_end'];
+    echo $GLOBALS['td'].  $note  .$GLOBALS['td_end'];
+    echo $GLOBALS['td'].  $meilleur_travail  .$GLOBALS['td_end'];
+    echo $GLOBALS['tr_end'];
+}
+
+function endTable(){
+    echo $GLOBALS['table_end'];
+}
+
 
 /* function calculDesRemises($arr){
     $reussites = 0;
