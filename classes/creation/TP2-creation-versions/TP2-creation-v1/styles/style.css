@@ -30,7 +30,15 @@ main{
     max-width: 33vw;
  }
 
-
+picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+picture > img {
+    width: 100%;
+    height: auto;
+}
 
 form{
     display: flex;
@@ -163,6 +171,8 @@ h1{
     font-family: 'Fira Sans', sans-serif;
     font-weight: 100;
     font-size: 60px;
+    padding: 0;
+    margin: 0;
 /*     text-align: right;
     margin-right:10%; */
 }
@@ -282,7 +292,7 @@ footer{
     justify-content: center;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:720px) {
     body{
         display: flex;
         flex-flow: column wrap;
