@@ -29,13 +29,13 @@ $ponderations = array(20, 20, 25, 35);
 $noteDePassage = 60;
 
 
-//variables pour tableau
+/* //variables pour tableau
 $nom_etudiant = "";
 $moyene_étudiante = 0;
 $note_lettre = "";
 $best_note = 0;
 $best_travail = "";
-$travail_egale = "";
+$travail_egale = ""; */
 
 
 //variables pour haut de la page
@@ -69,6 +69,7 @@ $section_end = "</section>";
 
 
 function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
+    //variables pour tableau
     $nom =""; 
     $moyene = ""; 
     $note = ""; 
@@ -236,20 +237,20 @@ function calculDesRemises($arr, $arrTE, $passage){
     $echecs = 0; 
     $vides = 0; 
     for ($i = 0; $i < count($arr); $i++){
-        echo $arr[$i]."this is the value being tested";
+        /* echo $arr[$i]."this is the value being tested"; */
         if ($arr[$i] >= $passage){
-            echo "note is (reussi): ".$arr[$i];
+            /* echo "note is (reussi): ".$arr[$i]; */
             $reussites ++;
             $arrTE[$i]["reussites"] ++;
         }
         if ($arr[$i] == 0){
-            echo "note is (vide): ".$arr[$i];
+            /* echo "note is (vide): ".$arr[$i]; */
             $vides ++;
             $arrTE[$i]["vides"] ++;
             //would this also count as an echec? 
         }
         if ($arr[$i] <$passage && $arr[$i] > 0) {
-            echo "note is (echec): ".$arr[$i];
+           /*  echo "note is (echec): ".$arr[$i]; */
             $echecs ++;
             $arrTE[$i]["echecs"] ++;
         }
