@@ -63,6 +63,8 @@ $div = "<div>";
 $div_end = "</div>";
 $section = "<section>";
 $section_end = "</section>";
+$h2 = "<h2>";
+$h2_end = "</h2>";
 //
 
 
@@ -401,6 +403,75 @@ function addToTable($nom, $moyene, $note, $meilleur_travail){
 
 function endTable(){
     echo $GLOBALS['table_end'];
+}
+
+
+//maybe do this in a loop so that you don't need to copy paste so many times
+
+function topOfPage($vides, $echecs, $reussites, $best_remise, $worst_remise){
+/*     {
+        $numargs = func_num_args();
+        echo "Number of arguments: $numargs \n";
+        if ($numargs >= 2) {
+            echo "Second argument is: " . func_get_arg(1) . "\n";
+        }
+        $arg_list = func_get_args();
+        for ($i = 0; $i < $numargs; $i++) {
+            echo "Argument $i is: " . $arg_list[$i] . "\n";
+        }
+    } */
+
+
+
+
+    echo $GLOBALS['section'];
+
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo "remises vides";
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $vides;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
+
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo "remises échecs";
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $echecs;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
+
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo "remises réussies";
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $reussites;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
+
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo "remise(s) la plus réussie";
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $best_remise;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
+
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo "remise(s) la plus échouée";
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $worst_remise;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
+
+    echo $GLOBALS['section_end'];
 }
 
 
