@@ -1,22 +1,26 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
 
+/*to ensure things are contained in flex*/
 *{
     box-sizing: border-box;
 }
+
 
 body{
     display: flex;
     flex-direction: column;
     margin-left: 0;
+    padding-top: 5em;
     margin-top: 0;  /*When the menu takes two lines, the body becomes invisible... */
     width: 100%; /*so the image goes to the edge*/
-    min-height: 100vh;
+    min-height: 100vh;/*this is part of what keeps the footer at the bottom of the page*/
 }
 
 main{
     flex: 1;
 }
 
+
+/*the validation page needs to present in rows of three*/
 .validation {
     display: flex;
     flex-flow: row wrap;
@@ -30,6 +34,7 @@ main{
     max-width: 33vw;
  }
 
+ /*this is used in the index page, for the banner image*/
 picture{
     display: flex;
     align-items: center;
@@ -40,13 +45,14 @@ picture > img {
     height: auto;
 }
 
+/*this is used in the contact page*/
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
 
-
+/*styling for the submenu*/
 nav > ul > li > ul {
     display: none;
     position: relative;
@@ -58,8 +64,8 @@ nav > ul > li > ul {
     padding-left: 16px;
   }
 
-
-  nav > ul > li > ul > li > a {
+/*styling for the submenu elements*/
+nav > ul > li > ul > li > a {
     position: relative;
 }
 
@@ -67,6 +73,7 @@ nav > ul > li > ul > li > a:hover {
     color:#943265;
 }
 
+/*styling for the menu*/
 nav > ul{
     display: flex;
     justify-content: flex-end;
@@ -75,11 +82,12 @@ nav > ul{
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient(white, rgba(255, 255, 255, 0.7), transparent);
+    background-image: linear-gradient(white, white, rgba(255, 255, 255, 0.7), transparent);
     height: 140px;
     z-index: 10;
 }
 
+/*styling for the menu elements*/
  nav > ul > li {
     display: inline;
     position: relative;
@@ -139,26 +147,9 @@ a:hover:not(nav a) {
 
 
 .toparea{
-   /* https://dev-bay.com/css-center-text-image-div-vertically-and-horizontally/#:~:text=Setting%20some%20element%20in%20the,block%20)and%20it%20is%20done.*/
     position:relative; 
 }
 
-.filmstrip{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 200px; /*the concept for this section started as a flimstrip and evolved to a string of beads--perhaps a very subtle reference to my interest in beading? More likely, the repetition of circles in the design helps it feel light and airy.*/
-}
-
-.line{
-    height: 2px;
-    width: 100%;
-    background-color: rgb(202, 196, 196);
-    position:absolute;
-    top:50%;
-    z-index: -1;
-}
 
 .circle-img, .edu> li >img{
     border-radius: 50%;
@@ -170,7 +161,7 @@ a:hover:not(nav a) {
 h1{
     font-family: 'Fira Sans', sans-serif;
     font-weight: 100;
-    font-size: 60px;
+    font-size: 40px;
     padding: 0;
     margin: 0;
 /*     text-align: right;
@@ -180,20 +171,27 @@ h1{
 h2{
     font-family: 'Fira Sans', sans-serif;
     font-weight: 100;
-    font-size: 80px;
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
     /* margin-bottom:0; */
 }
 h3{
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 4px;
+    padding: 0;
+    margin: 0;
 }
 
 h4{
     font-family: 'Work Sans', sans-serif;
     font-weight: 100;
-    font-size: 50px;
+    font-size: 38px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 /*     margin-left: 15px; */
 }
 
@@ -262,6 +260,8 @@ footer{
     text-align: center;
 }
 
+/*the experience page should display the content in 2 columns, the first taking 1/3, 
+and the second taking up 2/3 of the alloted space*/
 .experience{
     display: flex;
     flex-direction: row;
@@ -274,17 +274,30 @@ footer{
     flex-basis: 66.66%;
 } 
 
+.experience ul, .experience li {
+    padding: 0;
+    margin: 0;
+}
+
+/*the education page should display the content in 2 columns, 
+both taking up 1/2 the screen, left side for text, right side for 
+images*/
 .edu {
     display: flex;
     flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
+/*this has text relating to studies as odd children
+and images as even children, and they should be 
+displayed side by side... unless its a small screen*/
 .edu > li{
     flex-basis: 50%;
     align-items: center;
     list-style-type: none;
-
 }
-
+/*this has an image as a child*/
 .edu > li:nth-child(even){
     display: flex;
     align-items: center;
@@ -292,6 +305,8 @@ footer{
     justify-content: center;
 }
 
+/*On small screens, all the content should appear
+as a column*/
 @media screen and (max-width:720px) {
     body{
         display: flex;
@@ -319,6 +334,12 @@ footer{
     
     .validation > section > img {
        max-width: 100vw;
+    }
+
+    .edu > li{
+        flex-basis: 100%;
+        align-items: center;
+        list-style-type: none;
     }
     
 }
