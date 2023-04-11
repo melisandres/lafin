@@ -195,22 +195,6 @@ h4{
 /*     margin-left: 15px; */
 }
 
-.school{
-    /* margin-left: 40%; */
-    margin-top: 0px;
-}
-
-.bigyear{
-    font-family: 'Work Sans', sans-serif;
-    font-size: 200px;
-    font-weight: 400;
-/*     margin-left: 40%; */
-    color: #eeeeed;
-    position: absolute;
-    margin-top: -275px;
-    z-index: -10;
-}
-
 p{
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
@@ -289,21 +273,46 @@ images*/
     margin: 0;
     list-style-type: none;
 }
+.edu h4{
+    text-align: left;
+}
 /*this has text relating to studies as odd children
 and images as even children, and they should be 
 displayed side by side... unless its a small screen*/
 .edu > li{
+    display: flex;
+    flex-direction: column;
     flex-basis: 50%;
-    align-items: center;
+/*     align-items: center;
     list-style-type: none;
+    justify-content: center; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+
 }
 /*this has an image as a child*/
 .edu > li:nth-child(even){
-    display: flex;
+
     align-items: center;
     list-style-type: none;
     justify-content: center;
 }
+
+.school{
+    margin-top: 0px;
+    
+}
+
+.bigyear{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    color: #eeeeed;
+    position: absolute;
+    margin-top: -0.2em;
+    z-index: -99;
+}
+
 
 /*On small screens, all the content should appear
 as a column*/
