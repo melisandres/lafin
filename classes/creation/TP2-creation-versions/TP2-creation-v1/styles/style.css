@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.menu-button-container, .menu-button {
+    display: none;
+    position: relative;
+    font-size: 3em;
+    z-index: 999;
+}
 
 body{
     display: flex;
@@ -41,6 +47,7 @@ picture{
     align-items: center;
     justify-content: center;
 }
+
 picture > img {
     width: 100%;
     height: auto;
@@ -57,7 +64,7 @@ form{
 nav > ul > li > ul {
     display: none;
     position: relative;
-    z-index: 999;
+    z-index: 99;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -383,6 +390,16 @@ as a column*/
         text-align: center !important;
         font-size: 200px;
     }
+
+    /*styling the mobile menu*/
+    .menu-button-container, .menu-button {
+        display: block;
+    }
+    #menu-toggle {
+        display: none;
+    }
+
+    
 }
 
 @media screen and (max-width:500px){

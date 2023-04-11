@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu retract</title>
+    <style>
+        *{
+            box-sizing: border-box; /* this applies to border and padding but not to margins!*/
+        }
+        body{
+            margin: 0px;
+            font-family: sans-serif;
+        }
+
+        nav{
+            display: flex;
+            background: linear-gradient(to left, black, rgb(126, 125, 125));
+            color: #999;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+        }
+
+        ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        nav ul li{
+            margin: 0 1em;
+            overflow: hidden;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .menu-button-container{
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu-toggle{
+            display: none;
+        }
+
+        @media screen and (max-width: 700px){
+            .menu-button-container{
+                display: flex;
+            }
+
+            ul{
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 50px;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #menu-toggle ~ ul li{
+                height: 0;
+                margin: 0;
+                padding: 0; 
+                border: 0; 
+                transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            #menu-toggle:checked ~ ul li{
+                border: 1px solid #333;
+                height: 2.5em;
+                padding: 0.5em;
+                transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            ul > li {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0.5em, 0;
+                width: 100%;
+                color:white;
+                background-color: black;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            logo
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-button-container"><!--label for the id of the input, means that whatever is inside is ALSO a click area-->
+            <span class="menu-button">☰</span>
+        </label>
+        <ul role="menu">
+            <li role="menuitem" aria-label="Menu Acceuil" aria-haspopup="false"> <a href="#">Acceuil</a></li>
+            <li role="menuitem" aria-label="Menu a propos" aria-haspopup="false"> <a href="#">A propos</a></li>
+            <li role="menuitem" aria-label="Menu services" aria-haspopup="false"> <a href="#">Services</a></li>
+            <li role="menuitem" aria-label="Menu contacter" aria-haspopup="false"> <a href="#">Contacter</a></li>
+            <li role="menuitem" aria-label="Menu questions" aria-haspopup="false"> <a href="#">Questions</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
