@@ -147,13 +147,14 @@ a:hover:not(nav a) {
 
 
 .toparea{
-    position:relative; 
+    position: relative; 
 }
 
 
 .circle-img, .edu> li >img{
     border-radius: 50%;
     margin: 0;
+    z-index: -2;
 }
 
 
@@ -293,7 +294,7 @@ displayed side by side... unless its a small screen*/
 /*this has an image as a child*/
 .edu > li:nth-child(even){
 
-    align-items: center;
+/*     align-items: center; */
     list-style-type: none;
     justify-content: center;
 }
@@ -310,7 +311,7 @@ displayed side by side... unless its a small screen*/
     color: #eeeeed;
     position: absolute;
     margin-top: -0.2em;
-    z-index: -99;
+    z-index: -1;
 }
 
 
@@ -345,10 +346,14 @@ as a column*/
        max-width: 100vw;
     }
 
-    .edu > li{
+    .edu > li {
+        text-align: center;
         flex-basis: 100%;
         align-items: center;
         list-style-type: none;
+    }
+    .school{
+        text-align: center !important;
     }
     
 }
