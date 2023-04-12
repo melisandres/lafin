@@ -5,6 +5,7 @@
 }
 
 body{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-left: 0;
@@ -56,14 +57,18 @@ form{
 
 /*the hamburger*/
 
-.menu-button-container, .menu-button {
-    top: 0;
+.menu-button-container, .menu-button, .submenu-button-container, .submenu-button {
     display: none;
-    position: fixed;
+    position: absolute;
     font-size: 2.5em;
     z-index: 999;
 }
-#menu-toggle{
+
+.menu-button-container, .menu-button{
+    top: 0;
+}
+
+#menu-toggle, #submenu-toggle{
     display: none;
 }
 
@@ -104,7 +109,6 @@ nav > ul > li > a{
     font-size: 27px;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 100;  
-
 }
 
 nav > ul > li > a:hover{
@@ -120,6 +124,7 @@ nav > ul > li > a.active{
 }
   
 .dropbtn:hover > ul {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -156,12 +161,13 @@ nav > ul > li > ul {
 
 /*styling for the submenu elements*/
 nav > ul > li > ul > li > a {
+    border-top: lightgray solid 1px;
     position: relative;
     background-image: radial-gradient(white 70%, transparent);
 }
 
 nav > ul > li > ul > li > a:hover {
-    color:#943265;
+    color:hotpink;
 }
 
 .toparea{
@@ -393,7 +399,7 @@ as a column*/
     }
 
     /*styling the mobile menu*/
-    .menu-button-container, .menu-button {
+    .menu-button-container, .menu-button{
         display: flex;
         right: 0;
         border-bottom-left-radius: 100%;
@@ -402,15 +408,35 @@ as a column*/
         border: solid lightslategray 1px;
     }
 
+    .submenu-button{
+        display: block;
+        text-align: center;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 500;
+        color: rgb(148, 50, 101, 0.3);
+    }
+    .submenu-button-container {
+        display: flex;
+        top: -0.5em;
+        left: 8em;
+/*         width : 100px;
+        height: 100px; */
+    }
 
-    #menu-toggle ~ ul{
+
+
+    #menu-toggle ~ nav > ul, #submenu-toggle ~ ul{
         display: none;
     }
 
-    #menu-toggle:checked ~ ul {
+    #menu-toggle:checked ~ nav > ul, #submenu-toggle:checked ~ ul {
         display: flex;
     }
 
+    #menu-toggle:checked ~ main{
+        margin-top: -100px;
+        z-index: -10;
+    }
 
 
     nav > ul > li > a{
@@ -431,14 +457,11 @@ as a column*/
         background-image: linear-gradient( white 80%,  transparent 100%);
         padding: 0 0 2em 0;
     }
-    main{
-        margin-top: -100px;
-        z-index: -10;
-    }
 
     .dropdown-item > a{
         font-size: 50px;
         padding-left: 40vw;
+        background-image: none;
     }
     
     nav > ul > li > a:hover{
