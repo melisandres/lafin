@@ -63,7 +63,9 @@ form{
     font-size: 2.5em;
     z-index: 999;
 }
-
+#menu-toggle{
+    display: none;
+}
 
 
 /*styling for the menu*/
@@ -337,12 +339,14 @@ displayed side by side... unless its a small screen*/
 as a column*/
 @media screen and (max-width:720px) {
     body{
-        display: flex;
+        display: flex;/*maybe here... for figuring out how to change position of main... */
         flex-flow: column wrap;
+        padding-top: 0;
     }
     main{
         display: flex;
         flex-flow: column wrap;
+        top: 0px;
     }
 
     p{
@@ -380,7 +384,7 @@ as a column*/
     }
 
     .contact{
-    margin: 0;
+        margin: 0;
     }
 
     .bigyear{
@@ -391,9 +395,11 @@ as a column*/
     /*styling the mobile menu*/
     .menu-button-container, .menu-button {
         display: flex;
-        border-bottom-right-radius: 100%;
+        right: 0;
+        border-bottom-left-radius: 100%;
         width : 115px;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgb(148, 50, 101, 0.3);
+        border: solid lightslategray 1px;
     }
 
 
@@ -405,35 +411,34 @@ as a column*/
         display: flex;
     }
 
-    /*this is not working*/
-    #menu-toggle:checked:has(nav) {
-        padding-top: 320px;
-    }
 
 
     nav > ul > li > a{
         display: flex;
         width: 50vw;
         font-size: 50px;
-        padding: 0 0 0 0;
+        padding: 0 0 0 1em;
         border-top: 1px solid lightslategray;
     }
 
     nav > ul{
-        position: relative;
+        position: static;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-left: 5em;
-        position: fixed;
         width: 100vw;
         height: fit-content;
-        background-image: linear-gradient(to bottom white, 90%,  transparent, 100%);
+        background-image: linear-gradient( white 80%,  transparent 100%);
+        padding: 0 0 2em 0;
+    }
+    main{
+        margin-top: -100px;
+        z-index: -10;
     }
 
     .dropdown-item > a{
         font-size: 50px;
-        padding-left: 50vw;
+        padding-left: 40vw;
     }
     
     nav > ul > li > a:hover{
@@ -445,9 +450,6 @@ as a column*/
     nav > ul > li > a.active{
         border-radius: 0 0 0 0;
     }
-
-
-
 
 
 }
