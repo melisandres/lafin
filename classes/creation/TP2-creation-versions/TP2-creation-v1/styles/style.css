@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-.menu-button-container, .menu-button {
-    display: none;
-    position: relative;
-    font-size: 3em;
-    z-index: 999;
-}
-
 body{
     display: flex;
     flex-direction: column;
@@ -60,28 +53,18 @@ form{
     align-items: center;
 } 
 
-/*styling for the submenu*/
-nav > ul > li > ul {
+
+/*the hamburger*/
+
+.menu-button-container, .menu-button {
+    top: 0;
     display: none;
-    position: relative;
-    z-index: 99;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    list-style-type: none;
-    padding-left: 16px;
-
-  }
-
-/*styling for the submenu elements*/
-nav > ul > li > ul > li > a {
-    position: relative;
-    background-image: radial-gradient(white 70%, transparent);
+    position: fixed;
+    font-size: 2.5em;
+    z-index: 999;
 }
 
-nav > ul > li > ul > li > a:hover {
-    color:#943265;
-}
+
 
 /*styling for the menu*/
 nav > ul{
@@ -129,7 +112,6 @@ nav > ul > li > a:hover{
 }
 
 nav > ul > li > a.active{
-    background-color: rgb(0, 0, 0, 0.3);
     color: hsl(329, 49%, 39%);
     border-radius: 0 0 150px 150px;
     background-color: #eeeeed;
@@ -140,6 +122,8 @@ nav > ul > li > a.active{
     flex-direction: column;
 }
 
+/*styling for links that 
+are not in the menu*/
 a:not(nav a) {
     color: #bfbfbf;
     text-decoration: none;
@@ -155,6 +139,28 @@ a:hover:not(nav a) {
     text-decoration: none;
 }
 
+/*styling for the submenu*/
+nav > ul > li > ul {
+    display: none;
+    position: relative;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    padding-left: 16px;
+
+  }
+
+/*styling for the submenu elements*/
+nav > ul > li > ul > li > a {
+    position: relative;
+    background-image: radial-gradient(white 70%, transparent);
+}
+
+nav > ul > li > ul > li > a:hover {
+    color:#943265;
+}
 
 .toparea{
     position: relative; 
@@ -167,7 +173,7 @@ a:hover:not(nav a) {
     z-index: -2;
 }
 
-
+/*styling for titles*/
 
 h1{
     font-family: 'Fira Sans', sans-serif;
@@ -175,8 +181,6 @@ h1{
     font-size: 40px;
     padding: 0;
     margin: 0;
-/*     text-align: right;
-    margin-right:10%; */
 }
 
 h2{
@@ -185,7 +189,6 @@ h2{
     font-size: 60px;
     padding: 0;
     margin: 0;
-    /* margin-bottom:0; */
 }
 h3{
     font-family: 'Fira Sans', sans-serif;
@@ -203,16 +206,12 @@ h4{
     text-align: center;
     padding: 0;
     margin: 0;
-/*     margin-left: 15px; */
 }
 
 p{
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 20px;
-/*     margin-left: 30%;
-    margin-top: 65px;
-    margin-right: 40px; */
     letter-spacing: 1.5px;
 }
 
@@ -226,7 +225,6 @@ p{
 
 .contact > section > h1{
     text-align: center !important;
-    /* justify-self: center; */
     font-family:'Fira Sans', sans-serif;
     font-weight: 200;
     font-size: 35px;
@@ -330,6 +328,10 @@ displayed side by side... unless its a small screen*/
     margin-right: 1em;
     margin-top: 1em;
 }
+@media screen and (max-width:800px){
+    nav > ul > li > a{
+        font-size: 3.7vw;
+    }
 
 /*On small screens, all the content should appear
 as a column*/
@@ -343,11 +345,6 @@ as a column*/
         flex-flow: column wrap;
     }
 
-    [role = menuitem]  a{
-        padding: 30px 16px;
-        font-size: 15px;
-        font-weight: 300;  
-    }
     p{
         width: 90vw;
         margin: 10px;
@@ -393,13 +390,66 @@ as a column*/
 
     /*styling the mobile menu*/
     .menu-button-container, .menu-button {
-        display: block;
+        display: flex;
+        border-bottom-right-radius: 100%;
+        width : 115px;
+        background-color: rgba(0, 0, 0, 0.1);
     }
-    #menu-toggle {
+
+
+    #menu-toggle ~ ul{
         display: none;
     }
 
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /*this is not working*/
+    #menu-toggle:checked:has(nav) {
+        padding-top: 320px;
+    }
+
+
+    nav > ul > li > a{
+        display: flex;
+        width: 50vw;
+        font-size: 50px;
+        padding: 0 0 0 0;
+        border-top: 1px solid lightslategray;
+    }
+
+    nav > ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 5em;
+        position: fixed;
+        width: 100vw;
+        height: fit-content;
+        background-image: linear-gradient(to bottom white, 90%,  transparent, 100%);
+    }
+
+    .dropdown-item > a{
+        font-size: 50px;
+        padding-left: 50vw;
+    }
     
+    nav > ul > li > a:hover{
+        background-color:  rgb(0, 0, 0, 0.01);
+        color: hotpink;
+        border-radius: 0 0 0 0;
+    }
+    
+    nav > ul > li > a.active{
+        border-radius: 0 0 0 0;
+    }
+
+
+
+
+
 }
 
 @media screen and (max-width:500px){
@@ -408,8 +458,5 @@ as a column*/
     }
 }
 
-@media screen and (max-width:800px){
-    nav > ul > li > a{
-        font-size: 3.7vw;
-    }
+
 }
