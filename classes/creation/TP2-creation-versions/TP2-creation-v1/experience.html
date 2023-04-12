@@ -16,11 +16,25 @@
     <header>
 
     </header>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-button-container">
+        <span class="menu-button">☰</span>
+    </label>
     <nav>
         <ul role="menu">
             <li role="menuitem" aria-label="Menu acceuil"> <a href="index.html"> Acceuil </a></li>
             <li role="menuitem" aria-label="Menu education"> <a href="education.html"> Éducation </a></li>
-            <li role="menuitem" aria-label="Menu experience"> <a class="active" href="experience.html"> Experience</a></li>
+            <li class="dropbtn" role="menuitem" aria-label="Menu experience">   <a class="active" href="experience.html"> Experience</a>
+                <input type="checkbox" id="submenu-toggle">
+                <label for="submenu-toggle" class="submenu-button-container">
+                    <span class="submenu-button">></span>
+                </label>
+                <ul class="dropdown-content">
+                    <li class="dropdown-item"><a href="experience.html#bourses">Bourses</a></li>
+                    <li class="dropdown-item"><a href="experience.html#residences">Résidences</a></li>
+                    <li class="dropdown-item"><a href="experience.html#autre">Autres</a></li>
+                </ul>
+            </li>
             <li role="menuitem" aria-label="Menu contact"> <a href="contact.html"> Contact </a></li>
             <li role="menuitem" aria-label="Menu validation"> <a href="validation.html"> Validation </a></li>
         </ul>
