@@ -49,10 +49,8 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
-/*         $password = test_input($_POST["password"]); */
         include 'final_functions.php';
         calculateMean($notes, $passFailStructure, $notesABC, $ponderations, $noteDePassage);
-
     }
  
     function test_input($data) {

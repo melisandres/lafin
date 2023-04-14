@@ -1,0 +1,526 @@
+
+/*to ensure things are contained in flex*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    margin-left: 0;
+    padding-top: 5em;
+    margin-top: 0;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+main{
+    flex: 1;
+}
+
+
+/*the validation page presents in rows of three*/
+.validation {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2em;
+}
+
+.validation > section{
+    flex: 1 1 calc(33.33%);
+}
+
+.validation > section > img {
+    max-width: 33vw;
+ }
+
+/*this is used in the index page, for the banner image*/
+picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+picture > img {
+    width: 100%;
+    height: auto;
+}
+
+/*this is used in the contact page*/
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+/*the hamburger*/
+.menu-button-container, .menu-button, .submenu-button-container, .submenu-button {
+    display: none;
+    position: absolute;
+    font-size: 2.5em;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.menu-button-container, .menu-button{
+    top: 0;
+}
+
+#menu-toggle, #submenu-toggle{
+    display: none;
+}
+
+
+/*styling for the menu*/
+nav > ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding: 8px 16px 100px 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(white 40%, transparent 100%);
+    height: 140px;
+    z-index: 10;
+}
+
+/*to add a bit more haze to the menu on the index page*/
+nav.withFog{
+    background-image: linear-gradient(white 80%, transparent 100%);
+}
+
+/*styling for the menu elements*/
+ nav > ul > li {
+    display: inline;
+    position: relative;
+}
+
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 30px 16px;
+    font-size: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;  
+}
+
+.dropdown-item > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 27px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;  
+}
+
+nav > ul > li > a:hover{
+    background-color:  rgb(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    border-radius: 0 0 150px 150px;
+}
+
+nav > ul > li > a.active{
+    color: hsl(329, 49%, 39%);
+    border-radius: 0 0 150px 150px;
+    background-color: #eeeeed;
+}
+  
+.dropbtn:hover > ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*styling for links that 
+are not in the menu*/
+a:not(nav a) {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+a:visited:not(nav a){
+    color: #943265;
+    text-decoration: none;
+}
+
+a:hover:not(nav a) {
+    color: #000000;
+    text-decoration: none;
+}
+
+/*styling for the submenu*/
+nav > ul > li > ul {
+    display: none;
+    position: relative;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    padding-left: 16px;
+  }
+
+/*styling for the submenu elements*/
+nav > ul > li > ul > li > a {
+    border-top: lightgray solid 1px;
+    position: relative;
+    background-image: radial-gradient(white 70%, transparent);
+}
+
+nav > ul > li > ul > li > a:hover {
+    color:hotpink;
+}
+
+
+.circle-img, .edu> li >img{
+    border-radius: 50%;
+    margin: 0;
+    z-index: -2;
+}
+
+/*styling for titles*/
+h1, h2, h3, h4{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+h3{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+h4{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    font-size: 38px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+/*contact page styling*/
+.contact{
+    justify-content: center;
+    margin: 10% 20% 5% 20%;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.contact > section > h1{
+    text-align: center !important;
+    font-family:'Fira Sans', sans-serif;
+    font-weight: 200;
+    font-size: 35px;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+    color: grey;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    border: hsla(329, 49%, 39%, 0.495) solid 1px;
+    box-shadow: hsla(329, 49%, 39%, 0.1) -4px 9px 25px -6px inset, rgba(0, 0, 0, 0.3) 0px 1px 14px -48px inset;
+}
+
+input, select, textarea{
+    width: 80%;
+    display: block;
+    padding: 16px;
+    border: rgba(73, 70, 70, 0.1) solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+}
+
+footer{
+    text-align: center;
+}
+
+/*the experience page displaying the content in 2 columns, the first taking 1/3, 
+and the second taking up 2/3 of the alloted space*/
+.experience{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.experience > section:nth-child(1){
+    flex-basis: 33.33%;
+} 
+
+.experience > section:nth-child(2){
+    flex-basis: 66.66%;
+} 
+
+.experience ul, .experience li {
+    padding: 0;
+    margin: 0;
+}
+
+/*the education page displaying the content in 2 columns, 
+both taking up 1/2 the screen, left side for text, right side for 
+images*/
+.edu {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.edu h4{
+    text-align: left;
+}
+
+/*this has text relating to studies as odd children
+and images as even children, and they should be 
+displayed side by side... unless its a small screen*/
+.edu > li{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 1em;
+}
+
+/*this has an image as a child*/
+.edu > li:nth-child(even){
+    list-style-type: none;
+    justify-content: center;
+    align-items: center; /*this makes the image small... so we might want to not use it*/
+    z-index: -4;
+}
+
+/*these style the text for school and year in the education section*/
+.school{
+    margin-top: 0px;   
+}
+
+.bigyear{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: #eeeeed;
+    position: absolute;
+    margin-top: -0.2em;
+    z-index: -1;
+    font-size: 20vw;
+}
+
+
+/*set up margins for text content, which appear in index and in experience*/
+.acceuil section, .experience section, .validation div {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+@media screen and (max-width:800px){
+    nav > ul > li > a{
+        font-size: 3.7vw;
+    }
+}
+
+/*On small screens, all the content should appear
+as a column*/
+@media screen and (max-width:720px) {
+
+    /*display flex created issues with being able to access
+    the form, But only when the menu is open...*/
+    body{
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 0;
+    }
+
+    main{
+        display: flex;
+        flex-flow: column wrap;
+        top: 0px;
+    }
+
+    p{
+        width: 90vw;
+        margin: 10px;
+        text-align: justify;
+    }
+
+    .experience{
+        margin-left: 1em;
+    }
+
+    .experience li{
+        margin-top: 2em;
+    }
+
+    .validation > section{
+        flex: 1 1 100%;
+    }
+    
+    .validation > section > img {
+       max-width: 100vw;
+    }
+
+    .edu > li {
+        text-align: center;
+        flex-basis: 100%;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    /*since I wasn't sure what was 
+    prohibiting my school to center align
+    I made it important...*/
+    .school{
+        text-align: center !important;
+    }
+
+    .contact{
+        margin: 0;
+    }
+
+    .bigyear{
+        text-align: center !important;
+        font-size: 200px;
+    }
+
+    /*styling the mobile menu*/
+    .menu-button-container, .menu-button{
+        display: block;
+        right: 0;
+        border-bottom-left-radius: 100%;
+        width : 125px;
+        background-color: rgb(148, 50, 101, 0.3);
+    }
+
+    .submenu-button{
+        display: block;
+        text-align: center;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 100;
+        color: rgb(148, 50, 101);
+    }
+
+    .submenu-button-container {
+        display: flex;
+        top: -0.5em;
+        left: 8em;
+    }
+
+    #menu-toggle ~ nav > ul, #submenu-toggle ~ ul{
+        display: none;
+    }
+
+    #menu-toggle:checked ~ nav > ul, #submenu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    nav > ul > li > a{
+        display: flex;
+        width: 50vw;
+        font-size: 50px;
+        padding: 0 0 0 1em;
+        border-top: 1px solid lightslategray;
+    }
+    
+    /*the class withFog has been created in order
+    to fix a styling issue that occurs with the 
+    submenu is open--the gradient is no longer 
+    visible on the bottom edge. But I haven't been 
+    able to locate the problem*/
+    #menu-toggle:checked ~ nav.withFog > ul {
+        height: fit-content;
+        background-image: linear-gradient( rgb(240, 240, 247) 75%,  transparent 100%);
+        padding: 0 0 4em 0;
+    }
+
+    nav > ul{
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100vw;
+        height: fit-content;
+        background-image: linear-gradient( rgb(240, 240, 247) 75%,  transparent 100%);
+        padding: 0 0 3em 0;
+    }
+
+    .dropdown-item > a{
+        font-size: 50px;
+        padding-left: 40vw;
+        background-image: none;
+    }
+    
+    nav > ul > li  a:hover {
+        background-color:  rgb(0, 0, 0, 0.01);
+        color: hotpink;
+        border-radius: 0 0 0 0; 
+    }
+    
+    nav > ul > li > a.active{
+        border-radius: 0 0 0 0;
+    }
+
+    /*resetting the top of pages*/
+    .edu{
+        margin-top: 2em;
+    }
+
+    .experience{
+        margin-top: 5em;   
+    }
+
+    .validation{
+        margin-top: 8em;
+    }
+
+    /*resetting the top of pages
+    with the menu toggled on*/
+    #menu-toggle:checked ~ main{
+        margin-top: 40px;
+        z-index: -10;
+    }
+
+    #menu-toggle:checked ~ main.acceuil{
+        margin-top: -100px;
+    }
+
+
+    /*the flex on the contact body is making 
+    the form innaccessible*/
+    .noFlex{
+        display: block !important;
+    }
+
+    .noFlex main{
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width:500px){
+    .bigyear{
+        font-size: 40vw;
+    }
+}
+    /*I had some help for the shadows around ny form, with minor adjustments.*/
+    /*https://getcssscan.com/css-box-shadow-examples by ls grafics*/
