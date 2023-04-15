@@ -10,16 +10,17 @@ error_reporting(E_ALL);
 */
 
 
-displayGreeting();
-
 $notes = array(
-105 => [["Stein", "Gertrude"],[89, 59],[45, 90]],
+105 => [["Stein", "Gertrude"],[89, 90],[45, 90]],
 106 => [["DeBeauvoir", "Simone"],[100, 100],[100, 99]],
 107 => [["Atwood", "Margaret"],[52, 67],[0, 1]],
 108 => [["Munro", "Alice"],[5, 0],[100, 32]],
 109 => [["Didion", "Joan"],[90, 90],[90, 90]],
 110 => [["Duras", "Marguerite"],[100, 100],[55, 34]],
-111 => [["Orzick", "Cynthia"], [0, 0], [0,0]]
+111 => [["Orzick", "Cynthia"], [0, 0], [0,0]], 
+112 => [["Plath", "Sylvia"], [85, 83],[100, 98]],
+113 => [["Lessing", "Doris"], [85, 83],[100, 98]],
+114 => [["Elliot", "Georges"], [56, 83],[100, 98]]
 );
 
 //variables comming in
@@ -39,17 +40,17 @@ $travail_egale = ""; */
 
 
 //variables pour haut de la page
-$nb_vides = 0;
+/* $nb_vides = 0;
 $nb_echecs = 0;
 $nb_reussites = 0;
 $best_remise = "";
 $worst_remise = "";
 $best_remise_egale = "";
-$worst_remise_egale = "";
+$worst_remise_egale = ""; */
 
 
 
- // HTML 
+// HTML 
 $br = "<br>";
 $table = "<table>";
 $table_end = "</table>";
@@ -71,6 +72,7 @@ $h2_end = "</h2>";
 
 
 function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
+    displayGreeting();
     //variables pour tableau
     $nom =""; 
     $matricule ="";
@@ -100,8 +102,8 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
         for ($i = 0; $i < count($value); $i++){
             //lets initialize the tableau
             if (!$init){
-                $t = "Travail ";
-                $e = "Examen ";
+                $t = "travail ";
+                $e = "examen ";
                 $traveauxHead = setDynamicTableHead($value[1], $t);
                 $examensHead = setDynamicTableHead($value[2], $e);
                 initializeTable($traveauxHead, $examensHead);
@@ -124,6 +126,7 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
                     $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $passage);
                     $remiseTravauxEtudiant = $returnArr[0];
                     $remisesTravauxClasse = $returnArr[1];
+
                     $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $passage);
 
                     /*variable pour creer la parti du tableau qui comprend les notes*/
@@ -235,49 +238,36 @@ function createDynamicArrays($arr, $passFailS){
 
 
 
-//the following two functions can be combined, surely. 
-//and the function immediately following may be better a little shorter
-
-
-
-//would it be possible, while looping through, to check if... for instance, pass exists, 
-//at arrT[$i] position (wherever I've found a pass...)and if it does not, just add it with a 
-//value of 1? would that be less code heavy?
-
-//this returns an array with the values from all the traveau, or all the examens
-//what are the two arrays being sent out? 
-function calculDesRemises($arr, $arrTE, $passage){
+//this returns two arrays with the values from all the traveau, OR all the examens
+//it gets called while looping through the traveau, and again while looping through the exams
+//$arr is the data for the student currently being looped through
+//$arClasse is an array compiling the data for the whole class
+function calculDesRemises($arr, $arrClasse, $passage){
     $reussites = 0;
     $echecs = 0; 
     $vides = 0; 
     for ($i = 0; $i < count($arr); $i++){
-        /* echo $arr[$i]."this is the value being tested"; */
         if ($arr[$i] >= $passage){
-            /* echo "note is (reussi): ".$arr[$i]; */
             $reussites ++;
-            $arrTE[$i]["reussites"] ++;
+            $arrClasse[$i]["reussites"] ++;
         }
         if ($arr[$i] == 0){
-            /* echo "note is (vide): ".$arr[$i]; */
             $vides ++;
-            $arrTE[$i]["vides"] ++;
-            //would this also count as an echec? 
+            $arrClasse[$i]["vides"] ++;
         }
         if ($arr[$i] <$passage && $arr[$i] > 0) {
-           /*  echo "note is (echec): ".$arr[$i]; */
             $echecs ++;
-            $arrTE[$i]["echecs"] ++;
+            $arrClasse[$i]["echecs"] ++;
         }
     }
-    $arr = array( "reussites" => $reussites, "echecs" => $echecs, "vides" => $vides);
-    return array($arr, $arrTE);
+    $arrEtudiant = array( "reussites" => $reussites, "echecs" => $echecs, "vides" => $vides);
+    return array($arrEtudiant, $arrClasse);
 }
 
-//this is surely doing the same thing as some other functions... 
-//I need to compare the functions that seem to do something similar, 
-//and see if they really are, and if they aren't I need to articulate that
-//in some good comments because my comments are not good enough to explain my code 
-//to future me. I'm confused about what I wrote last week. 
+
+
+
+//this is refreshing the class passes and fails
 function refreshClassArr($class, $mean, $passage){
     if ($mean >= $passage){
         $class["reussites"] ++;
@@ -302,24 +292,34 @@ function refreshClassArr($class, $mean, $passage){
 function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
     $lastValue = 0;
     $equalValue = 0;
-    $position = "";
+    $bestOrWorst = "";
     $remiseEgale = "";
+    echo "we are checking ".$bestWorst;
+    echo "<br>";
 
     $combinedArr = array($classArrT, $classArrE);
     for ($i = 0; $i < count($combinedArr); $i++){
         for($j = 0; $j < count($combinedArr[$i]); $j++){
+            echo "we are now checking ".$combinedArr[$i][$j][$bestWorst];
+            echo "<br>";
             if ($combinedArr[$i][$j][$bestWorst] > $lastValue){
+                echo $combinedArr[$i][$j][$bestWorst]. " is > to ".$lastValue;
+                echo "<br>";
+                echo "lastValue is being set to: ".$combinedArr[$i][$j][$bestWorst];
                 $lastValue = $combinedArr[$i][$j][$bestWorst];
-                //if $i ==0 we are running through Traveaux,  $i=1 is exams
+                //if $i == 0 we are running through traveaux,  $i == 1 is exams
                 if($i == 0){
-                    $position = "travail ".($j+1);
+                    $bestOrWorst = "travail ".($j+1);
                 }
                 else {
-                    $position = "examen ".($j+1);
+                    $bestOrWorst = "examen ".($j+1);
                 }
             }
             //check if the number here is equal to the last one
             elseif ($combinedArr[$i][$j][$bestWorst] == $lastValue){
+                echo $combinedArr[$i][$j][$bestWorst]. " is == to ".$lastValue;
+                echo "<br>";
+                echo "equalValue is being set to: ".$combinedArr[$i][$j][$bestWorst];
                 $equalValue = $combinedArr[$i][$j][$bestWorst];
                 if($i == 0){
                     $remiseEgale = "travail ".($j+1);
@@ -328,13 +328,18 @@ function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
                     $remiseEgale = "examen ".($j+1);
                 }
             }
+            else{
+                echo "<br>";
+                echo "we are slipping through";
+                echo $combinedArr[$i][$j][$bestWorst]. " is neither == nor > than ".$lastValue;
+            }
         }
     }
     if ($lastValue == $equalValue){
-        $position .= " & ".$remiseEgale;
+        $bestOrWorst .= " & ".$remiseEgale;
     }
-    
-    return $position;
+
+    return $bestOrWorst;
 }
 
 
@@ -382,11 +387,11 @@ function calculPlusHauteNote($arr){
         }
     //vérifier si la plus grande note a une note égale
     if ($travailEgale > 0 && $arr[$travailEgale-1] == $plusHauteNote){
-        return "Travail".$travail." & ".$travailEgale.", à ".$plusHauteNote."%";
+        return "travail ".$travail." & ".$travailEgale.", à ".$plusHauteNote."%";
     }
     //rendre les infos pour la plus haute note.
     else 
-        return "Travail".$travail.", à ".$plusHauteNote."%";
+        return "travail ".$travail.", à ".$plusHauteNote."%";
     }
     $returnArr = array($plusHauteNote, $travail, $travailEgale);
     return $returnArr; 
@@ -407,7 +412,7 @@ function calculPlusHauteNote($arr){
 
 
 function displayGreeting(){
-    echo "Welcome: ".$_POST["name"]."</br></br>";
+    echo $GLOBALS['div']."Welcome: ".$_POST["name"].$GLOBALS['div_end'];
 }
 
 
@@ -420,8 +425,8 @@ function initializeTable($traveaux, $examens){
     echo $GLOBALS['th']. "matricule"   .$GLOBALS['th_end'];
     echo $traveaux;
     echo $examens;
-    echo $GLOBALS['th'].  "moyene finale"  .$GLOBALS['th_end'];
     echo $GLOBALS['th'].  "note finale"  .$GLOBALS['th_end'];
+    echo $GLOBALS['th'].  "note lettre"  .$GLOBALS['th_end'];
     echo $GLOBALS['th'].  "travail le mieux réussit"  .$GLOBALS['th_end'];
     echo $GLOBALS['tr_end'];
 }
@@ -445,7 +450,7 @@ function setDynamicTableHead($arr, $examOrTp){
 function addDynamiclyToTable($arr){
     $tabNotes = "";
     foreach($arr as $note){
-        $tabNotes .= $GLOBALS['td'].$note.$GLOBALS['td_end'];
+        $tabNotes .= $GLOBALS['td'].$note. "%".$GLOBALS['td_end'];
     }
     return $tabNotes;
 }
@@ -457,10 +462,10 @@ function addDynamiclyToTable($arr){
 function addToTable($nom, $matricule, $moyene, $note, $notesTraveaux, $notesExamens, $meilleur_travail){
     echo $GLOBALS['tr'];
     echo $GLOBALS['td'].  $nom  .$GLOBALS['td_end'];
-    echo $GLOBALS['td']. $matricule .$GLOBALS['td_end'];
+    echo $GLOBALS['td']. "#".$matricule .$GLOBALS['td_end'];
     echo $notesTraveaux;
     echo $notesExamens;
-    echo $GLOBALS['td'].  $moyene  .$GLOBALS['td_end'];
+    echo $GLOBALS['td'].  $moyene."%"  .$GLOBALS['td_end'];
     echo $GLOBALS['td'].  $note  .$GLOBALS['td_end'];
     echo $GLOBALS['td'].  $meilleur_travail  .$GLOBALS['td_end'];
     echo $GLOBALS['tr_end'];
@@ -479,59 +484,30 @@ function endTable(){
 
 
 
-//maybe do this in a loop so that you don't need to copy paste so many times
+//a display function that gets called for each new value
 
 function topOfPage($vides, $echecs, $reussites, $best_remise, $worst_remise){
 
-
     echo $GLOBALS['section'];
 
-    echo $GLOBALS['div'];
-    echo $GLOBALS['h2'];
-    echo "remises vides";
-    echo $GLOBALS['h2_end'];
-    echo $GLOBALS['div'];
-    echo $vides;
-    echo $GLOBALS['div_end'];
-    echo $GLOBALS['div_end'];
-
-    echo $GLOBALS['div'];
-    echo $GLOBALS['h2'];
-    echo "échecs";
-    echo $GLOBALS['h2_end'];
-    echo $GLOBALS['div'];
-    echo $echecs;
-    echo $GLOBALS['div_end'];
-    echo $GLOBALS['div_end'];
-
-    echo $GLOBALS['div'];
-    echo $GLOBALS['h2'];
-    echo "réussites";
-    echo $GLOBALS['h2_end'];
-    echo $GLOBALS['div'];
-    echo $reussites;
-    echo $GLOBALS['div_end'];
-    echo $GLOBALS['div_end'];
-
-    echo $GLOBALS['div'];
-    echo $GLOBALS['h2'];
-    echo "remise(s) la plus réussie";
-    echo $GLOBALS['h2_end'];
-    echo $GLOBALS['div'];
-    echo $best_remise;
-    echo $GLOBALS['div_end'];
-    echo $GLOBALS['div_end'];
-
-    echo $GLOBALS['div'];
-    echo $GLOBALS['h2'];
-    echo "remise(s) la plus échouée";
-    echo $GLOBALS['h2_end'];
-    echo $GLOBALS['div'];
-    echo $worst_remise;
-    echo $GLOBALS['div_end'];
-    echo $GLOBALS['div_end'];
+    createTopSegment("vides", $vides);
+    createTopSegment("échecs", $echecs);
+    createTopSegment("réussites", $reussites);
+    createTopSegment("remise(s) la plus réussie", $best_remise);
+    createTopSegment("remise(s) la plus échouée", $worst_remise);
 
     echo $GLOBALS['section_end'];
+}
+
+function createTopSegment($text, $value){
+    echo $GLOBALS['div'];
+    echo $GLOBALS['h2'];
+    echo $text;
+    echo $GLOBALS['h2_end'];
+    echo $GLOBALS['div'];
+    echo $value;
+    echo $GLOBALS['div_end'];
+    echo $GLOBALS['div_end'];
 }
 
 ?>

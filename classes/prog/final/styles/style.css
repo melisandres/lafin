@@ -1,0 +1,92 @@
+body{
+    margin-left : 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10vw;
+    /*https://getcssscan.com/css-box-shadow-examples*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+input, textarea, label{
+    flex-basis: 100%;
+    display: block;
+    margin: 0 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+
+table {
+    margin-top: 300px;
+    margin-left: 2vw;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: solid 1px lightgrey; 
+    border-collapse: collapse;
+}
+
+body > div{
+    position:absolute;
+    top: -140px;
+    text-shadow:  0 0 200px rgb(34, 1, 23);
+    color:white;
+    font-size: 60px;
+    padding: 3px;
+}
+
+th, td, tr{
+    border: solid 1px lightgrey;
+    padding: 1em;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #fff5f7;
+
+}
+th{
+    background-color: #feecf0;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    color: rgb(55, 63, 71);
+}
+
+section {
+    position: absolute;
+    margin: 4px 2vw 0px 2vw;
+    width: 96vw;
+    top: -300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+section > div {
+    background-color: rgba(236, 235, 235, 0.388);
+    box-shadow: rgb(218, 112, 192) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding: 1em;
+    border: solid 1px slategray;
+}
+
+section > div > div {
+    text-align: center;
+    font-size: 25px;
+}
+h2{
+    color: rgb(55, 63, 71);
+    letter-spacing: 1px;
+}
+
+h2 + div{
+    text-align: center;
+    color:rgb(218, 112, 192);
+}
+

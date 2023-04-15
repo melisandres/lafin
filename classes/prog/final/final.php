@@ -14,36 +14,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>final</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
 <style>
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 200px;
-        /*https://getcssscan.com/css-box-shadow-examples*/
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-
-    input, textarea, label{
-        flex-basis: 50%;
-        display: block;
-        margin: 0 100px;
-        font-family: sans-serif;
-        font-size: 15px;
-    }
 </style>
 </head>
 <body>
 
 
-
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" target="_blank">
+<!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" target="_blank">
     <label for="name">name</label>
     <input type="text" name="name" id="name" required>
     <label for="password" name="password" id="password">password</label>
     <input type="password" required>
     <input type="submit" value="submit">
-</form>
+</form> -->
 
 
 <?php
@@ -52,6 +37,23 @@
         include 'final_functions.php';
         calculateMean($notes, $passFailStructure, $notesABC, $ponderations, $noteDePassage);
     }
+    else {
+        echo '<form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post" target="_blank">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="password" name="password" id="password">password</label>
+        <input type="password" required>
+        <input type="submit" value="submit">
+        </form>';
+      }
+
+
+
+
+
+
+
+
  
     function test_input($data) {
         $data = trim($data);
@@ -62,28 +64,6 @@
 
 
  ?>
-
-
-
-
-
-
-<?php 
-
-//create a form
-//send that info to the next functions
-//will the form disappear once you submit?
-
-?>
-
-
-
-
-
-
-
-
-
     
 </body>
 </html>
