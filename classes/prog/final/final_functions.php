@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 * Mélisandre Schofield: 2395207
 */
 
-/*student and class data*/
+// Data for the class
 $studentData = array(
 105 => [["Stein", "Gertrude"],[89, 90, 25],[45, 90]],
 106 => [["DeBeauvoir", "Simone"],[100, 100, 25],[100, 99]],
@@ -44,40 +44,46 @@ $section = "<section>";
 $section_end = "</section>";
 $h2 = "<h2>";
 $h2_end = "</h2>";
-//
 
 
 
-/*main function iterates through the student data structure
-and calls all other functions*/
+/*
+ * Main function iterates through the student data structure and calls all other functions
+ * 
+ * Inputs :
+ * $arr: students array
+ * $passFailS: associative array structure to track: echecs, succes et vides
+ * $aBC: array with number grades and equivalent letter grades
+ * $pond: ponderation array
+ * $pass: passing grade
+ * 
+ * Outputs :
+ * (void) Executes display functions.
+ */
 function calculateMean($arr, $passFailS, $aBC, $pond, $pass){
-    //display the greeting
+    // Display the greeting
     displayGreeting();
 
-    //create two assiative arrays that track pass, fail, and empty.
+    // Create two assiative arrays that track pass, fail, and empty.
     $arrTraveauxExamens = createDynamicArrays($arr, $passFailS);
-
-    //Extract these arrays (one for ALL traveaux, and the other for ALL examens)
+    // Extract these arrays (one for ALL traveaux, and the other for ALL examens)
     $remisesTravauxClasse = $arrTraveauxExamens[0];
     $remisesExamensClasse = $arrTraveauxExamens[1];
 
-    //use the same structure, and track: all "remises", the class
-    //and each individual student, as we loop through
-    $remisesTotals = $passFailS;
+    // Use the same structure, and track: all "remises", the class
+    // and each individual student, as we loop through.
     $cour = $passFailS;
-    $remiseTravauxEtudiant = $passFailS;
-    $remiseExamensEtudiant = $passFailS;
 
-    /*a variable to initialize the html spreadsheet*/
+    // A variable to check if we've initialized the html spreadsheet
     $init = FALSE;
 
     foreach ($arr as $key => $value){
         for ($i = 0; $i < count($value); $i++){
-            //let's initialize the spreadsheet
+            // Let's initialize the spreadsheet
             if (!$init){
                 $t = "travail ";
                 $e = "examen ";
-                //$value[1] and $value[2] are respectively Traveaux and Examens
+                // $value[1] and $value[2] are respectively Traveaux and Examens
                 $traveauxHead = setDynamicTableHead($value[1], $t);
                 $examensHead = setDynamicTableHead($value[2], $e);
                 initializeTable($traveauxHead, $examensHead);
@@ -85,63 +91,56 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $pass){
             }
 
             switch ($i){
-                //looping through the name
+                // Let's loop through the name
                 case 0:
                     $nom = $value[$i][0]. ", ". $value[$i][1];
                     $matricule = $key;
                     break;
 
-                //looping through the Traveaux 
+                // Let's loop through the Traveaux 
                 case 1:
-                    //calculate the highest grade on a Travail by this student
+                    // Calculate the highest grade on a Travail by this student
                     $meilleur_travail = calculPlusHauteNote($value[$i]);
 
-                    /*update the variables that are tracking all the remises Traveaux*/
-                    $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $pass);
-                    $remiseTravauxEtudiant = $returnArr[0];
-                    $remisesTravauxClasse = $returnArr[1];
+                    // Update the variables that are tracking all the remises Traveaux for display
+                    $remisesTravauxClasse =  calculRemises($value[$i], $remisesTravauxClasse, $pass);
 
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $pass);
-
-                    /*this is a variable that holds a dynamic update of the grades for the spreadsheet*/
+                    // This is a variable that holds a dynamic update of the grades for the spreadsheet
                     $notesT = addDynamiclyToTable($value[$i]);
 
                     break;
 
-                //looping though the exams 
+                // Let's loop though the exams 
                 case 2:
-                    /*update the variables that are tracking all the remises Examens*/
-                    $returnArr = calculDesRemises($value[$i], $remisesExamensClasse, $pass);
-                    $remiseExamensEtudiant = $returnArr[0];
-                    $remisesExamensClasse = $returnArr[1];
+                    // Update the variables that are tracking all the remises Examens
+                    $remisesExamensClasse =  calculRemises($value[$i], $remisesExamensClasse, $pass);
 
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant, $pass);
 
-                    /*update the variables that are tracking all the remises Examens*/
+                    // Update the variables that are tracking all the remises Examens for display
                     $notesE = addDynamiclyToTable($value[$i]);
 
-                    //calculate the student's final grade
+                    // Calculate the student's final grade
                     $mean = calculateEachMean($pond, $value);
                     $note = getLetterGrade($mean, $aBC);
 
-                    //add this student's pass or fail to an ass. array tracking pass/fail for the class
-                    $cour = refreshClassArr($cour, $mean, $pass);
+                    // Add this student's pass or fail to an ass. array tracking pass/fail for the class
+                    $cour = refreshArr($cour, $mean, $pass);
 
-                    //add the current student to the html spreadsheet
+                    // Add the current student to the html spreadsheet
                     addToTable($nom, $matricule, $mean, $note, $notesT, $notesE, $meilleur_travail);
 
                     break;  
                 }
         }
     }
-    //close the html table, now that you have added all the students
+    // Close the html table, now that you have added all the students.
     endTable();
 
-    //calculate the best and the worst remises, for the top of the page
+    // Calculate the best and the worst remises, for the top of the page.
     $best_remise = bestAndWorstInClass($remisesTravauxClasse, $remisesExamensClasse, "reussites");
     $worst_remise = bestAndWorstInClass($remisesTravauxClasse, $remisesExamensClasse, "echecs");
 
-    //display the data that will go on top of the page
+    // Display the data that will go on top of the page.
     topOfPage($cour["vides"], $cour["echecs"], $cour["reussites"], $best_remise, $worst_remise);
 }
 
@@ -149,8 +148,17 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $pass){
 
 
 
-
-//this calculates each student's final number grade
+/*
+ * Calculate each student's final number grade.
+ * 
+ * Inputs :
+ * $pond: ponderation array
+ * $value: the student array 
+ * 
+ * Outputs :
+ * $mean: the final grade.
+ */
+//
 function calculateEachMean($pond, $value){
     $mean = 0;
     $k = 0;
@@ -165,28 +173,28 @@ function calculateEachMean($pond, $value){
 
 
 
-//this calculates how many passes & fails (& vides) 
-//for the whole class, for all traveaux and exams
-function calculTotalRemises($arrTotal, $arrAjout){
-    foreach ($arrTotal as $key => $value){
-        $arrTotal[$key] += $arrAjout[$key];
-    }
-    return $arrTotal;
-}
 
 
+/*
+ * Loop through one studentData layer, and use 
+ * it as a template to create two associative arrays,
+ * one for Traveaux, and another for Examens.
+ * 
+ * Inputs :
+ * $arr: the student array
+ * $passFailS: associative array structure to track: echecs, succes et vides
+ * 
+ * Outputs :
+ * $arrT: array of arrays, 1 for each Travail found in the first student's structure.
+ * $arrE: array of arrays, 1 for each Exament found in the first student's structure.
+ */
 
-
-
-//this will loop through one studentData layer, and use 
-//it as a template to create two associative arrays,
-//one for Traveaux, and another for Examens
 function createDynamicArrays($arr, $passFailS){
     $arrT = array();
     $arrE = array();
-    //only loop once over one student, to see what the template is
-    //and only on the value of the associative array
-    //start your iterator at one to skip the name
+    // Only loop once over one student, to see what the template is
+    // and only on the value of the associative array
+    // start your iterator at one to skip the name.
     $loop = true;
     foreach ($arr as $key => $value){
         if (!$loop){
@@ -196,11 +204,11 @@ function createDynamicArrays($arr, $passFailS){
         for($i = 1; $i < count($value); $i++){
             for($j = 0; $j < count($value[$i]); $j++){
                 if ($i == 1){
-                    //as you loop through traveaux, add an array for each
+                    // As you loop through traveaux, add an array for each.
                     array_push($arrT, $passFailS);
                 }
                 else {
-                    //as you loop through exams, add an array for each
+                    // As you loop through exams, add an array for each
                     array_push($arrE, $passFailS);
                 }
             }
@@ -212,76 +220,88 @@ function createDynamicArrays($arr, $passFailS){
 
 
 
-//this returns two arrays with the values from all the traveaux, OR all the examens
-//it gets called while looping through the traveau, and again while looping through the exams
-//$arr is the data for the student currently being looped through
-//$arrClasse is an array compiling the data for the whole class
-function calculDesRemises($arr, $arrClasse, $pass){
-    $reussites = 0;
-    $echecs = 0; 
-    $vides = 0; 
+/*
+ * Return an array with the values from all the traveaux, OR all the examens
+ * it gets called twice 1. looping through traveaux, 2. looping through exams
+ * 
+ * Inputs :
+ * $arr: the student array
+ * $arrClasse: is an array compiling the data for the whole class
+ * 
+ * Outputs :
+ * $arrClasse: updated class array
+ */
+
+function calculRemises($arr, $arrClasse, $pass){
     for ($i = 0; $i < count($arr); $i++){
         if ($arr[$i] >= $pass){
-            $reussites ++;
-            $arrClasse[$i]["reussites"] ++;
+                $arrClasse[$i]["reussites"] ++;
+            }
+            if ($arr[$i] == 0){
+                $arrClasse[$i]["vides"] ++;
+            }
+            if ($arr[$i] <$pass && $arr[$i] > 0) {
+                $arrClasse[$i]["echecs"] ++;
+            }
         }
-        if ($arr[$i] == 0){
-            $vides ++;
-            $arrClasse[$i]["vides"] ++;
-        }
-        if ($arr[$i] <$pass && $arr[$i] > 0) {
-            $echecs ++;
-            $arrClasse[$i]["echecs"] ++;
-        }
-    }
-    $arrEtudiant = array( "reussites" => $reussites, "echecs" => $echecs, "vides" => $vides);
-    return array($arrEtudiant, $arrClasse);
+    return $arrClasse;
 }
 
 
 
-
-//this is refreshing the class passes and fails
-function refreshClassArr($class, $mean, $pass){
-    if ($mean >= $pass){
-        $class["reussites"] ++;
+/*
+ * This is refreshing the class passes and fails
+ * 
+ * Inputs :
+ * $arrToRefresh: the array that one wants to refresh
+ * $value: the student array
+ * $pass: the passing grade
+ * 
+ * Outputs :
+ * $arrToRefresh: the array that is being refreshed
+ */
+function refreshArr($arrToRefresh, $value, $pass){
+    if ($value >= $pass){
+        $arrToRefresh["reussites"] ++;
     }
-    elseif ($mean > 0) {
-        $class["echecs"] ++;
+    elseif ($value > 0) {
+        $arrToRefresh["echecs"] ++;
     }
     else{
-        $class["vides"] ++;
+        $arrToRefresh["vides"] ++;
     }
-    return $class;
+    return $arrToRefresh;
 }
 
 
 
 
 
-
-//This is meant to return the exam or homework that the most people passed
-//but it will also be used to return the exam or homework that most people failed
-//$bestWorst is a string that is used as a key, and determines which we are checking for. 
+/*
+ * Check which homework or Exam did best, 
+ * and which did worst
+ * 
+ * Inputs :
+ * $classArrT: the array of class Pass/Fails for Traveaux
+ * $classArrE: the array of class Pass/Fails for Examens
+ * $bestWorst: a string (values= "reussites" or "echecs"), 
+ * used as a key determining if we check for the best, or the worst
+ * 
+ * Outputs :
+ * $bestOrWorst: a string with the name of the best/worst travail/examen
+ */
 function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
     $lastValue = 0;
     $equalValue = 0;
     $bestOrWorst = "";
     $remiseEgale = "";
-    echo "we are checking ".$bestWorst;
-    echo "<br>";
 
     $combinedArr = array($classArrT, $classArrE);
     for ($i = 0; $i < count($combinedArr); $i++){
         for($j = 0; $j < count($combinedArr[$i]); $j++){
-            echo "we are now checking ".$combinedArr[$i][$j][$bestWorst];
-            echo "<br>";
             if ($combinedArr[$i][$j][$bestWorst] > $lastValue){
-                echo $combinedArr[$i][$j][$bestWorst]. " is > to ".$lastValue;
-                echo "<br>";
-                echo "lastValue is being set to: ".$combinedArr[$i][$j][$bestWorst];
                 $lastValue = $combinedArr[$i][$j][$bestWorst];
-                //if $i == 0 we are running through traveaux,  $i == 1 is exams
+                // If $i == 0 we are running through traveaux,  $i == 1 is exams
                 if($i == 0){
                     $bestOrWorst = "travail ".($j+1);
                 }
@@ -289,11 +309,8 @@ function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
                     $bestOrWorst = "examen ".($j+1);
                 }
             }
-            //check if the number here is equal to the last one
+            // Check if the number here is equal to the last one
             elseif ($combinedArr[$i][$j][$bestWorst] == $lastValue){
-                echo $combinedArr[$i][$j][$bestWorst]. " is == to ".$lastValue;
-                echo "<br>";
-                echo "equalValue is being set to: ".$combinedArr[$i][$j][$bestWorst];
                 $equalValue = $combinedArr[$i][$j][$bestWorst];
                 if($i == 0){
                     $remiseEgale = "travail ".($j+1);
@@ -302,13 +319,9 @@ function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
                     $remiseEgale = "examen ".($j+1);
                 }
             }
-            else{
-                echo "<br>";
-                echo "we are slipping through";
-                echo $combinedArr[$i][$j][$bestWorst]. " is neither == nor > than ".$lastValue;
-            }
         }
     }
+    // Now that we've determined the best or worst, let's check if the equal value is still equal.
     if ($lastValue == $equalValue){
         $bestOrWorst .= " & ".$remiseEgale;
     }
@@ -319,8 +332,17 @@ function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
 
 
 
+/*
+ * Get the letter grade for current student
+ * 
+ * Inputs :
+ * $grade: the students final grade
+ * $abc: array of letter grades, and equivalent number grades
+ * 
+ * Outputs :
+ * $key: the letter grade for the current student
+ */
 
-//this will return the final letter grade for each student. 
 function getLetterGrade($grade, $aBC){
     if  ($grade >= 101 | $grade < 0){
         echo "erreur de tableau. ".$grade." n'est pas une valeur de note permise.";
@@ -335,33 +357,40 @@ function getLetterGrade($grade, $aBC){
 
 
 
-
-
-
-
-//this iterates through one array and returns the highest grade, with the 
-//"name"(as a number) of the associated homework. It also sends the "name of 
-//a secondary homework if another homework ties for first place. It will not
-//return a third homework name, if three homeworks have tied for first place
+/*
+ * Iterate through one array and return the highest grade, with the 
+ * name of the associated homework. It also sends the name of 
+ * a secondary homework if this ties it for 1st place. It will not
+ * return a 3rd homework name, if 3 homeworks tie for 1st place.
+ * 
+ * Inputs :
+ * $arr: student array
+ * 
+ * Outputs :
+ * $returnArr (includes) :
+ * $plusHauteNote: the grade of the best travail
+ * $travail: the numeral associated to the best travail
+ * $travailEgale: the numeral associated to another travail that tied it for 1st place
+ */
 function calculPlusHauteNote($arr){
     $plusHauteNote = $arr[0];
     $travail = 1;
     $travailEgale = 0;
     for ($j = 1; $j < count($arr); $j++){
-        //vérifier si la présente note est plus grande que la dernière
+        // Check if the current grade is greater than the last
         if ($plusHauteNote < $arr[$j]){
             $plusHauteNote = $arr[$j];
             $travail = $j + 1;
         }
-        //vérifier si la présente note est égale à la dernière
+        // Check if the current grade is equal to the last
         elseif ($plusHauteNote == $arr[$j]){
             $travailEgale = $j +1;
         }
-    //vérifier si la plus grande note a une note égale
+    // Check if the greatest grade has a grade equal to it
     if ($travailEgale > 0 && $arr[$travailEgale-1] == $plusHauteNote){
         return "travail ".$travail." & ".$travailEgale.", à ".$plusHauteNote."%";
     }
-    //rendre les infos pour la plus haute note.
+    // Return the infos for the best grade.
     else 
         return "travail ".$travail.", à ".$plusHauteNote."%";
     }
@@ -378,16 +407,39 @@ function calculPlusHauteNote($arr){
 
 
 
+/*
+*HTML DISPLAY FUNCTIONS
+ */
 
 
-/*HTML DISPLAY FUNCTIONS*/
-
+/*
+ * Display the Greeting 
+ * 
+ * Inputs :
+ * $name: the user name (received from POST)
+ * $global html variables
+ * 
+ * Outputs :
+ * (void) execute part of the display
+ */
 
 function displayGreeting(){
     echo $GLOBALS['div']."Bienvenue: ".$_POST["name"].$GLOBALS['div_end'];
 }
 
 
+
+/*
+ * Display the initializing of the spreadsheet
+ * 
+ * Inputs :
+ * $traveaux: an html string showing the correct number of traveaux
+ * $examens: an html string showing the correct number of examens
+ * gobal html variables
+ * 
+ * Outputs :
+ * (void) execute part of the display
+ */
 function initializeTable($traveaux, $examens){
     echo $GLOBALS['table'];
     echo $GLOBALS['tr'];
@@ -402,6 +454,20 @@ function initializeTable($traveaux, $examens){
 }
 
 
+
+/*
+ * Create the strings for the Spreadsheet Head
+ * Traveaux and Examen part, so that it reflects the 
+ * correct number of these
+ * 
+ * Inputs :
+ * $arr: student array
+ * $examOrTp: string, "examen" or "travail"
+ * gobal html variables
+ * 
+ * Outputs :
+ * $head: a string for each examen and travail
+ */
 function setDynamicTableHead($arr, $examOrTp){
     $i = 1;
     $head = "";
@@ -412,7 +478,16 @@ function setDynamicTableHead($arr, $examOrTp){
     return $head;
 }
 
-
+/*
+ * Add grades the the spreadsheet
+ * 
+ * Inputs :
+ * $arr: student array
+ * gobal html variables
+ * 
+ * Outputs :
+ * $tabNotes: an html output of the grades concatenated together
+ */
 function addDynamiclyToTable($arr){
     $tabNotes = "";
     foreach($arr as $note){
@@ -421,8 +496,31 @@ function addDynamiclyToTable($arr){
     return $tabNotes;
 }
 
+/*
+ * Add all the student data to the spreadsheet
+ * 
+ * Inputs :
+ * $nom: student name 
+ * $matricule: student id
+ * $moyene: student final grade
+ * $note: student letter grade
+ * $notesTraveaux: grades for all traveaux
+ * $notesExamens: grades for all examens
+ * $meilleur_travail: grade for best travail, and its name
+ * gobal html variables
+ * 
+ * Outputs :
+ * (void) Displays the spreadsheet line of one student
+ */
+function addToTable(
+    $nom, 
+    $matricule, 
+    $moyene, 
+    $note, 
+    $notesTraveaux, 
+    $notesExamens, 
+    $meilleur_travail) {
 
-function addToTable($nom, $matricule, $moyene, $note, $notesTraveaux, $notesExamens, $meilleur_travail){
     echo $GLOBALS['tr'];
     echo $GLOBALS['td'].  $nom  .$GLOBALS['td_end'];
     echo $GLOBALS['td']. "#".$matricule .$GLOBALS['td_end'];
@@ -435,6 +533,15 @@ function addToTable($nom, $matricule, $moyene, $note, $notesTraveaux, $notesExam
 }
 
 
+/*
+ * Close the html for the spreadsheet
+ * 
+ * Inputs :
+ * none  (gobal html variables)
+ * 
+ * Outputs :
+ * (void) execute a display
+ */
 function endTable(){
     echo $GLOBALS['table_end'];
 }
@@ -442,10 +549,21 @@ function endTable(){
 
 
 
-
-
-//a display function that gets called for each new value
-
+/*
+ * Display the statistical elements 
+ * for the top of the page
+ * 
+ * Inputs :
+ * $vides: number of students in the class who only returned empty work
+ * $echecs: number of failures in the class
+ * $reussites: number of successes in the class
+ * $best_remise: work(s) that the most students succeeded at
+ * $worst_remise: work(s) that the most students failed at
+ * gobal html variables
+ * 
+ * Outputs :
+ * (void) executes a display
+ */
 function topOfPage($vides, $echecs, $reussites, $best_remise, $worst_remise){
 
     echo $GLOBALS['section'];
@@ -459,6 +577,18 @@ function topOfPage($vides, $echecs, $reussites, $best_remise, $worst_remise){
     echo $GLOBALS['section_end'];
 }
 
+
+/*
+ * Display the statistical elements 
+ * for the top of the page
+ * 
+ * Inputs :
+ * $text: the header to be displayed
+ * $value: the value to be displayed
+ * 
+ * Outputs :
+ * (void) executes a display
+ */
 function createTopSegment($text, $value){
     echo $GLOBALS['div'];
     echo $GLOBALS['h2'];
