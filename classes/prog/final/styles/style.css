@@ -5,6 +5,11 @@ body{
     position: relative;
 }
 
+h2{
+    color: rgb(55, 63, 71);
+    letter-spacing: 1px;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -33,11 +38,14 @@ table {
 
 body > div{
     position:absolute;
-    top: -140px;
+    top: -130px;
+    margin-right: 60vw;
+    margin-left: 2vw;
     text-shadow:  0 0 200px rgb(34, 1, 23);
     color:white;
     font-size: 60px;
     padding: 3px;
+    height: 2em;
 }
 
 th, td, tr{
@@ -48,10 +56,10 @@ th, td, tr{
 
 tr:nth-child(even){
     background-color: #fff5f7;
-
 }
+
 th{
-    background-color: #feecf0;
+    background-color: #f0efef;
     font-size: 17px;
     letter-spacing: 0.5px;
     color: rgb(55, 63, 71);
@@ -61,10 +69,10 @@ section {
     position: absolute;
     margin: 4px 2vw 0px 2vw;
     width: 96vw;
-    top: -300px;
+    top: -285px;
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items:safe; 
     justify-content: space-between;
 }
 
@@ -76,17 +84,26 @@ section > div {
     border: solid 1px slategray;
 }
 
-section > div > div {
-    text-align: center;
-    font-size: 25px;
-}
-h2{
-    color: rgb(55, 63, 71);
-    letter-spacing: 1px;
+section >div:nth-child(-n + 3){
+    border-radius: 100%;
+    height: 130px;
+    width: 130px;
 }
 
-h2 + div{
+section > div > div  {
     text-align: center;
+    font-size: 25px;
     color:rgb(218, 112, 192);
 }
+section > div:nth-child(-n + 3) > div{
+    font-size: 80px;
+    color:  #f2cad1;
+    margin-top: -25px;
+}
+
+section > div:nth-child(-n+3) > h2 {
+    text-align: center;
+}
+
+
 

@@ -9,45 +9,23 @@ error_reporting(E_ALL);
 * Mélisandre Schofield: 2395207
 */
 
-
-$notes = array(
-105 => [["Stein", "Gertrude"],[89, 90],[45, 90]],
-106 => [["DeBeauvoir", "Simone"],[100, 100],[100, 99]],
-107 => [["Atwood", "Margaret"],[52, 67],[0, 1]],
-108 => [["Munro", "Alice"],[5, 0],[100, 32]],
-109 => [["Didion", "Joan"],[90, 90],[90, 90]],
-110 => [["Duras", "Marguerite"],[100, 100],[55, 34]],
-111 => [["Orzick", "Cynthia"], [0, 0], [0,0]], 
-112 => [["Plath", "Sylvia"], [85, 83],[100, 98]],
-113 => [["Lessing", "Doris"], [85, 83],[100, 98]],
-114 => [["Elliot", "Georges"], [56, 83],[100, 98]]
+/*student and class data*/
+$studentData = array(
+105 => [["Stein", "Gertrude"],[89, 90, 25],[45, 90]],
+106 => [["DeBeauvoir", "Simone"],[100, 100, 25],[100, 99]],
+107 => [["Atwood", "Margaret"],[52, 67, 34],[0, 1]],
+108 => [["Munro", "Alice"],[5, 0, 24],[100, 32]],
+109 => [["Didion", "Joan"],[90, 90, 56],[90, 90]],
+110 => [["Duras", "Marguerite"],[100, 100, 67],[55, 34]],
+111 => [["Orzick", "Cynthia"], [0, 0, 54], [0,0]], 
+112 => [["Plath", "Sylvia"], [85, 83, 43],[100, 98]],
+113 => [["Lessing", "Doris"], [85, 83, 45],[100, 98]],
+114 => [["Elliot", "Georges"], [56, 83, 45],[100, 98]]
 );
-
-//variables comming in
-$notesABC = array("A" => 90, "B"=> 80, "C" => 70, "D" => 60,"E" => 1, "Abs" => 0);
+$gradesABC = array("A" => 90, "B"=> 80, "C" => 70, "D" => 60,"E" => 1, "Abs" => 0);
 $passFailStructure = array("reussites" => 0, "echecs" => 0, "vides" => 0);
-$ponderations = array(20, 20,  25, 35);
-$noteDePassage = 60;
-
-
-/* //variables pour tableau
-$nom_etudiant = "";
-$moyene_étudiante = 0;
-$note_lettre = "";
-$best_note = 0;
-$best_travail = "";
-$travail_egale = ""; */
-
-
-//variables pour haut de la page
-/* $nb_vides = 0;
-$nb_echecs = 0;
-$nb_reussites = 0;
-$best_remise = "";
-$worst_remise = "";
-$best_remise_egale = "";
-$worst_remise_egale = ""; */
-
+$ponderations = array(20, 10, 10, 25, 35);
+$passingGrade = 60;
 
 
 // HTML 
@@ -70,40 +48,36 @@ $h2_end = "</h2>";
 
 
 
-
-function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
+/*main function iterates through the student data structure
+and calls all other functions*/
+function calculateMean($arr, $passFailS, $aBC, $pond, $pass){
+    //display the greeting
     displayGreeting();
-    //variables pour tableau
-    $nom =""; 
-    $matricule ="";
-    $moyene = ""; 
-    $note = ""; 
-    $meilleur_travail = "";
-    //array Traveaux Examens
-    $arrTE = createDynamicArrays($arr, $passFailS);
 
-    /* Une structure qui permet de voir pour chaque travail au niveau
-    individuel, et de la classe, les echecs, reussites, et remises vides*/
-    $remiseTravauxEtudiant = $passFailS;
-    $remisesTravauxClasse = $arrTE[0];
+    //create two assiative arrays that track pass, fail, and empty.
+    $arrTraveauxExamens = createDynamicArrays($arr, $passFailS);
 
-    /*La meme structure, mais pour les examens */
-    $remiseExamensEtudiant = $passFailS;
-    $remisesExamensClasse = $arrTE[1];
+    //Extract these arrays (one for ALL traveaux, and the other for ALL examens)
+    $remisesTravauxClasse = $arrTraveauxExamens[0];
+    $remisesExamensClasse = $arrTraveauxExamens[1];
 
-    /*La meme structure, mais pour toutes les remises, et pour le cours*/
+    //use the same structure, and track: all "remises", the class
+    //and each individual student, as we loop through
     $remisesTotals = $passFailS;
     $cour = $passFailS;
+    $remiseTravauxEtudiant = $passFailS;
+    $remiseExamensEtudiant = $passFailS;
 
-    /* une variable pour initialiser le tableau html*/
+    /*a variable to initialize the html spreadsheet*/
     $init = FALSE;
 
     foreach ($arr as $key => $value){
         for ($i = 0; $i < count($value); $i++){
-            //lets initialize the tableau
+            //let's initialize the spreadsheet
             if (!$init){
                 $t = "travail ";
                 $e = "examen ";
+                //$value[1] and $value[2] are respectively Traveaux and Examens
                 $traveauxHead = setDynamicTableHead($value[1], $t);
                 $examensHead = setDynamicTableHead($value[2], $e);
                 initializeTable($traveauxHead, $examensHead);
@@ -115,44 +89,45 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
                 case 0:
                     $nom = $value[$i][0]. ", ". $value[$i][1];
                     $matricule = $key;
-
                     break;
 
-                //looping through the TPs 
+                //looping through the Traveaux 
                 case 1:
+                    //calculate the highest grade on a Travail by this student
                     $meilleur_travail = calculPlusHauteNote($value[$i]);
 
-                    /*update the variables that are tracking all the remises*/
-                    $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $passage);
+                    /*update the variables that are tracking all the remises Traveaux*/
+                    $returnArr = calculDesRemises($value[$i], $remisesTravauxClasse, $pass);
                     $remiseTravauxEtudiant = $returnArr[0];
                     $remisesTravauxClasse = $returnArr[1];
 
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $passage);
+                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseTravauxEtudiant, $pass);
 
-                    /*variable pour creer la parti du tableau qui comprend les notes*/
+                    /*this is a variable that holds a dynamic update of the grades for the spreadsheet*/
                     $notesT = addDynamiclyToTable($value[$i]);
 
                     break;
 
                 //looping though the exams 
                 case 2:
-                    /*update the variables that are tracking all the remises*/
-                    $returnArr = calculDesRemises($value[$i], $remisesExamensClasse, $passage);
+                    /*update the variables that are tracking all the remises Examens*/
+                    $returnArr = calculDesRemises($value[$i], $remisesExamensClasse, $pass);
                     $remiseExamensEtudiant = $returnArr[0];
                     $remisesExamensClasse = $returnArr[1];
-                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant, $passage);
 
-                    /*variable pour creer la parti du tableau qui comprend les notes*/
+                    $remisesTotals = calculTotalRemises($remisesTotals, $remiseExamensEtudiant, $pass);
+
+                    /*update the variables that are tracking all the remises Examens*/
                     $notesE = addDynamiclyToTable($value[$i]);
 
-                    //la moyene de l'édudiant
+                    //calculate the student's final grade
                     $mean = calculateEachMean($pond, $value);
                     $note = getLetterGrade($mean, $aBC);
 
-                    //add your pass/fail values to an associative array for the class
-                    $cour = refreshClassArr($cour, $mean, $passage);
+                    //add this student's pass or fail to an ass. array tracking pass/fail for the class
+                    $cour = refreshClassArr($cour, $mean, $pass);
 
-                    //add the current student to the html table
+                    //add the current student to the html spreadsheet
                     addToTable($nom, $matricule, $mean, $note, $notesT, $notesE, $meilleur_travail);
 
                     break;  
@@ -162,9 +137,11 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
     //close the html table, now that you have added all the students
     endTable();
 
+    //calculate the best and the worst remises, for the top of the page
     $best_remise = bestAndWorstInClass($remisesTravauxClasse, $remisesExamensClasse, "reussites");
     $worst_remise = bestAndWorstInClass($remisesTravauxClasse, $remisesExamensClasse, "echecs");
 
+    //display the data that will go on top of the page
     topOfPage($cour["vides"], $cour["echecs"], $cour["reussites"], $best_remise, $worst_remise);
 }
 
@@ -173,7 +150,7 @@ function calculateMean($arr, $passFailS, $aBC, $pond, $passage){
 
 
 
-
+//this calculates each student's final number grade
 function calculateEachMean($pond, $value){
     $mean = 0;
     $k = 0;
@@ -188,13 +165,8 @@ function calculateEachMean($pond, $value){
 
 
 
-
-
-
-
-
-
-//this calculates how many failures, successes, and empties in the whole class, for all traveaux's and exams
+//this calculates how many passes & fails (& vides) 
+//for the whole class, for all traveaux and exams
 function calculTotalRemises($arrTotal, $arrAjout){
     foreach ($arrTotal as $key => $value){
         $arrTotal[$key] += $arrAjout[$key];
@@ -206,7 +178,9 @@ function calculTotalRemises($arrTotal, $arrAjout){
 
 
 
-
+//this will loop through one studentData layer, and use 
+//it as a template to create two associative arrays,
+//one for Traveaux, and another for Examens
 function createDynamicArrays($arr, $passFailS){
     $arrT = array();
     $arrE = array();
@@ -238,16 +212,16 @@ function createDynamicArrays($arr, $passFailS){
 
 
 
-//this returns two arrays with the values from all the traveau, OR all the examens
+//this returns two arrays with the values from all the traveaux, OR all the examens
 //it gets called while looping through the traveau, and again while looping through the exams
 //$arr is the data for the student currently being looped through
-//$arClasse is an array compiling the data for the whole class
-function calculDesRemises($arr, $arrClasse, $passage){
+//$arrClasse is an array compiling the data for the whole class
+function calculDesRemises($arr, $arrClasse, $pass){
     $reussites = 0;
     $echecs = 0; 
     $vides = 0; 
     for ($i = 0; $i < count($arr); $i++){
-        if ($arr[$i] >= $passage){
+        if ($arr[$i] >= $pass){
             $reussites ++;
             $arrClasse[$i]["reussites"] ++;
         }
@@ -255,7 +229,7 @@ function calculDesRemises($arr, $arrClasse, $passage){
             $vides ++;
             $arrClasse[$i]["vides"] ++;
         }
-        if ($arr[$i] <$passage && $arr[$i] > 0) {
+        if ($arr[$i] <$pass && $arr[$i] > 0) {
             $echecs ++;
             $arrClasse[$i]["echecs"] ++;
         }
@@ -268,8 +242,8 @@ function calculDesRemises($arr, $arrClasse, $passage){
 
 
 //this is refreshing the class passes and fails
-function refreshClassArr($class, $mean, $passage){
-    if ($mean >= $passage){
+function refreshClassArr($class, $mean, $pass){
+    if ($mean >= $pass){
         $class["reussites"] ++;
     }
     elseif ($mean > 0) {
@@ -288,7 +262,7 @@ function refreshClassArr($class, $mean, $passage){
 
 //This is meant to return the exam or homework that the most people passed
 //but it will also be used to return the exam or homework that most people failed
-//$bestWorst is the value () that determines which we are checking for. 
+//$bestWorst is a string that is used as a key, and determines which we are checking for. 
 function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
     $lastValue = 0;
     $equalValue = 0;
@@ -347,7 +321,6 @@ function bestAndWorstInClass($classArrT, $classArrE, $bestWorst){
 
 
 //this will return the final letter grade for each student. 
-
 function getLetterGrade($grade, $aBC){
     if  ($grade >= 101 | $grade < 0){
         echo "erreur de tableau. ".$grade." n'est pas une valeur de note permise.";
@@ -370,7 +343,6 @@ function getLetterGrade($grade, $aBC){
 //"name"(as a number) of the associated homework. It also sends the "name of 
 //a secondary homework if another homework ties for first place. It will not
 //return a third homework name, if three homeworks have tied for first place
-
 function calculPlusHauteNote($arr){
     $plusHauteNote = $arr[0];
     $travail = 1;
@@ -412,10 +384,8 @@ function calculPlusHauteNote($arr){
 
 
 function displayGreeting(){
-    echo $GLOBALS['div']."Welcome: ".$_POST["name"].$GLOBALS['div_end'];
+    echo $GLOBALS['div']."Bienvenue: ".$_POST["name"].$GLOBALS['div_end'];
 }
-
-
 
 
 function initializeTable($traveaux, $examens){
@@ -432,8 +402,6 @@ function initializeTable($traveaux, $examens){
 }
 
 
-
-
 function setDynamicTableHead($arr, $examOrTp){
     $i = 1;
     $head = "";
@@ -445,8 +413,6 @@ function setDynamicTableHead($arr, $examOrTp){
 }
 
 
-
-
 function addDynamiclyToTable($arr){
     $tabNotes = "";
     foreach($arr as $note){
@@ -454,9 +420,6 @@ function addDynamiclyToTable($arr){
     }
     return $tabNotes;
 }
-
-
-
 
 
 function addToTable($nom, $matricule, $moyene, $note, $notesTraveaux, $notesExamens, $meilleur_travail){
@@ -470,9 +433,6 @@ function addToTable($nom, $matricule, $moyene, $note, $notesTraveaux, $notesExam
     echo $GLOBALS['td'].  $meilleur_travail  .$GLOBALS['td_end'];
     echo $GLOBALS['tr_end'];
 }
-
-
-
 
 
 function endTable(){

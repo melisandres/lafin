@@ -22,20 +22,12 @@
 <body>
 
 
-<!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" target="_blank">
-    <label for="name">name</label>
-    <input type="text" name="name" id="name" required>
-    <label for="password" name="password" id="password">password</label>
-    <input type="password" required>
-    <input type="submit" value="submit">
-</form> -->
-
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
         include 'final_functions.php';
-        calculateMean($notes, $passFailStructure, $notesABC, $ponderations, $noteDePassage);
+        calculateMean($studentData, $passFailStructure, $gradesABC, $ponderations, $passingGrade);
     }
     else {
         echo '<form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post" target="_blank">
@@ -46,13 +38,6 @@
         <input type="submit" value="submit">
         </form>';
       }
-
-
-
-
-
-
-
 
  
     function test_input($data) {
