@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mcandide/public_html/lafin/
+    - export DEPLOYPATH=/home/mcandide/public_html/
     - /bin/cp academics.php $DEPLOYPATH
     - /bin/cp board.php $DEPLOYPATH
     - /bin/cp fiction.php $DEPLOYPATH
