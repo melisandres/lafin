@@ -1,0 +1,21 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp academics.php $DEPLOYPATH
+    - /bin/cp board.php $DEPLOYPATH
+    - /bin/cp fiction.php $DEPLOYPATH
+    - /bin/cp gallery.php $DEPLOYPATH
+    - /bin/cp history.php $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp info.json $DEPLOYPATH
+    - /bin/cp launch.json $DEPLOYPATH
+    - /bin/cp main.css $DEPLOYPATH
+    - /bin/cp presses.php $DEPLOYPATH
+    - /bin/cp readme.md $DEPLOYPATH
+    - /bin/cp research.php $DEPLOYPATH
+    - /bin/cp residency.php $DEPLOYPATH
+    - /bin/cp script.jx $DEPLOYPATH
+    - /bin/cp -R favicon_io $DEPLOYPATH
+    - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R infos $DEPLOYPATH
+    - /bin/cp -R img $DEPLOYPATH
