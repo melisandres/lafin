@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mcandide/public_html/
+    - export DEPLOYPATH=/home/mcandide/public_html/lafin
     - /bin/cp academics.php $DEPLOYPATH
     - /bin/cp board.php $DEPLOYPATH
     - /bin/cp fiction.php $DEPLOYPATH
@@ -15,7 +15,7 @@ deployment:
     - /bin/cp readme.md $DEPLOYPATH
     - /bin/cp research.php $DEPLOYPATH
     - /bin/cp residency.php $DEPLOYPATH
-    - /bin/cp script.jx $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
     - /bin/cp -R favicon_io $DEPLOYPATH
     - /bin/cp -R includes $DEPLOYPATH
     - /bin/cp -R infos $DEPLOYPATH
