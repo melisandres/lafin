@@ -1,13 +1,14 @@
 <div class="archive-c-text">	
 	<button type="button" class="collapsible">about</button>
 	<div class="content">
-	<p><i>Foamed</i> is a journey in which the landmarks take on imagined shapes, and revert into the oceanic mass. Julianna spends months on a small sailboat with a couple, June and August, and the wayward tuna that has taken to following their boat. The tempermental force of the ocean, and the ways in which she feels herself redefined, as a blending of those near her&mdash;July.</p>
+	<p><i>Foamed</i> is a journey in which the landmarks take on imagined shapes, and revert into the oceanic mass. Julianna spends months on a small sailboat with a couple, June and August, and the large tuna that has taken to following their boat. Made anxious by their tempermental ocean companion, she 
+	documents what she increasingly believes is her disappearance, as those near her meld&mdash;July.</p>
 	</div>
 
 	<button type="button" class="collapsible">artist statement</button>
 	<div class="content">
 		<h4>excerpted from <i>Foamed</i>:</h4>
-		<p>Our tuna has a worried gaze that never relaxes, unblinking eyes permanently frozen in apprehension. Every morning, it siddles up to us, almost as big as the boat, it peers in on me in my tiny room. It peers in on me with an unwavering expression, as if something is forever, and desperatly wrong. When it swishes its tail, the boat jostles. When it opens its mouth, the darkness it reveals seems deep enough to swallow the world.</p>
+		<p>Our tuna has worried eyes. When I'm alone in the guest room, it siddles up. An eye knocks on my window. flattened as it presses. Expressionless. The bed jostles. The giant unwavering eye. I can see an edge of the mouth. It's lost its breath in exersion. I feel water in my lungs, glass against my eye. Fishy smells, and a frightened woman dissappearing on the other side.</p>
 	</div>	
 
 	<button type="button" class="collapsible">archivist statement</button>

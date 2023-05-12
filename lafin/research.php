@@ -53,14 +53,14 @@
 	<p>
 		With Lafin's board members primarily comming from backgrounds in fine 
 		arts, <i>research</i> at Lafin is a framework that embraces both science
-		and pseudo-science, introspection and extrospection, invention and 
+		and pseudo-science, introspection and observation, invention and 
 		documentation.
 	</p>
 	<p>	
 		Although our methodologies differ wildly from project to project, and 
-		sometimes even within the same project, from one researcher to another
-		We generally try to recognize the moments where fact and fiction can be
-		allies. We create an environment in which the stregths of each can come
+		sometimes even within the same project, from one researcher to another&mdash;we 
+		generally try to recognize the moments where fact and fiction can be
+		allies. We create an environment in which the strengths of each can come
 		to serve the broader goal of uncovering what could be.  
 	</p>
 	<p>
