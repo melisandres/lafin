@@ -57,10 +57,10 @@
 	</p>
 	<p>
 		Find out <a class="join-us-link" href="javascript:;">more</a>. 
-		Our archives are shut clamshells under tide-flooded sands, locked safes
-		under wild-fire debris, rusted manholes in lost alleyways. We 
-		collaborate with fishermen, locksmiths, and city workers. Art is 
-		everywhere.
+		Our archives are clamshells under tide-flooded sands, they are lockboxes
+		reshaped by wild-fires, and rusted manholes in lost alleyways. We 
+		collaborate with fishermen, locksmiths, and sanitation workers. Our 
+		memories seep into the unlikeliest of places.
 	</p>
 	</div>
 </section>

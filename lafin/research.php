@@ -53,7 +53,7 @@
 	<p>
 		With Lafin's board members primarily comming from backgrounds in fine 
 		arts, <i>research</i> at Lafin is a framework that embraces both science
-		and pseudio-science, introspection and extrospection, invention and 
+		and pseudo-science, introspection and extrospection, invention and 
 		documentation.
 	</p>
 	<p>	
