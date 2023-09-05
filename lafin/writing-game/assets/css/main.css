@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+input,textarea, label{
+    display: block;
+    margin: 5px;
+}
+
+header{
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    min-height: 100vh;
+}
+
+main{
+    min-height: 100%;
+    flex-grow: 1;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    min-width: 100vw;
+
+}
+
+td, th,tr,p,form,textarea,h1{
+    padding:20px;
+}
+
+.author{
+    color: hotpink;
+}
+
+.keyword{
+    display: inline;
+    padding:10px;
+    padding-left:20px;
+    font-size: 15px;
+    color:red;
+}
+.keyword::before{
+    content:"-"
+}
